@@ -1,0 +1,849 @@
+
+/* =====================================================
+   SAFE SECOND SCENE LAYOUT FIX
+   v20-like layout, independent from old script.js
+   ===================================================== */
+
+/* 第二幕整体：独立占一整段，不再被其他 flex/grid 影响 */
+#map-section.safe-scene2 {
+  position: relative !important;
+  width: 96vw !important;
+  max-width: none !important;
+  margin: 72px auto 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  color: #eef8ff !important;
+  box-sizing: border-box !important;
+}
+
+/* 标题 + 控制器，位于地图上方 */
+#map-section.safe-scene2 .safe-scene2-header {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 28px !important;
+  margin: 0 0 24px 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* 左上标题 */
+#map-section.safe-scene2 .safe-scene2-title {
+  max-width: 760px !important;
+  flex: 1 1 auto !important;
+}
+
+#map-section.safe-scene2 .safe-kicker {
+  margin: 0 0 10px !important;
+  color: rgba(170, 205, 225, 0.62) !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 2.8px !important;
+  text-transform: uppercase !important;
+}
+
+#map-section.safe-scene2 .safe-scene2-title h2 {
+  margin: 0 !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: clamp(34px, 4vw, 58px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -1.8px !important;
+  color: #eef8ff !important;
+}
+
+#map-section.safe-scene2 .safe-scene2-title h2::after {
+  content: "";
+  display: block;
+  width: 82px;
+  height: 4px;
+  margin-top: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #83c7ff, #ed69ad, #f2a06b);
+}
+
+#map-section.safe-scene2 .safe-scene2-title p:last-child {
+  max-width: 700px !important;
+  margin: 18px 0 0 !important;
+  color: rgba(210, 232, 244, 0.70) !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+/* 控制器：地图上方右侧，不叠到地图里 */
+#safe-variable-controls.safe-toolbar {
+  position: static !important;
+  display: flex !important;
+  gap: 14px !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex-shrink: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 小选择框 */
+.safe-pill-select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+
+  min-width: 166px !important;
+  height: 46px !important;
+  padding: 0 42px 0 18px !important;
+
+  border-radius: 13px !important;
+  border: 1px solid rgba(131, 199, 255, 0.24) !important;
+
+  color: #ffffff !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 46px !important;
+
+  cursor: pointer !important;
+  outline: none !important;
+
+  background-image:
+    linear-gradient(90deg, #2f7eff 0%, #8f63ff 52%, #ed69ad 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>") !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: left top, right 14px center !important;
+  background-size: 100% 100%, 16px 16px !important;
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255,255,255,0.18) !important;
+}
+
+.safe-pill-select option {
+  color: #102033 !important;
+  background: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+/* 地图外壳：整行铺开 */
+#map-section.safe-scene2 .safe-map-shell {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 76vh !important;
+  min-height: 700px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+
+  background:
+    radial-gradient(circle at 50% 48%, #f5fbff 0%, #eaf4fb 48%, #dbeaf5 100%) !important;
+  border: 1px solid rgba(131, 199, 255, 0.22) !important;
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.48),
+    0 0 54px rgba(131, 199, 255, 0.08) !important;
+}
+
+/* Mapbox 容器必须铺满地图外壳 */
+#map-section.safe-scene2 .safe-map-shell #global-map {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: #eaf4fb !important;
+}
+
+/* 防止 mapbox canvas 被旧样式限制 */
+#map-section.safe-scene2 .safe-map-shell #global-map canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 状态提示 */
+.safe-map-status {
+  position: absolute !important;
+  left: 18px !important;
+  bottom: 18px !important;
+  z-index: 40 !important;
+  max-width: 560px !important;
+  padding: 10px 13px !important;
+  border-radius: 10px !important;
+  background: rgba(6, 18, 31, 0.74) !important;
+  color: rgba(235, 247, 255, 0.92) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(131, 199, 255, 0.18) !important;
+}
+
+.safe-map-status.is-hidden {
+  display: none !important;
+}
+
+/* 右上角分布卡片 */
+#safe-map-overlay {
+  position: absolute !important;
+  top: 28px !important;
+  right: 28px !important;
+  z-index: 24 !important;
+  width: 322px !important;
+  padding: 20px 20px 18px !important;
+  border-radius: 4px !important;
+
+  background:
+    linear-gradient(180deg, rgba(22, 42, 58, 0.86), rgba(14, 31, 47, 0.90)) !important;
+  border: 1px solid rgba(210, 232, 244, 0.20) !important;
+  backdrop-filter: blur(10px) !important;
+
+  box-shadow:
+    0 24px 56px rgba(14, 31, 47, 0.32),
+    inset 0 1px 0 rgba(255,255,255,0.08) !important;
+}
+
+.safe-overlay-kicker {
+  color: rgba(220, 238, 248, 0.70) !important;
+  font-size: 12px !important;
+  letter-spacing: 0.4px !important;
+  margin-bottom: 6px !important;
+}
+
+#safe-variable-title {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.safe-value-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 10px 0 14px !important;
+}
+
+.safe-dot {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #83c7ff, #ed69ad) !important;
+  box-shadow:
+    0 0 18px rgba(131,199,255,0.36),
+    0 0 18px rgba(237,105,173,0.24) !important;
+}
+
+#safe-variable-value {
+  color: #ffffff !important;
+  font-size: 42px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+}
+
+#safe-variable-unit {
+  color: rgba(220, 238, 248, 0.78) !important;
+  font-size: 18px !important;
+}
+
+.safe-mini-meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 4px 0 8px !important;
+}
+
+.safe-mini-meta span {
+  color: rgba(235, 247, 255, 0.88) !important;
+  font-size: 13px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.safe-mini-meta strong {
+  color: #f2a06b !important;
+  font-size: 12px !important;
+  letter-spacing: 0.8px !important;
+  white-space: nowrap !important;
+  text-transform: uppercase !important;
+}
+
+#safe-mini-chart {
+  width: 100% !important;
+  height: 124px !important;
+  margin: 8px 0 12px !important;
+}
+
+.safe-legend {
+  margin-top: 8px !important;
+}
+
+.safe-legend-labels,
+.safe-legend-values {
+  display: flex !important;
+  justify-content: space-between !important;
+  color: rgba(220, 238, 248, 0.74) !important;
+  font-size: 12px !important;
+}
+
+.safe-gradient-bar {
+  height: 12px !important;
+  margin: 7px 0 6px !important;
+  background: linear-gradient(90deg, #6ba7d6, #83c7ff, #9d63ff, #ed69ad) !important;
+  box-shadow:
+    0 0 18px rgba(131,199,255,0.18),
+    0 0 18px rgba(237,105,173,0.12) !important;
+}
+
+/* Mapbox 控件 */
+#map-section.safe-scene2 .mapboxgl-ctrl-top-left {
+  top: 14px !important;
+  left: 14px !important;
+}
+
+#map-section.safe-scene2 .mapboxgl-ctrl-group {
+  background: rgba(255,255,255,0.92) !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+
+#map-section.safe-scene2 .mapboxgl-ctrl-attrib {
+  opacity: 0.60 !important;
+}
+
+/* 下方图表 */
+#plots {
+  width: 92vw !important;
+  margin: 72px auto 80px !important;
+}
+
+/* 小屏 */
+@media (max-width: 1100px) {
+  #map-section.safe-scene2 {
+    width: 92vw !important;
+  }
+
+  #map-section.safe-scene2 .safe-scene2-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  #safe-variable-controls.safe-toolbar {
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+  }
+
+  #map-section.safe-scene2 .safe-map-shell {
+    height: 78vh !important;
+    min-height: 760px !important;
+  }
+
+  #safe-map-overlay {
+    top: auto !important;
+    right: 18px !important;
+    left: 18px !important;
+    bottom: 18px !important;
+    width: auto !important;
+  }
+}
+
+
+
+
+
+
+
+
+/* === V23 CLEAN SCENE2 START === */
+
+/* 第二幕本身不再有任何蓝色大方框 */
+#map-section.safe-scene2 {
+  position: relative !important;
+  width: 96vw !important;
+  max-width: none !important;
+  margin: -18px auto 0 !important;
+  padding: 74px 0 0 !important;
+
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  overflow: visible !important;
+}
+
+/* 彻底关掉之前制造横带的伪元素 */
+#map-section.safe-scene2::before,
+#map-section.safe-scene2::after {
+  content: none !important;
+  display: none !important;
+  background: transparent !important;
+}
+
+/* 标题区不再是一个卡片/方框 */
+#map-section.safe-scene2 .safe-scene2-header {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 28px !important;
+
+  margin: 0 0 24px 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* 标题文字容器也透明 */
+#map-section.safe-scene2 .safe-scene2-title {
+  max-width: 760px !important;
+  flex: 1 1 auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+#map-section.safe-scene2 .safe-kicker {
+  margin: 0 0 10px !important;
+  color: rgba(142, 194, 226, 0.86) !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 2.8px !important;
+  text-transform: uppercase !important;
+
+  background: transparent !important;
+}
+
+#map-section.safe-scene2 .safe-scene2-title h2 {
+  margin: 0 !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: clamp(34px, 4vw, 58px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -1.8px !important;
+  color: #eef8ff !important;
+  text-shadow: 0 10px 34px rgba(0, 0, 0, 0.18) !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#map-section.safe-scene2 .safe-scene2-title h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #83c7ff, #ed69ad, #f2a06b) !important;
+}
+
+#map-section.safe-scene2 .safe-scene2-title p:last-child {
+  max-width: 700px !important;
+  margin: 18px 0 0 !important;
+  color: rgba(220, 238, 248, 0.78) !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 选择器保持在右侧，但不套外框 */
+#safe-variable-controls.safe-toolbar {
+  position: static !important;
+  display: flex !important;
+  gap: 14px !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex-shrink: 0 !important;
+
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  transform: none !important;
+}
+
+/* 小选择框保留蓝粉跳色 */
+.safe-pill-select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+
+  min-width: 166px !important;
+  height: 46px !important;
+  padding: 0 42px 0 18px !important;
+
+  border-radius: 13px !important;
+  border: 1px solid rgba(255, 255, 255, 0.30) !important;
+
+  color: #ffffff !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 46px !important;
+
+  cursor: pointer !important;
+  outline: none !important;
+
+  background-image:
+    linear-gradient(90deg, #3e8dff 0%, #8e68ff 52%, #ed69ad 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>") !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: left top, right 14px center !important;
+  background-size: 100% 100%, 16px 16px !important;
+
+  box-shadow:
+    0 14px 30px rgba(3, 16, 29, 0.26),
+    0 0 22px rgba(237, 105, 173, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.24) !important;
+}
+
+.safe-pill-select option {
+  color: #102033 !important;
+  background: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+/* 地图外壳单独作为浅蓝地图卡片，不和标题合成一个大方框 */
+#map-section.safe-scene2 .safe-map-shell {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 76vh !important;
+  min-height: 700px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+
+  background:
+    radial-gradient(circle at 55% 45%, #fbfdff 0%, #eaf6fd 44%, #dceef8 100%) !important;
+  border: 1px solid rgba(158, 205, 235, 0.48) !important;
+  box-shadow:
+    0 28px 70px rgba(4, 18, 32, 0.30),
+    0 0 46px rgba(131, 199, 255, 0.12) !important;
+}
+
+#map-section.safe-scene2 .safe-map-shell #global-map {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #eaf4fb !important;
+}
+
+/* 右上角分布图继续是深蓝玻璃卡 */
+#safe-map-overlay {
+  position: absolute !important;
+  top: 28px !important;
+  right: 28px !important;
+  z-index: 24 !important;
+  width: 322px !important;
+  padding: 20px 20px 18px !important;
+  border-radius: 4px !important;
+
+  background:
+    linear-gradient(180deg, rgba(22, 42, 58, 0.88), rgba(13, 30, 47, 0.92)) !important;
+  border: 1px solid rgba(213, 236, 250, 0.22) !important;
+  backdrop-filter: blur(10px) !important;
+
+  box-shadow:
+    0 24px 58px rgba(6, 21, 36, 0.36),
+    0 0 30px rgba(131, 199, 255, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.10) !important;
+}
+
+/* 小屏适配 */
+@media (max-width: 1100px) {
+  #map-section.safe-scene2 {
+    width: 92vw !important;
+    margin-top: 0 !important;
+    padding-top: 54px !important;
+  }
+
+  #map-section.safe-scene2 .safe-scene2-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  #safe-variable-controls.safe-toolbar {
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+  }
+
+  #map-section.safe-scene2 .safe-map-shell {
+    height: 78vh !important;
+    min-height: 760px !important;
+  }
+
+  #safe-map-overlay {
+    top: auto !important;
+    right: 18px !important;
+    left: 18px !important;
+    bottom: 18px !important;
+    width: auto !important;
+  }
+}
+
+/* === V23 CLEAN SCENE2 END === */
+
+
+
+/* === CENTER TITLE PATCH START === */
+
+/* =====================================================
+   第二幕：Exploring Global Heat Stress Perception 居中
+   ===================================================== */
+
+/* 第二幕整体不要产生额外方框 */
+#map-section.safe-scene2 {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 标题区改为中轴排版 */
+#map-section.safe-scene2 .safe-scene2-header {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto 36px !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 22px !important;
+
+  text-align: center !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* 标题文字块居中 */
+#map-section.safe-scene2 .safe-scene2-title {
+  width: 100% !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+
+  text-align: center !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* GLOBAL EXPLORER */
+#map-section.safe-scene2 .safe-kicker {
+  margin: 0 auto 14px !important;
+  text-align: center !important;
+
+  color: rgba(142, 194, 226, 0.88) !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 3.2px !important;
+  text-transform: uppercase !important;
+}
+
+/* 第二幕主标题 */
+#map-section.safe-scene2 .safe-scene2-title h2 {
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+
+  text-align: center !important;
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-size: clamp(46px, 5.5vw, 86px) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -2.6px !important;
+
+  color: #eef8ff !important;
+  text-shadow: 0 12px 36px rgba(0, 0, 0, 0.18) !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 第二幕标题下划线居中 */
+#map-section.safe-scene2 .safe-scene2-title h2::after {
+  content: "" !important;
+  display: block !important;
+  width: 96px !important;
+  height: 4px !important;
+  margin: 20px auto 0 !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #83c7ff, #ed69ad, #f2a06b) !important;
+}
+
+/* 第二幕描述文字居中 */
+#map-section.safe-scene2 .safe-scene2-title p:last-child {
+  max-width: 760px !important;
+  margin: 20px auto 0 !important;
+
+  text-align: center !important;
+  color: rgba(220, 238, 248, 0.80) !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 第二幕选择器也居中，更像 Treepedia */
+#safe-variable-controls.safe-toolbar {
+  position: static !important;
+
+  width: auto !important;
+  height: auto !important;
+  margin: 4px auto 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  transform: none !important;
+}
+
+/* 选择器保持蓝粉跳色 */
+#safe-variable-controls .safe-pill-select {
+  min-width: 166px !important;
+  height: 46px !important;
+
+  border-radius: 13px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+
+  background-image:
+    linear-gradient(90deg, #3e8dff 0%, #8e68ff 52%, #ed69ad 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>") !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: left top, right 14px center !important;
+  background-size: 100% 100%, 16px 16px !important;
+
+  border: 1px solid rgba(255,255,255,0.28) !important;
+  box-shadow:
+    0 14px 30px rgba(3, 16, 29, 0.24),
+    0 0 24px rgba(237, 105, 173, 0.10),
+    inset 0 1px 0 rgba(255,255,255,0.22) !important;
+}
+
+/* 下拉菜单文字修复 */
+#safe-variable-controls .safe-pill-select option {
+  color: #102033 !important;
+  background: #ffffff !important;
+}
+
+/* 地图和标题之间留出更自然距离 */
+#map-section.safe-scene2 .safe-map-shell {
+  margin-top: 8px !important;
+}
+
+/* === CENTER TITLE PATCH END === */
+
+
+
+/* === SCENE2 TITLE SIZE FITLINE START === */
+
+/* 第二幕标题略缩小，增加呼吸感 */
+#map-section.safe-scene2 .safe-scene2-header {
+  margin: 0 auto 48px !important;
+  padding: 14px 0 8px !important;
+  gap: 18px !important;
+}
+
+#map-section.safe-scene2 .safe-kicker {
+  font-size: 11px !important;
+  letter-spacing: 3px !important;
+  margin-bottom: 10px !important;
+}
+
+#map-section.safe-scene2 .safe-scene2-title h2 {
+  font-size: clamp(38px, 4.5vw, 68px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -1.6px !important;
+}
+
+#map-section.safe-scene2 .safe-scene2-title h2::after {
+  width: 88px !important;
+  height: 4px !important;
+  margin: 18px auto 0 !important;
+}
+
+#map-section.safe-scene2 .safe-scene2-title p:last-child {
+  max-width: 720px !important;
+  margin: 18px auto 0 !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+#safe-variable-controls.safe-toolbar {
+  margin-top: 8px !important;
+}
+
+#map-section.safe-scene2 .safe-map-shell {
+  margin-top: 18px !important;
+}
+
+/* === SCENE2 TITLE SIZE FITLINE END === */

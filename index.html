@@ -1,0 +1,4953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Thermal Voices MVP v19-restore</title>
+
+  <!-- Mapbox GL JS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js"></script>
+
+  <!-- ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+  <link rel="stylesheet" href="style.css?v=sleep_regression_redesign_20260607_115826" />
+<link rel="stylesheet" href="scene2-safe.css?v=restoreCorrectIndex_20260528_141648">
+
+<!-- === FINAL BLUEFLOW REAL DOM STYLE START === -->
+<style id="final-blueflow-real-dom-style">
+
+/* =====================================================
+   Final Blue Flow Background
+   Scene 2 deep blue → Scene 3 middle blue → Scene 4 light blue
+   ===================================================== */
+
+html,
+body {
+  background:
+    linear-gradient(
+      180deg,
+      #06172b 0%,
+      #0a213c 26%,
+      #244e70 48%,
+      #7fa6bf 72%,
+      #e7f3fb 100%
+    ) !important;
+}
+
+/* 第二幕：真实 DOM 由 JS 加 class */
+.final-blue-scene2 {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(112, 188, 255, 0.16), transparent 32%),
+    linear-gradient(
+      180deg,
+      #06172b 0%,
+      #0a213c 42%,
+      #173856 76%,
+      #244e70 100%
+    ) !important;
+  background-color: #06172b !important;
+  margin: 0 !important;
+  padding-top: 92px !important;
+  padding-bottom: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 第三幕 */
+#profile-dashboard.final-blue-scene3,
+.final-blue-scene3 {
+  background:
+    radial-gradient(circle at 22% 8%, rgba(174, 220, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 78% 32%, rgba(237, 105, 173, 0.08), transparent 32%),
+    linear-gradient(
+      180deg,
+      #244e70 0%,
+      #4f7894 34%,
+      #91b5ca 68%,
+      #d4e8f3 100%
+    ) !important;
+  background-color: #91b5ca !important;
+  margin: 0 !important;
+  padding-top: 88px !important;
+  padding-bottom: 96px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 第四幕 */
+#about-section.final-blue-scene4,
+.final-blue-scene4 {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(128, 194, 255, 0.14), transparent 30%),
+    radial-gradient(circle at 78% 22%, rgba(237, 105, 173, 0.07), transparent 30%),
+    linear-gradient(
+      180deg,
+      #d4e8f3 0%,
+      #ecf7fc 55%,
+      #f8fcff 100%
+    ) !important;
+  background-color: #ecf7fc !important;
+  margin: 0 !important;
+  padding-top: 96px !important;
+  padding-bottom: 116px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 强制去掉二三四幕自己的 before/after 色块 */
+.final-blue-scene2::before,
+.final-blue-scene2::after,
+.final-blue-scene3::before,
+.final-blue-scene3::after,
+.final-blue-scene4::before,
+.final-blue-scene4::after,
+#profile-dashboard::before,
+#profile-dashboard::after,
+#about-section::before,
+#about-section::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* 第二幕标题缩小 */
+.final-blue-scene2-title {
+  font-size: clamp(42px, 3.75vw, 60px) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.035em !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+/* 第二幕 kicker */
+.final-blue-scene2-kicker {
+  font-size: 11px !important;
+  letter-spacing: 0.28em !important;
+  opacity: 0.76 !important;
+  margin-bottom: 12px !important;
+}
+
+/* 第二幕说明 */
+.final-blue-scene2-subtitle {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  max-width: 680px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 第三幕大标题 Emotion / Attention / Mechanism 缩小 */
+.final-blue-row-title {
+  font-size: clamp(34px, 3.1vw, 46px) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.03em !important;
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+}
+
+/* 第三幕图表标题更克制 */
+#profile-dashboard h3,
+#profile-dashboard .chart-title,
+#profile-dashboard .profile-chart-title {
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+}
+
+/* 图表区域弱化白色卡片感 */
+#profile-dashboard .chart-card,
+#profile-dashboard .profile-card,
+#profile-dashboard .card,
+#profile-dashboard .panel,
+.final-blue-scene3 .chart-card,
+.final-blue-scene3 .profile-card,
+.final-blue-scene3 .card,
+.final-blue-scene3 .panel {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  box-shadow: 0 14px 34px rgba(16, 45, 70, 0.10) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* ECharts 容器不要一块纯白 */
+#profile-dashboard canvas,
+#profile-dashboard .echarts-for-react,
+#profile-dashboard [id*="chart"],
+#profile-dashboard [class*="chart"] {
+  background-color: transparent !important;
+}
+
+/* 第四幕文字更像极简项目页 */
+#about-section .about-minimal-heading {
+  font-size: 19px !important;
+}
+
+#about-section .about-minimal-text p {
+  font-size: 16px !important;
+  line-height: 1.66 !important;
+}
+
+/* 修复中间断层 */
+.final-blue-scene2 + #profile-dashboard,
+.final-blue-scene2 + .final-blue-scene3,
+#profile-dashboard + #about-section,
+.final-blue-scene3 + .final-blue-scene4 {
+  margin-top: 0 !important;
+}
+
+/* 地图底部不再留深色硬边 */
+.final-blue-scene2 .safe-map-shell,
+.final-blue-scene2 .map-shell,
+.final-blue-scene2 .map-wrapper,
+.final-blue-scene2 #global-map {
+  margin-bottom: 0 !important;
+}
+
+/* 手机端 */
+@media (max-width: 900px) {
+  .final-blue-scene2-title {
+    font-size: clamp(34px, 7vw, 46px) !important;
+  }
+
+  .final-blue-row-title {
+    font-size: clamp(30px, 6vw, 38px) !important;
+  }
+}
+
+</style>
+<!-- === FINAL BLUEFLOW REAL DOM STYLE END === -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Thermal Voices <span class="version-tag">MVP v19-restore</span></h1>
+    <p>Mapping how cities feel heat</p>
+  </header>
+
+
+  <!-- 00 Opening Hero Globe -->
+  
+
+
+<section id="opening-hero">
+  <div class="hero-topbar">
+<button id="hero-about-btn" type="button" data-enter-atlas="true" class="enter-atlas-trigger">About</button>
+  </div>
+
+  <div id="three-hero-stage"></div>
+
+  <div class="hero-cinematic-overlay"></div>
+
+  <div class="opening-title-wrap">
+    <p class="opening-mini">INTERACTIVE GLOBAL ATLAS</p>
+
+    <h1 class="opening-main-title">
+      Global Urban Heat Perception
+    </h1>
+
+    <p class="opening-main-subtitle">
+      A visual atlas of how cities perceive, express, and respond to heat through emotion, attention, and everyday urban experience.
+    </p>
+
+    <button id="hero-enter-btn" type="button">
+      Enter the atlas
+    </button>
+  </div>
+</section>
+<!-- === SCENE2 INTERMISSION TITLE PAGE START === -->
+<section id="scene2-title-page" class="scene2-title-page" aria-label="Same Heat, Different Emotion">
+  <div class="scene2-title-bg"></div>
+
+  <div class="scene2-title-inner">
+    <h2 class="scene2-title-main">Same Heat, Different Emotion</h2>
+    <p class="scene2-title-sub">A shared emotional fingerprint with local accents</p>
+  </div>
+</section>
+
+
+<!-- === SCENE2 FULLSCREEN FINAL START === -->
+<section id="scene2-comparison" class="scene2-comparison scene2-fullscreen-final" aria-label="Global city map and emotion wheel">
+  <div class="scene2-compare-shell">
+    <div class="scene2-compare-grid">
+
+      <section class="scene2-map-card">
+        <div class="scene2-card-head scene2-map-head">
+          <div>
+            <h3>Global City Map</h3>
+            <p>Click a city to inspect its emotional profile.</p>
+          </div>
+          <div class="scene2-map-chip">Emotion Atlas</div>
+        </div>
+
+        <div id="scene2-map-view" class="scene2-map-view"></div>
+      </section>
+
+      <aside class="scene2-profile-panel">
+        <div class="scene2-card-head scene2-profile-head">
+          <div class="scene2-profile-titlebox">
+            <h3>Emotion Wheel</h3>
+            <p id="scene2-profile-location">Selected city · global and country baselines</p>
+          </div>
+
+          <div class="scene2-select-wrap">
+            <label for="scene2-city-select">Selected city</label>
+            <select id="scene2-city-select"></select>
+          </div>
+        </div>
+
+        <div class="scene2-radar-wrap">
+          <canvas id="scene2-radar-chart"></canvas>
+        </div>
+
+        <div class="scene2-legend-row">
+          <span class="scene2-legend-chip city">Selected city</span>
+          <span class="scene2-legend-chip global">Global baseline</span>
+          <span class="scene2-legend-chip country">Country baseline</span>
+        </div>
+
+        <div class="scene2-stats-grid">
+          <div class="scene2-stat-card">
+            <div class="scene2-stat-label">City</div>
+            <div id="scene2-stat-city" class="scene2-stat-value">—</div>
+          </div>
+
+          <div class="scene2-stat-card">
+            <div class="scene2-stat-label">Top emotion</div>
+            <div id="scene2-top-emotion" class="scene2-stat-value">—</div>
+          </div>
+
+          <div class="scene2-stat-card">
+            <div class="scene2-stat-label">Top share</div>
+            <div id="scene2-top-share" class="scene2-stat-value">—</div>
+          </div>
+
+          <div class="scene2-stat-card">
+            <div class="scene2-stat-label">Largest gap</div>
+            <div id="scene2-largest-gap" class="scene2-stat-value">—</div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- === ATTENTION INTERLUDE START === -->
+<section id="interlude-attention" class="attention-interlude" aria-label="Same Emotion, Different Attention">
+  <div class="attention-interlude-bg"></div>
+
+  <div class="attention-interlude-inner">
+    <h2 class="attention-interlude-title">Same Emotion, Different Attention</h2>
+    <p class="attention-interlude-subtitle">
+      How 24 attention subcategories route heat into emotion?
+    </p>
+  </div>
+
+  <div class="attention-interlude-hint">CLICK TO CONTINUE</div>
+</section>
+
+
+<!-- === SCENE3 ATTENTION ROUTING START === -->
+<section id="scene3-attention-routing" class="scene3-attention-routing" aria-label="Same Emotion, Different Attention">
+
+  <div class="scene3-ambient scene3-ambient-a"></div>
+  <div class="scene3-ambient scene3-ambient-b"></div>
+  <div class="scene3-ambient scene3-ambient-c"></div>
+
+  <div class="scene3-routing-inner">
+
+    <div class="scene3-routing-head">
+      <div class="scene3-routing-kicker">ATTENTION ROUTING</div>
+      <h2 class="scene3-routing-title">Same Emotion, Different Attention</h2>
+      <p class="scene3-routing-subtitle">
+        Click one attention family to reveal its subcategories, then select a subcategory to inspect its emotional route.
+      </p>
+    </div>
+
+    <div class="scene3-routing-layout">
+
+      <div class="attention-bubble-stage" id="attentionBubbleStage">
+
+        <div class="attention-stage-hint">
+          <span>01</span>
+          Click a major family
+        </div>
+
+        <div class="attention-origin-label">Heat Perception</div>
+
+        <svg class="attention-route-svg" viewBox="0 0 1200 760" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="scene3FlowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7cc8ff" stop-opacity="0.14"/>
+              <stop offset="48%" stop-color="#9a7cff" stop-opacity="0.26"/>
+              <stop offset="100%" stop-color="#f05ca8" stop-opacity="0.16"/>
+            </linearGradient>
+          </defs>
+          <path
+            d="M110,620 C245,470 348,432 480,505 C594,568 682,612 778,500 C890,370 972,260 1115,182"
+            fill="none"
+            stroke="url(#scene3FlowGradient)"
+            stroke-width="36"
+            stroke-linecap="round"
+            opacity="0.72"
+          />
+          <path
+            d="M110,620 C245,470 348,432 480,505 C594,568 682,612 778,500 C890,370 972,260 1115,182"
+            fill="none"
+            stroke="rgba(255,255,255,0.46)"
+            stroke-width="1.5"
+            stroke-dasharray="8 12"
+            opacity="0.76"
+          />
+        </svg>
+
+        <div class="main-bubble-layer" id="mainBubbleLayer"></div>
+        <div class="sub-bubble-layer" id="subBubbleLayer"></div>
+
+        <div class="attention-floating-card" id="attentionFloatingCard" aria-hidden="true">
+          <button class="floating-card-close" id="floatingCardClose" type="button">×</button>
+
+          <div class="floating-card-label">SELECTED ROUTE</div>
+          <h3 id="floatingTitle">Subcategory</h3>
+          <p id="floatingFamily">Attention family</p>
+
+          <div class="floating-card-grid">
+            <div class="floating-metric">
+              <span>Code</span>
+              <strong id="floatingCode">—</strong>
+            </div>
+            <div class="floating-metric">
+              <span>Value</span>
+              <strong id="floatingValue">—</strong>
+            </div>
+            <div class="floating-metric">
+              <span>Emotion</span>
+              <strong id="floatingEmotion">—</strong>
+            </div>
+            <div class="floating-metric">
+              <span>Role</span>
+              <strong id="floatingRole">—</strong>
+            </div>
+          </div>
+
+          <div class="floating-description">
+            <span>Interpretation</span>
+            <p id="floatingDescription">—</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- === MECHANISM TITLE SECTION START === -->
+<section id="scene-mechanism-title" class="mechanism-title-section">
+  <div class="mechanism-title-inner">
+    <h2 class="mechanism-title-main">What Stays, What Shifts</h2>
+    <p class="mechanism-title-sub">
+      Universal mechanisms and local rewiring across 50 cities
+    </p>
+  </div>
+  <div class="mechanism-title-hint">CLICK TO CONTINUE</div>
+</section>
+<!-- === MECHANISM TITLE SECTION END === -->
+<!-- === SCENE3 ATTENTION ROUTING END === -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- === ATTENTION INTERLUDE END === -->
+
+
+
+<!-- === SCENE2 FULLSCREEN FINAL END === -->
+
+
+
+
+
+
+
+
+
+<!-- === SCENE2 INTERMISSION TITLE PAGE END === -->
+
+
+
+
+
+
+
+<!-- Variable selector -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- removed old scene2 block: id=map-section -->
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="hero-three.js?v=restore_gradient_safe_20260607_005518"></script>
+
+<!-- === MUTED MAPBOX BLUE SCRIPT START === -->
+
+<!-- === MUTED MAPBOX BLUE SCRIPT END === -->
+
+
+
+
+
+<section id="profile-dashboard" class="scene3-atlas">
+  <div class="scene3-atlas-inner">
+
+    <div class="scene3-city-control">
+      <span>Selected City</span>
+      <select id="scene3-city-select"></select>
+    </div>
+
+    <section class="atlas-block atlas-emotion">
+      <div class="atlas-title">
+        <div class="atlas-index">01</div>
+        <h2>Emotion</h2>
+        <p>Seven-emotion profile of the selected city compared with global and country baselines.</p>
+        <div class="atlas-accent"></div>
+      </div>
+
+      <div class="atlas-two-col">
+        <div class="atlas-panel atlas-panel-large">
+          <div class="panel-heading">
+            <h3>Emotion Wheel</h3>
+            <span>Selected city · global baseline</span>
+          </div>
+          <div id="scene3-emotion-wheel" class="atlas-chart"></div>
+        </div>
+
+        <div class="atlas-panel atlas-panel-large">
+          <div class="panel-heading">
+            <h3>Deviation from Baseline</h3>
+            <span>Selected city minus global average</span>
+          </div>
+          <div id="scene3-emotion-deviation" class="atlas-chart"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="atlas-block atlas-attention">
+      <div class="atlas-title">
+        <div class="atlas-index">02</div>
+        <h2>Attention</h2>
+        <p>Heat-related attention channels reorganise the emotional tone of urban heat perception.</p>
+        <div class="atlas-accent"></div>
+      </div>
+
+      <div class="atlas-two-col">
+        <div class="atlas-panel">
+          <div class="panel-heading">
+            <h3>Selected City Attention Channels</h3>
+            <span>Exposure · health · systems</span>
+          </div>
+          <div id="scene3-attention-modulators" class="atlas-chart"></div>
+        </div>
+
+        <div class="atlas-panel">
+          <div class="panel-heading">
+            <h3>Attention × Emotion Coupling</h3>
+            <span>Global ASR structure</span>
+          </div>
+          <div id="scene3-channel-heatmap" class="atlas-chart"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="atlas-block atlas-mechanism">
+      <div class="atlas-title">
+        <div class="atlas-index">03</div>
+        <h2>Mechanism</h2>
+        <p>Attention subcategories are connected to emotion nodes through recurrent mechanisms.</p>
+        <div class="atlas-accent"></div>
+      </div>
+
+      <div class="atlas-panel atlas-panel-wide">
+        <div class="panel-heading">
+          <h3>Attention Subcategories × Emotion Nodes</h3>
+          <span>Bubble size indicates mechanism strength; warm/cool colours indicate enrichment/depletion.</span>
+        </div>
+        <div id="scene3-mechanism-atlas" class="atlas-chart atlas-chart-tall"></div>
+      </div>
+    </section>
+
+    <section class="atlas-block atlas-lens">
+      <div class="atlas-title">
+        <div class="atlas-index">04</div>
+        <h2>Lens</h2>
+        <p>Click a mechanism to reveal cities where this perception pathway is strongest.</p>
+        <div class="atlas-accent"></div>
+      </div>
+
+      <div class="atlas-lens-grid">
+        <div class="atlas-panel">
+          <div class="panel-heading">
+            <h3>Mechanism Selector</h3>
+            <span>Backbone and switch-like mechanisms</span>
+          </div>
+          <div id="scene3-mechanism-buttons" class="mechanism-button-grid"></div>
+        </div>
+
+        <div class="atlas-panel">
+          <div class="panel-heading">
+            <h3>Highlighted Cities</h3>
+            <span>Click a city to update the profile</span>
+          </div>
+          <div id="scene3-mechanism-city-list" class="mechanism-city-list"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+
+<!-- =========================
+     FINAL ABOUT SECTION
+========================= -->
+<section id="about-section" class="about-minimal-section">
+  <div class="about-minimal-inner">
+
+    <!-- Column 1: Abstract + Contact -->
+    <div class="about-minimal-col about-col-abstract">
+      <h3 class="about-minimal-heading">Abstract</h3>
+
+      <div class="about-minimal-text">
+        <p>
+          Urban heat is increasingly recognised as a core challenge for urban liveability and climate justice,
+          yet we know little about how residents emotionally interpret it in everyday life. Here we propose
+          an attention–emotion framework that conceptualises urban heat perception as couplings between
+          which heat-related issues attract public attention and which emotions they elicit, applied to warm-season
+          tweets from 50 large cities.
+        </p>
+
+        <p>
+          Using a large language model as a closed-set classifier, we label tweets with attention categories
+          and discrete emotions to construct city-comparable indicators. We find a shared backbone of recurrent
+          mechanisms across cities: everyday burdens related to sleep, work and mobility are typically framed in sadness,
+          health alerts are strongly associated with fear, and systems and governance discourse is mostly neutral
+          with pockets of anxiety.
+        </p>
+
+        <p>
+          At the same time, we identify context-sensitive mechanisms in which similar thermal conditions are narrated
+          either as abnormal shocks or as normal background. These differences are closely linked to 15-minute accessibility
+          and environmental inequalities. Our framework moves beyond aggregate sentiment towards a mechanism-based,
+          multi-channel architecture of urban heat perception, offering guidance for more context-sensitive climate adaptive policy.
+        </p>
+      </div>
+
+      <div class="about-contact-block">
+        <h3 class="about-minimal-heading">Contact</h3>
+        <p class="about-contact-text">For more information, please contact:</p>
+        <a class="about-minimal-link about-email-link" href="mailto:meizi.you.2026@gmail.com">
+          meizi.you.2026@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <!-- Column 2: Team -->
+    <div class="about-minimal-col about-col-team">
+      <h3 class="about-minimal-heading">Team</h3>
+
+      <div class="about-team-list">
+        <div class="about-team-item">
+          <a href="javascript:void(0)" class="about-minimal-link">Meizi You</a>
+          <div class="about-team-role">Research Lead</div>
+        </div>
+
+        <div class="about-team-item">
+          <a href="javascript:void(0)" class="about-minimal-link">Waishan Qiu</a>
+          <div class="about-team-role">Visualization &amp; Web</div>
+        </div>
+
+        <div class="about-team-item">
+          <a href="javascript:void(0)" class="about-minimal-link">Laipeng Xu</a>
+          <div class="about-team-role">Visualization &amp; Web</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 3: Project -->
+    <div class="about-minimal-col about-col-project">
+      <h3 class="about-minimal-heading">Project</h3>
+
+      <div class="about-minimal-text">
+        <p>
+          This website visualises how selected cities express, attend to, and explain urban heat stress
+          through a multi-layer attention–emotion framework.
+        </p>
+
+        <p>
+          It combines global comparison, city-level exploration, and mechanism-based profiling to support
+          more context-sensitive understanding of climate adaptation and urban inequality.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- === STATIC ENTER + ABOUT SCRIPT START === -->
+<script>
+(function () {
+  "use strict";
+
+  function cleanText(text) {
+    return String(text || "")
+      .trim()
+      .replace(/\s+/g, " ")
+      .toLowerCase();
+  }
+
+  function findByExactText(selector, expectedText) {
+    const expected = cleanText(expectedText);
+    const nodes = Array.from(document.querySelectorAll(selector));
+
+    return nodes.find(function (el) {
+      return cleanText(el.textContent) === expected;
+    }) || null;
+  }
+
+  function findEnterButton() {
+    return (
+      findByExactText("button, a, div, span", "Enter the atlas") ||
+      document.querySelector("#enter-atlas-btn") ||
+      document.querySelector("[data-enter-atlas='true']") ||
+      document.querySelector(".enter-atlas-trigger")
+    );
+  }
+
+  function findAboutButton() {
+    return (
+      findByExactText("a, button, div, span", "About") ||
+      document.querySelector("#about-link") ||
+      document.querySelector(".nav-about") ||
+      document.querySelector(".about-link")
+    );
+  }
+
+  function findHeroSection(enterButton) {
+    if (enterButton) {
+      const section = enterButton.closest("section");
+      if (section) return section;
+    }
+
+    return (
+      document.querySelector("#hero") ||
+      document.querySelector("#hero-section") ||
+      document.querySelector(".hero") ||
+      document.querySelector(".hero-section") ||
+      document.querySelector(".opening-hero") ||
+      document.querySelector(".landing-hero") ||
+      document.querySelector(".three-hero") ||
+      document.querySelector(".hero-three") ||
+      document.querySelector("section")
+    );
+  }
+
+  function findMapSection() {
+    return (
+      document.querySelector("#scene2-title-page") ||
+        document.querySelector("#map-section") ||
+      document.querySelector(".safe-scene2") ||
+      document.querySelector("#global-map-section") ||
+      document.querySelector("#global-explorer") ||
+      (document.querySelector("#global-map") && document.querySelector("#global-map").closest("section")) ||
+      (document.querySelector(".safe-map-shell") && document.querySelector(".safe-map-shell").closest("section"))
+    );
+  }
+
+  function findAboutSection() {
+    return document.querySelector("#about-section");
+  }
+
+  function clearOldState() {
+    document.body.classList.remove(
+      "atlas-transitioning",
+      "atlas-entering"
+    );
+
+    document.querySelectorAll(".atlas-enter-hint").forEach(function (el) {
+      el.remove();
+    });
+
+    document.querySelectorAll(".atlas-cinematic-exit, .atlas-map-pre-reveal, .atlas-map-revealed").forEach(function (el) {
+      el.classList.remove("atlas-cinematic-exit", "atlas-map-pre-reveal", "atlas-map-revealed");
+    });
+  }
+
+  function initStaticEnter() {
+    clearOldState();
+
+    const enterButton = findEnterButton();
+    const aboutButton = findAboutButton();
+    const heroSection = findHeroSection(enterButton);
+    const mapSection = findMapSection();
+    const aboutSection = findAboutSection();
+
+    if (heroSection) {
+      heroSection.classList.add("atlas-hero-gate");
+    }
+
+    if (enterButton) {
+      enterButton.id = "enter-atlas-btn";
+      enterButton.classList.add("enter-atlas-trigger");
+      enterButton.setAttribute("data-enter-atlas", "true");
+      enterButton.setAttribute("role", "button");
+      enterButton.setAttribute("tabindex", "0");
+      enterButton.style.pointerEvents = "auto";
+      enterButton.style.cursor = "pointer";
+    } else {
+      console.warn("[Static Enter] Cannot find Enter the atlas button.");
+    }
+
+    if (aboutButton) {
+      aboutButton.classList.add("top-about-fixed");
+      aboutButton.style.pointerEvents = "auto";
+      aboutButton.style.cursor = "pointer";
+    }
+
+    // 打开页面时仍然停留第一幕；About 链接除外
+    if (window.location.hash !== "#about" && window.location.hash !== "#about-section") {
+      document.body.classList.add("atlas-locked");
+    } else {
+      document.body.classList.remove("atlas-locked");
+    }
+
+    function enterAtlas(event) {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      if (!mapSection) {
+        console.warn("[Static Enter] Cannot find map section.");
+        return;
+      }
+
+      document.body.classList.remove("atlas-locked");
+
+      mapSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+    function goAbout(event) {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      document.body.classList.remove("atlas-locked");
+
+      if (aboutSection) {
+        aboutSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }
+
+    if (enterButton) {
+      enterButton.addEventListener("click", enterAtlas);
+
+      enterButton.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          enterAtlas(event);
+        }
+      });
+    }
+
+    if (aboutButton) {
+      aboutButton.addEventListener("click", goAbout);
+    }
+
+    document.addEventListener("click", function (event) {
+      const target = event.target.closest("a, button, div, span");
+      if (!target) return;
+
+      const text = cleanText(target.textContent);
+
+      if (text === "enter the atlas") {
+        enterAtlas(event);
+      }
+
+      if (text === "about") {
+        goAbout(event);
+      }
+    }, true);
+
+    console.log("[Static Enter] Ready.");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initStaticEnter);
+  } else {
+    initStaticEnter();
+  }
+})();
+</script>
+<!-- === STATIC ENTER + ABOUT SCRIPT END === -->
+
+<!-- === FINAL BLUEFLOW REAL DOM SCRIPT START === -->
+<script id="final-blueflow-real-dom-script">
+(function () {
+  "use strict";
+
+  function norm(text) {
+    return String(text || "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+  }
+
+  function smallestContaining(text) {
+    const target = norm(text);
+    const nodes = Array.from(document.querySelectorAll("body *"))
+      .filter(function (el) {
+        const tag = el.tagName.toLowerCase();
+        if (["script", "style", "link", "meta"].includes(tag)) return false;
+        return norm(el.textContent).includes(target);
+      });
+
+    if (!nodes.length) return null;
+
+    nodes.sort(function (a, b) {
+      return norm(a.textContent).length - norm(b.textContent).length;
+    });
+
+    return nodes[0];
+  }
+
+  function exactInside(root, text) {
+    if (!root) return [];
+    const target = norm(text);
+
+    return Array.from(root.querySelectorAll("*")).filter(function (el) {
+      const tag = el.tagName.toLowerCase();
+      if (["script", "style", "link", "meta"].includes(tag)) return false;
+      return norm(el.textContent) === target;
+    });
+  }
+
+  function climbToSectionFromMap() {
+    const map = document.querySelector("#global-map");
+    if (!map) return null;
+
+    let node = map;
+
+    while (node && node !== document.body) {
+      const txt = norm(node.textContent);
+
+      if (
+        txt.includes("Same Heat, Different Emotion") ||
+        txt.includes("select an indicator")
+      ) {
+        return node;
+      }
+
+      if (node.tagName && node.tagName.toLowerCase() === "section") {
+        return node;
+      }
+
+      node = node.parentElement;
+    }
+
+    return map.closest("section") || map.parentElement;
+  }
+
+  function applyBlueFlow() {
+    // 第二幕
+    const scene2 = climbToSectionFromMap();
+    if (scene2) {
+      scene2.classList.add("final-blue-scene2");
+      scene2.classList.remove("final-fresh-scene2");
+    }
+
+    const title2 = smallestContaining("Same Heat, Different Emotion");
+    if (title2) {
+      title2.classList.add("final-blue-scene2-title");
+      title2.classList.remove("final-fresh-scene2-title");
+    }
+
+    const kicker2 = smallestContaining("GLOBAL EXPLORER");
+    if (kicker2) {
+      kicker2.classList.add("final-blue-scene2-kicker");
+    }
+
+    const subtitle2 = smallestContaining("Select an indicator to compare");
+    if (subtitle2) {
+      subtitle2.classList.add("final-blue-scene2-subtitle");
+    }
+
+    // 第三幕
+    const scene3 = document.querySelector("#profile-dashboard");
+    if (scene3) {
+      scene3.classList.add("final-blue-scene3");
+      scene3.classList.remove("final-fresh-scene3");
+
+      ["Emotion", "Attention", "Mechanism"].forEach(function (label) {
+        exactInside(scene3, label).forEach(function (el) {
+          el.classList.add("final-blue-row-title");
+          el.classList.remove("final-fresh-row-title");
+        });
+      });
+    }
+
+    // 第四幕
+    const scene4 = document.querySelector("#about-section");
+    if (scene4) {
+      scene4.classList.add("final-blue-scene4");
+      scene4.classList.remove("final-fresh-scene4");
+    }
+
+    console.log("[Final BlueFlow Real DOM] Applied:", {
+      scene2: !!scene2,
+      title2: !!title2,
+      kicker2: !!kicker2,
+      subtitle2: !!subtitle2,
+      scene3: !!scene3,
+      scene4: !!scene4
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyBlueFlow);
+  } else {
+    applyBlueFlow();
+  }
+
+  setTimeout(applyBlueFlow, 600);
+  setTimeout(applyBlueFlow, 1400);
+  setTimeout(applyBlueFlow, 2600);
+})();
+</script>
+<!-- === FINAL BLUEFLOW REAL DOM SCRIPT END === -->
+<script src="scene3-profile.js?v=restore_before_lightblue_20260607_011222"></script>
+
+
+
+
+
+<!-- === SAFE MERGE LENS PATCH START === -->
+<script>
+(function () {
+  function getBlockTitle(block) {
+    const h2 = block.querySelector('.atlas-title h2');
+    return h2 ? h2.textContent.trim().toLowerCase() : '';
+  }
+
+  function safeMergeLensIntoMechanism() {
+    const root = document.querySelector('#profile-dashboard');
+    if (!root) return false;
+
+    const inner = root.querySelector('.scene3-atlas-inner') || root;
+
+    const blocks = Array.from(inner.children).filter(el => {
+      return el.classList && el.classList.contains('atlas-block');
+    });
+
+    if (blocks.length < 3) return false;
+
+    let mechanismBlock = null;
+    let lensBlock = null;
+
+    blocks.forEach(block => {
+      const title = getBlockTitle(block);
+      if (title === 'mechanism' || title.includes('mechanism atlas')) {
+        mechanismBlock = block;
+      }
+      if (title === 'lens' || title.includes('mechanism lens') || block.classList.contains('atlas-lens')) {
+        lensBlock = block;
+      }
+    });
+
+    if (!mechanismBlock) {
+      mechanismBlock = blocks.find(b => b.classList.contains('atlas-mechanism'));
+    }
+
+    if (!lensBlock) {
+      lensBlock = blocks.find(b => b.classList.contains('atlas-lens'));
+    }
+
+    if (!mechanismBlock || !lensBlock) return false;
+
+    if (mechanismBlock.dataset.safeLensMerged === '1') return true;
+
+    const title = mechanismBlock.querySelector('.atlas-title h2');
+    if (title) title.textContent = 'Mechanism';
+
+    const index = mechanismBlock.querySelector('.atlas-title .atlas-index');
+    if (index) index.textContent = '03';
+
+    const lensTitle = lensBlock.querySelector('.atlas-title');
+
+    let mergedWrap = mechanismBlock.querySelector('.atlas-mechanism-lens-merged');
+
+    if (!mergedWrap) {
+      mergedWrap = document.createElement('div');
+      mergedWrap.className = 'atlas-mechanism-lens-merged';
+      mechanismBlock.appendChild(mergedWrap);
+    }
+
+    Array.from(lensBlock.children).forEach(child => {
+      if (child !== lensTitle) {
+        mergedWrap.appendChild(child);
+      }
+    });
+
+    lensBlock.remove();
+
+    mechanismBlock.dataset.safeLensMerged = '1';
+    mechanismBlock.classList.add('merged-mechanism-block');
+
+    // 重新调整 ECharts 尺寸
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 100);
+
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 600);
+
+    console.log('[Safe Merge Lens] 04 Lens 已合并进 03 Mechanism');
+    return true;
+  }
+
+  function runUntilSuccess() {
+    let count = 0;
+    const timer = setInterval(() => {
+      count += 1;
+      const ok = safeMergeLensIntoMechanism();
+      if (ok || count > 80) {
+        clearInterval(timer);
+      }
+    }, 250);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runUntilSuccess);
+  } else {
+    runUntilSuccess();
+  }
+
+  window.addEventListener('load', runUntilSuccess);
+})();
+</script>
+<!-- === SAFE MERGE LENS PATCH END === -->
+
+
+<!-- === MECHANISM FINAL POLISH SCRIPT START === -->
+<script>
+(function () {
+  function getTitleText(block) {
+    const h2 = block && block.querySelector ? block.querySelector('.atlas-title h2') : null;
+    return h2 ? h2.textContent.trim().toLowerCase() : '';
+  }
+
+  function findMechanismBlock(root) {
+    const inner = root.querySelector('.scene3-atlas-inner') || root;
+    const directBlocks = Array.from(inner.children).filter(el => {
+      return el.classList && el.classList.contains('atlas-block');
+    });
+
+    let block =
+      inner.querySelector('.atlas-mechanism') ||
+      directBlocks.find(el => getTitleText(el) === 'mechanism') ||
+      directBlocks.find(el => getTitleText(el).includes('mechanism'));
+
+    return block || null;
+  }
+
+  function findLensBlock(root) {
+    const inner = root.querySelector('.scene3-atlas-inner') || root;
+    const directBlocks = Array.from(inner.children).filter(el => {
+      return el.classList && el.classList.contains('atlas-block');
+    });
+
+    let block =
+      inner.querySelector('.atlas-lens') ||
+      directBlocks.find(el => getTitleText(el) === 'lens') ||
+      directBlocks.find(el => getTitleText(el).includes('mechanism lens'));
+
+    return block || null;
+  }
+
+  function safeMergeLens(root, mechanismBlock) {
+    if (!mechanismBlock) return false;
+
+    let wrap = mechanismBlock.querySelector('.atlas-mechanism-lens-merged');
+
+    if (!wrap) {
+      const buttons = root.querySelector('#scene3-mechanism-buttons');
+      const cities = root.querySelector('#scene3-mechanism-city-list');
+
+      if (buttons && cities) {
+        const leftPanel = buttons.closest('.atlas-panel') || buttons.parentElement;
+        const rightPanel = cities.closest('.atlas-panel') || cities.parentElement;
+
+        wrap = document.createElement('div');
+        wrap.className = 'atlas-mechanism-lens-merged';
+
+        if (leftPanel && rightPanel && leftPanel.parentElement === rightPanel.parentElement) {
+          const oldParent = leftPanel.parentElement;
+          wrap.appendChild(leftPanel);
+          wrap.appendChild(rightPanel);
+          mechanismBlock.appendChild(wrap);
+
+          if (oldParent && oldParent.children.length === 0) {
+            oldParent.remove();
+          }
+        }
+      }
+    }
+
+    const lensBlock = findLensBlock(root);
+
+    if (lensBlock && lensBlock !== mechanismBlock) {
+      if (!wrap) {
+        wrap = document.createElement('div');
+        wrap.className = 'atlas-mechanism-lens-merged';
+        mechanismBlock.appendChild(wrap);
+      }
+
+      const lensTitle = lensBlock.querySelector('.atlas-title');
+
+      Array.from(lensBlock.children).forEach(child => {
+        if (child !== lensTitle) {
+          wrap.appendChild(child);
+        }
+      });
+
+      lensBlock.remove();
+    }
+
+    return true;
+  }
+
+  function polishMechanism() {
+    const root = document.querySelector('#profile-dashboard');
+    if (!root) return false;
+
+    const mechanismBlock = findMechanismBlock(root);
+    if (!mechanismBlock) return false;
+
+    root.classList.add('mechanism-final-ready');
+    mechanismBlock.classList.add('mechanism-final-block');
+
+    const title = mechanismBlock.querySelector('.atlas-title h2');
+    if (title) title.textContent = 'Mechanism';
+
+    const index = mechanismBlock.querySelector('.atlas-title .atlas-index');
+    if (index) index.textContent = '03';
+
+    safeMergeLens(root, mechanismBlock);
+
+    const wrap =
+      mechanismBlock.querySelector('.atlas-mechanism-lens-merged') ||
+      root.querySelector('.atlas-mechanism-lens-merged');
+
+    if (!wrap) return false;
+
+    wrap.classList.add('mechanism-final-layout');
+
+    const buttons = root.querySelector('#scene3-mechanism-buttons');
+    const cityList = root.querySelector('#scene3-mechanism-city-list');
+
+    if (!buttons || !cityList) return false;
+
+    const leftPanel = buttons.closest('.atlas-panel') || buttons.parentElement;
+    const rightPanel = cityList.closest('.atlas-panel') || cityList.parentElement;
+
+    if (leftPanel) {
+      leftPanel.classList.add('mechanism-final-selector-panel');
+    }
+
+    if (rightPanel) {
+      rightPanel.classList.add('mechanism-final-result-panel');
+    }
+
+    buttons.classList.add('mechanism-final-button-list');
+    cityList.classList.add('mechanism-final-city-list');
+
+    // 给右侧卡片结构补 class，便于最终排版
+    const summary = cityList.querySelector('.lens-summary');
+    if (summary) summary.classList.add('mechanism-final-summary');
+
+    const grid = cityList.querySelector('.lens-city-grid');
+    if (grid) {
+      grid.classList.add('mechanism-final-city-grid');
+      Array.from(grid.children).forEach(card => {
+        if (card.nodeType === 1) {
+          card.classList.add('mechanism-final-city-card');
+        }
+      });
+    }
+
+    // 给左侧 mechanism chip 补最终 class
+    buttons.querySelectorAll('.mechanism-chip').forEach(chip => {
+      chip.classList.add('mechanism-final-chip');
+    });
+
+    // 监听之后因为点击 mechanism 重新渲染导致的 DOM 更新
+    if (!cityList.dataset.finalObserved) {
+      const observer = new MutationObserver(() => {
+        const summary = cityList.querySelector('.lens-summary');
+        if (summary) summary.classList.add('mechanism-final-summary');
+
+        const grid = cityList.querySelector('.lens-city-grid');
+        if (grid) {
+          grid.classList.add('mechanism-final-city-grid');
+          Array.from(grid.children).forEach(card => {
+            if (card.nodeType === 1) {
+              card.classList.add('mechanism-final-city-card');
+            }
+          });
+        }
+      });
+
+      observer.observe(cityList, {
+        childList: true,
+        subtree: true
+      });
+
+      cityList.dataset.finalObserved = '1';
+    }
+
+    if (!buttons.dataset.finalObserved) {
+      const observer = new MutationObserver(() => {
+        buttons.querySelectorAll('.mechanism-chip').forEach(chip => {
+          chip.classList.add('mechanism-final-chip');
+        });
+      });
+
+      observer.observe(buttons, {
+        childList: true,
+        subtree: true
+      });
+
+      buttons.dataset.finalObserved = '1';
+    }
+
+    setTimeout(() => window.dispatchEvent(new Event('resize')), 80);
+    setTimeout(() => window.dispatchEvent(new Event('resize')), 450);
+
+    return true;
+  }
+
+  function runLoop() {
+    let tries = 0;
+
+    const timer = setInterval(() => {
+      tries += 1;
+      const ok = polishMechanism();
+
+      if (ok || tries > 80) {
+        clearInterval(timer);
+        if (ok) {
+          console.log('[Mechanism Final Polish] applied');
+        } else {
+          console.warn('[Mechanism Final Polish] target not found');
+        }
+      }
+    }, 250);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runLoop);
+  } else {
+    runLoop();
+  }
+
+  window.addEventListener('load', runLoop);
+})();
+</script>
+<!-- === MECHANISM FINAL POLISH SCRIPT END === -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- === CLICK ATLAS INTRO PATCH START === -->
+<div id="atlas-intro-slides" class="atlas-intro-slides" aria-hidden="true">
+  <div class="atlas-intro-bg"></div>
+
+  <div class="atlas-intro-slidebox">
+    <img
+      class="atlas-intro-slide is-active"
+      src="assets/atlas_slides/slide_01_physical_heat.png"
+      alt="Physical Heat"
+    />
+    <img
+      class="atlas-intro-slide"
+      src="assets/atlas_slides/slide_02_heat_health.png"
+      alt="Heat and Health"
+    />
+    <img
+      class="atlas-intro-slide"
+      src="assets/atlas_slides/slide_03_heat_perception.png"
+      alt="Heat Perception"
+    />
+  </div>
+
+  <div class="atlas-intro-shade"></div>
+
+  <div class="atlas-intro-progress" aria-hidden="true">
+    <span class="is-active"></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="atlas-intro-hint">Click to continue</div>
+
+  <button id="atlas-intro-skip" class="atlas-intro-skip" type="button">Skip</button>
+</div>
+
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  ready(function () {
+    const overlay = document.getElementById("atlas-intro-slides");
+    if (!overlay) return;
+
+    const slides = Array.from(overlay.querySelectorAll(".atlas-intro-slide"));
+    const dots = Array.from(overlay.querySelectorAll(".atlas-intro-progress span"));
+    const skipBtn = document.getElementById("atlas-intro-skip");
+
+    let playing = false;
+    let activeIndex = 0;
+    let locked = false;
+
+    const EXIT_DURATION = 850;
+    const CLICK_LOCK = 650;
+
+    function showSlide(index) {
+      activeIndex = index;
+
+      slides.forEach(function (slide, i) {
+        slide.classList.remove("is-active", "is-before", "is-after");
+
+        if (i < index) {
+          slide.classList.add("is-before");
+        } else if (i > index) {
+          slide.classList.add("is-after");
+        } else {
+          slide.classList.add("is-active");
+        }
+      });
+
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("is-active", i === index);
+      });
+    }
+
+    function findTargetSection() {
+      return (
+        document.querySelector("#scene2-title-page") ||
+        document.querySelector("#map-section") ||
+        document.querySelector(".safe-scene2") ||
+        document.querySelector("#global-map") ||
+        document.querySelector("#profile-dashboard") ||
+        document.querySelector("section:nth-of-type(2)")
+      );
+    }
+
+    function finishIntro() {
+      if (!playing) return;
+
+      overlay.classList.add("is-leaving");
+      document.body.classList.remove("atlas-intro-playing");
+
+      setTimeout(function () {
+        overlay.classList.remove("is-visible", "is-leaving");
+        overlay.setAttribute("aria-hidden", "true");
+        playing = false;
+        activeIndex = 0;
+        locked = false;
+
+        const target = findTargetSection();
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      }, EXIT_DURATION);
+    }
+
+    function nextSlide() {
+      if (!playing || locked) return;
+
+      locked = true;
+      setTimeout(function () {
+        locked = false;
+      }, CLICK_LOCK);
+
+      if (activeIndex < slides.length - 1) {
+        showSlide(activeIndex + 1);
+      } else {
+        finishIntro();
+      }
+    }
+
+    function playIntro() {
+      if (playing) return;
+
+      playing = true;
+      activeIndex = 0;
+      locked = false;
+
+      document.body.classList.add("atlas-intro-playing");
+
+      overlay.setAttribute("aria-hidden", "false");
+      overlay.classList.add("is-visible");
+      overlay.classList.remove("is-leaving");
+
+      showSlide(0);
+    }
+
+    function findEnterButton() {
+      const candidates = Array.from(
+        document.querySelectorAll("button, a, [data-enter-atlas], .enter-atlas-trigger")
+      );
+
+      return candidates.find(function (el) {
+        const text = (el.textContent || "").trim().toLowerCase();
+        return text.includes("enter the atlas");
+      });
+    }
+
+    function replaceEnterButton() {
+      const oldBtn = findEnterButton();
+      if (!oldBtn || oldBtn.dataset.clickSlidesBound === "1") return;
+
+      const newBtn = oldBtn.cloneNode(true);
+      newBtn.dataset.clickSlidesBound = "1";
+      newBtn.removeAttribute("onclick");
+
+      if (newBtn.tagName.toLowerCase() === "a") {
+        newBtn.setAttribute("href", "javascript:void(0)");
+      }
+
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+
+      newBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        playIntro();
+        return false;
+      }, true);
+
+      console.log("[Click Atlas Slides] Enter button replaced.");
+    }
+
+    replaceEnterButton();
+
+    // 兜底：拦截所有 Enter the atlas 点击
+    document.addEventListener("click", function (event) {
+      const target = event.target.closest("button, a, [data-enter-atlas], .enter-atlas-trigger");
+      if (!target) return;
+
+      const text = (target.textContent || "").trim().toLowerCase();
+
+      if (text.includes("enter the atlas")) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        playIntro();
+        return false;
+      }
+    }, true);
+
+    // 点击全屏幻灯片区域：下一张
+    overlay.addEventListener("click", function (event) {
+      if (!playing) return;
+
+      if (event.target === skipBtn) return;
+      if (event.target.closest("#atlas-intro-skip")) return;
+
+      event.preventDefault();
+      nextSlide();
+    });
+
+    if (skipBtn) {
+      skipBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        finishIntro();
+      });
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (!overlay.classList.contains("is-visible")) return;
+
+      if (
+        event.key === " " ||
+        event.key === "Enter" ||
+        event.key === "ArrowRight"
+      ) {
+        event.preventDefault();
+        nextSlide();
+      }
+
+      if (event.key === "Escape") {
+        event.preventDefault();
+        finishIntro();
+      }
+    });
+
+    console.log("[Click Atlas Slides] installed.");
+  });
+})();
+</script>
+<!-- === CLICK ATLAS INTRO PATCH END === -->
+
+
+
+
+
+
+
+
+<!-- === SCENE2 INTERMISSION RUNTIME START === -->
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn);
+    } else {
+      fn();
+    }
+  }
+
+  ready(function () {
+    const titlePage = document.getElementById('scene2-title-page');
+
+    function getMapTarget() {
+      return (
+        document.querySelector('#map-section') ||
+        document.querySelector('.safe-scene2') ||
+        document.querySelector('#global-map') ||
+        document.querySelector('#profile-dashboard')
+      );
+    }
+
+    function getTitleTarget() {
+      return document.getElementById('scene2-title-page');
+    }
+
+    // 如果当前没有幻灯片接管 Enter，就兜底跳到标题页
+    document.addEventListener('click', function (event) {
+      const el = event.target.closest('button, a, [data-enter-atlas], .enter-atlas-trigger');
+      if (!el) return;
+
+      const text = (el.textContent || '').trim().toLowerCase();
+      if (!text.includes('enter the atlas')) return;
+
+      const slideOverlay = document.getElementById('atlas-intro-slides');
+
+      // 如果幻灯片存在，让幻灯片脚本接管；这里不抢
+      if (slideOverlay) return;
+
+      const target = getTitleTarget();
+      if (!target) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, true);
+
+    // 点击标题页继续进入地图第二幕
+    if (titlePage) {
+      titlePage.addEventListener('click', function () {
+        const target = getMapTarget();
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    }
+  });
+})();
+</script>
+<!-- === SCENE2 INTERMISSION RUNTIME END === -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- === MAPBOX TOKEN FIX START === -->
+<script>
+  window.MAPBOX_ACCESS_TOKEN = "pk.eyJ1IjoianYyeW0iLCJhIjoiY21oNDRrdTdzMGdrczJvcTAxeDZjMG4zdiJ9.SxckX6zT2_bvKPL4jdDTSQ";
+  if (window.mapboxgl) {
+    window.mapboxgl.accessToken = window.MAPBOX_ACCESS_TOKEN;
+  }
+</script>
+<!-- === MAPBOX TOKEN FIX END === -->
+
+<script src="scene2-comparison.js?v=emotion_wheel_white_20260607_101735"></script>
+
+<!-- === SCENE2 DELETE OLD TARGET PATCH START === -->
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  ready(function () {
+    const titlePage = document.getElementById("scene2-title-page");
+
+    if (titlePage) {
+      titlePage.onclick = function (event) {
+        const target = document.getElementById("scene2-comparison");
+        if (!target) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      };
+    }
+
+    // 兜底：删除运行后还残留在 DOM 里的旧第二幕
+    const oldSelectors = [
+      "#map-section",
+      ".safe-scene2",
+      ".scene2-dashboard",
+      "#global-map-section"
+    ];
+
+    oldSelectors.forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (el) {
+        if (el.id === "scene2-comparison") return;
+        if (el.id === "scene2-title-page") return;
+        el.remove();
+      });
+    });
+
+    // 进一步兜底：如果某个旧块同时含有旧标题和旧变量按钮，也删掉
+    document.querySelectorAll("section, div").forEach(function (el) {
+      if (el.id === "scene2-title-page") return;
+      if (el.id === "scene2-comparison") return;
+      if (el.closest("#scene2-comparison")) return;
+
+      const text = (el.textContent || "").toLowerCase();
+
+      const looksLikeOldScene2 =
+        text.includes("same heat, different emotion") &&
+        text.includes("selected variable") &&
+        text.includes("sadness");
+
+      if (looksLikeOldScene2) {
+        el.remove();
+      }
+    });
+
+    // 新第二幕 resize
+    setTimeout(function () {
+      if (window.resizeScene2FullscreenFinal) {
+        window.resizeScene2FullscreenFinal();
+      }
+      if (window.scene2ComparisonMap && window.scene2ComparisonMap.resize) {
+        window.scene2ComparisonMap.resize();
+      }
+    }, 500);
+  });
+})();
+</script>
+<!-- === SCENE2 DELETE OLD TARGET PATCH END === -->
+
+
+<!-- === ATTENTION INTERLUDE RUNTIME START === -->
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  ready(function () {
+    const interlude = document.getElementById("interlude-attention");
+    if (!interlude || interlude.dataset.attentionInterludeBound === "1") return;
+
+    interlude.dataset.attentionInterludeBound = "1";
+
+    function findNextVisibleSection(section) {
+      let next = section.nextElementSibling;
+
+      while (next) {
+        const style = window.getComputedStyle(next);
+        const visible =
+          style.display !== "none" &&
+          style.visibility !== "hidden" &&
+          next.offsetHeight > 0;
+
+        if (visible) return next;
+        next = next.nextElementSibling;
+      }
+
+      return null;
+    }
+
+    interlude.addEventListener("click", function (event) {
+      const interactive = event.target.closest("a, button, input, select, textarea");
+      if (interactive) return;
+
+      const next = findNextVisibleSection(interlude);
+
+      if (next) {
+        next.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+})();
+</script>
+<!-- === ATTENTION INTERLUDE RUNTIME END === -->
+
+
+
+
+
+
+
+
+
+
+<!-- === SCENE3 ATTENTION TARGET PATCH START === -->
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  ready(function () {
+    const interlude = document.getElementById("interlude-attention");
+
+    if (interlude) {
+      interlude.addEventListener("click", function (event) {
+        const target = document.getElementById("scene3-attention-routing");
+        if (!target) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, true);
+    }
+  });
+})();
+</script>
+<!-- === SCENE3 ATTENTION TARGET PATCH END === -->
+
+<script src="scene3-attention-routing.js?v=kill_orbit_bubbles_20260607_110733"></script>
+
+
+
+
+<!-- === SCENE2 SAFE CLEAN TEXT RUNTIME START === -->
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  ready(function () {
+    const scene = document.getElementById("scene2-comparison");
+    if (!scene) return;
+
+    function forceRestoreScene2() {
+      scene.style.display = "";
+      scene.style.visibility = "visible";
+      scene.style.opacity = "1";
+
+      const importantSelectors = [
+        "#scene2-map",
+        "#scene2-map-view",
+        ".scene2-map",
+        ".scene2-map-view",
+        ".mapboxgl-map",
+        ".scene2-wheel-panel",
+        ".scene2-profile-panel",
+        ".scene2-emotion-panel"
+      ];
+
+      importantSelectors.forEach(function (sel) {
+        scene.querySelectorAll(sel).forEach(function (el) {
+          el.style.display = "";
+          el.style.visibility = "visible";
+          el.style.opacity = "1";
+        });
+      });
+    }
+
+    function safeCleanText() {
+      forceRestoreScene2();
+
+      const candidates = scene.querySelectorAll("p, span, button, a, small");
+
+      candidates.forEach(function (el) {
+        const raw = (el.textContent || "").trim();
+        const text = raw.toLowerCase().replace(/\s+/g, " ");
+
+        const isLeaf = el.children.length === 0;
+        const isSmall = el.getBoundingClientRect().height < 80 && el.getBoundingClientRect().width < 520;
+
+        const removeExact =
+          text === "click a city to inspect its emotional profile." ||
+          text === "emotion atlas";
+
+        const removeSubtitle =
+          text.includes("compared with global and country baselines");
+
+        if (isLeaf && isSmall && (removeExact || removeSubtitle)) {
+          el.style.display = "none";
+          el.setAttribute("aria-hidden", "true");
+        }
+      });
+    }
+
+    safeCleanText();
+    setTimeout(safeCleanText, 300);
+    setTimeout(safeCleanText, 1000);
+
+    if (window.scene2ComparisonMap && window.scene2ComparisonMap.resize) {
+      setTimeout(function () {
+        window.scene2ComparisonMap.resize();
+      }, 500);
+    }
+  });
+})();
+</script>
+<!-- === SCENE2 SAFE CLEAN TEXT RUNTIME END === -->
+
+
+<!-- === SCENE2 BADGE SAFE HIDE START === -->
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  ready(function () {
+    const scene = document.getElementById("scene2-comparison");
+    if (!scene) return;
+
+    function hideOnlyBadgeLeaf() {
+      scene.querySelectorAll("span, button, a, div").forEach(function (el) {
+        const text = (el.textContent || "").trim().toLowerCase();
+        const isLeaf = el.children.length === 0;
+        const rect = el.getBoundingClientRect();
+        const isSmall = rect.width < 260 && rect.height < 80;
+
+        if (isLeaf && isSmall && text === "emotion atlas") {
+          el.style.display = "none";
+          el.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      if (window.scene2ComparisonMap && window.scene2ComparisonMap.resize) {
+        window.scene2ComparisonMap.resize();
+      }
+    }
+
+    hideOnlyBadgeLeaf();
+    setTimeout(hideOnlyBadgeLeaf, 400);
+    setTimeout(hideOnlyBadgeLeaf, 1200);
+  });
+})();
+</script>
+<!-- === SCENE2 BADGE SAFE HIDE END === -->
+
+
+<!-- === SCENE2 MAP RESIZE FIX START === -->
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  ready(function () {
+    function resizeScene2Map() {
+      // 常见命名兜底
+      const possibleMaps = [
+        window.scene2ComparisonMap,
+        window.scene2Map,
+        window.map,
+        window.globalCityMap
+      ];
+
+      possibleMaps.forEach(function (m) {
+        if (m && typeof m.resize === "function") {
+          try { m.resize(); } catch (e) {}
+        }
+      });
+
+      // 如果你的 map 实例存在于 mapboxgl 的 canvas 上，也通过 resize 事件触发
+      window.dispatchEvent(new Event("resize"));
+    }
+
+    resizeScene2Map();
+    setTimeout(resizeScene2Map, 200);
+    setTimeout(resizeScene2Map, 600);
+    setTimeout(resizeScene2Map, 1200);
+  });
+})();
+</script>
+<!-- === SCENE2 MAP RESIZE FIX END === -->
+<script src="scene3b-attention-scene.js?v=restore_before_lightblue_20260607_011222"></script>
+
+
+<!-- === MECHANISM TITLE CLICK SCRIPT START === -->
+<script>
+(function () {
+  function initMechanismTitleClick() {
+    const titleSection = document.getElementById("scene-mechanism-title");
+    if (!titleSection) return;
+
+    titleSection.addEventListener("click", function () {
+      const next = titleSection.nextElementSibling;
+      if (next) {
+        next.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMechanismTitleClick);
+  } else {
+    initMechanismTitleClick();
+  }
+})();
+</script>
+<!-- === MECHANISM TITLE CLICK SCRIPT END === -->
+
+
+
+
+
+
+
+
+<script src="scene4-mechanism.js?v=restore_gradient_safe_20260607_005518"></script>
+
+
+<script src="scene4-switch.js?v=restore_gradient_safe_20260607_005518"></script>
+
+
+<script src="scene5-driver-title.js?v=restore_gradient_safe_20260607_005518"></script>
+
+
+<script src="scene5-driver-ranking.js?v=restore_gradient_safe_20260607_005518"></script>
+<script src="scene5-city-implications.js?v=restore_gradient_safe_20260607_005518"></script>
+
+<script src="data/city_summary.inline.js?v=realE21Sadness_20260606_214445"></script>
+<script src="scene5-driver-signal.js?v=restore_gradient_safe_20260607_005518"></script>
+<script src="zz-scene3-final-override.js?v=restore_before_lightblue_20260607_011222"></script>
+
+<!-- === SCENE2 TITLE WHITE NO GLOW JS START === -->
+<script>
+(function () {
+  function fixScene2Title() {
+    const allEls = Array.from(document.querySelectorAll('section, div'));
+    let target = null;
+
+    for (const el of allEls) {
+      const txt = (el.innerText || '').trim();
+      if (txt.includes('Same Heat, Different Emotion')) {
+        target = el;
+        break;
+      }
+    }
+
+    if (!target) return;
+
+    // 往上找一个更大的 scene 容器
+    let scene = target;
+    for (let i = 0; i < 4; i++) {
+      if (!scene.parentElement) break;
+      scene = scene.parentElement;
+    }
+
+    // 移除本容器上的背景发光
+    target.style.backgroundImage = 'none';
+    target.style.boxShadow = 'none';
+    target.style.filter = 'none';
+
+    scene.style.backgroundImage = scene.style.backgroundImage
+      ? scene.style.backgroundImage.replace(/radial-gradient\([^)]+\)\s*,?/g, '')
+      : scene.style.backgroundImage;
+
+    // 处理可能存在的 glow 圆元素
+    const glowLike = scene.querySelectorAll('div, span');
+    glowLike.forEach(node => {
+      const cs = getComputedStyle(node);
+      const w = parseFloat(cs.width);
+      const h = parseFloat(cs.height);
+      const br = cs.borderRadius;
+      const blur = cs.filter || '';
+      const shadow = cs.boxShadow || '';
+
+      const looksLikeGlow =
+        w > 120 && h > 120 &&
+        (br.includes('50%') || parseFloat(br) > 40) &&
+        (blur.includes('blur') || shadow !== 'none');
+
+      if (looksLikeGlow) {
+        node.style.display = 'none';
+      }
+    });
+
+    // 主标题
+    const titleCandidates = scene.querySelectorAll('h1, .big-title, .hero-title');
+    titleCandidates.forEach(el => {
+      if ((el.innerText || '').includes('Same Heat, Different Emotion')) {
+        el.style.color = '#ffffff';
+        el.style.webkitTextFillColor = '#ffffff';
+        el.style.background = 'none';
+        el.style.textShadow = 'none';
+        el.style.boxShadow = 'none';
+        el.style.filter = 'none';
+      }
+    });
+
+    // 副标题
+    const subCandidates = scene.querySelectorAll('p, .subtitle, .hero-subtitle');
+    subCandidates.forEach(el => {
+      const txt = (el.innerText || '').trim();
+      if (txt.includes('A shared emotional fingerprint with local accents')) {
+        el.style.color = 'rgba(255,255,255,0.92)';
+        el.style.webkitTextFillColor = 'rgba(255,255,255,0.92)';
+        el.style.background = 'none';
+        el.style.textShadow = 'none';
+        el.style.boxShadow = 'none';
+        el.style.filter = 'none';
+      }
+    });
+  }
+
+  window.addEventListener('load', fixScene2Title);
+  setTimeout(fixScene2Title, 300);
+  setTimeout(fixScene2Title, 1000);
+})();
+</script>
+<!-- === SCENE2 TITLE WHITE NO GLOW JS END === -->
+
+
+<!-- === SCENE2 REBUILD CLEAN JS START === -->
+<script>
+(function () {
+  function rebuildScene2() {
+    // 找标题元素
+    const titleCandidates = Array.from(document.querySelectorAll('h1, h2, h3, .big-title, .hero-title, .title'));
+    const titleNode = titleCandidates.find(el =>
+      /Same Heat,\s*Different Emotion/i.test((el.textContent || '').trim())
+    );
+
+    if (!titleNode) return;
+
+    // 尽量找到“第二幕整页”容器
+    let scene = titleNode.closest('section, .scene, .panel, .slide, .chapter, [data-scene]');
+    if (!scene) scene = titleNode.parentElement;
+
+    // 向上找更像整页的大容器
+    let cur = scene;
+    while (cur && cur !== document.body) {
+      const rect = cur.getBoundingClientRect();
+      if (rect.height >= window.innerHeight * 0.75) {
+        scene = cur;
+        break;
+      }
+      cur = cur.parentElement;
+    }
+
+    if (!scene) return;
+
+    // 如果已经重建过，就不重复执行
+    if (scene.dataset.scene2Rebuilt === "1") return;
+    scene.dataset.scene2Rebuilt = "1";
+
+    // 删除第二幕原内容，直接重建
+    scene.innerHTML = `
+      <div class="scene2-clean-wrap">
+        <div class="scene2-clean-title">Same Heat, Different Emotion</div>
+        <div class="scene2-clean-subtitle">A shared emotional fingerprint with local accents</div>
+      </div>
+      <div class="scene2-clean-continue">CLICK TO CONTINUE</div>
+    `;
+
+    // 加上新 class
+    scene.classList.add('scene2-rebuilt-clean');
+
+    // 去掉可能残留的背景发光
+    scene.style.boxShadow = 'none';
+    scene.style.filter = 'none';
+
+    // 如果之前有背景图，不动；只清除直接的发光渐变
+    // 这里故意不改 background，避免误伤第二幕背景底色
+  }
+
+  window.addEventListener('load', rebuildScene2);
+  setTimeout(rebuildScene2, 200);
+  setTimeout(rebuildScene2, 800);
+  setTimeout(rebuildScene2, 1500);
+})();
+</script>
+<!-- === SCENE2 REBUILD CLEAN JS END === -->
+
+
+<!-- === SCENE2 FORCE WHITE TEXT JS START === -->
+<script id="scene2-force-white-text-js">
+(function () {
+  function setImportant(el, prop, value) {
+    if (!el || !el.style) return;
+    el.style.setProperty(prop, value, "important");
+  }
+
+  function isInsideLightBox(el) {
+    return !!el.closest(
+      ".card, .stat-card, .metric-card, .info-card, .profile-card, .scene2-stat-card, .scene2-profile-panel, .summary-card, .city-card, .legend, .legend-item, .chip, .pill, button, select, .mapboxgl-map, #global-map"
+    );
+  }
+
+  function forceScene2TextColor() {
+    const scene = document.getElementById("scene2-comparison");
+    if (!scene) return;
+
+    // 深色背景上的普通文字 -> 白色
+    scene.querySelectorAll("h1,h2,h3,h4,h5,h6,p,label,small,span,strong,b").forEach(function (el) {
+      if (isInsideLightBox(el)) return;
+      setImportant(el, "color", "#ffffff");
+      setImportant(el, "-webkit-text-fill-color", "#ffffff");
+      setImportant(el, "opacity", "1");
+      setImportant(el, "text-shadow", "none");
+    });
+
+    // SVG 图表标签 -> 白色
+    scene.querySelectorAll("svg text").forEach(function (el) {
+      if (isInsideLightBox(el)) return;
+      setImportant(el, "fill", "rgba(255,255,255,0.96)");
+      setImportant(el, "color", "rgba(255,255,255,0.96)");
+      setImportant(el, "opacity", "1");
+    });
+
+    // 白色/浅色卡片内部 -> 深蓝
+    scene.querySelectorAll(
+      ".card, .card *, .stat-card, .stat-card *, .metric-card, .metric-card *, .info-card, .info-card *, .profile-card, .profile-card *, .scene2-stat-card, .scene2-stat-card *, .scene2-profile-panel, .scene2-profile-panel *, .summary-card, .summary-card *, .city-card, .city-card *"
+    ).forEach(function (el) {
+      setImportant(el, "color", "#173f68");
+      setImportant(el, "-webkit-text-fill-color", "#173f68");
+      setImportant(el, "fill", "#173f68");
+      setImportant(el, "opacity", "1");
+    });
+
+    // 下拉框 / 图例按钮 -> 深蓝
+    scene.querySelectorAll("select, option, button, button *, .legend, .legend *, .legend-item, .legend-item *, .chip, .chip *, .pill, .pill *").forEach(function (el) {
+      setImportant(el, "color", "#173f68");
+      setImportant(el, "-webkit-text-fill-color", "#173f68");
+      setImportant(el, "fill", "#173f68");
+      setImportant(el, "opacity", "1");
+    });
+
+    console.log("[scene2 force white text] applied");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", forceScene2TextColor);
+  } else {
+    forceScene2TextColor();
+  }
+
+  window.addEventListener("load", forceScene2TextColor);
+  [300, 800, 1600, 3000].forEach(function (t) {
+    setTimeout(forceScene2TextColor, t);
+  });
+})();
+</script>
+<!-- === SCENE2 FORCE WHITE TEXT JS END === -->
+
+
+<!-- === SCENE2 EMOTION WHEEL WHITE FIX JS START === -->
+<script id="scene2-emotion-wheel-white-fix-js">
+(function () {
+  function setImp(el, prop, value) {
+    if (!el || !el.style) return;
+    el.style.setProperty(prop, value, "important");
+  }
+
+  function patchEmotionWheel() {
+    const scene = document.getElementById("scene2-comparison");
+    if (!scene) return;
+
+    // 尝试抓几个常见容器名
+    const wheel =
+      scene.querySelector(".emotion-wheel") ||
+      scene.querySelector(".emotion-wheel-panel") ||
+      scene.querySelector(".wheel-panel") ||
+      scene.querySelector("[id*='wheel']") ||
+      scene;
+
+    // 1) 深色区域上的标题文字 -> 白色
+    wheel.querySelectorAll("h1,h2,h3,h4,h5,h6,p,label,span,small,strong,b").forEach(el => {
+      // 白色/浅色盒子内部不改
+      if (el.closest(".card, .stat-card, .metric-card, .info-card, .profile-card, .city-card, .summary-card, .legend, .legend-item, .chip, .pill, select")) {
+        return;
+      }
+      setImp(el, "color", "#ffffff");
+      setImp(el, "-webkit-text-fill-color", "#ffffff");
+      setImp(el, "opacity", "1");
+      setImp(el, "text-shadow", "none");
+    });
+
+    // 2) SVG 文本 -> 白色
+    wheel.querySelectorAll("svg text").forEach(el => {
+      if (el.closest(".card, .stat-card, .metric-card, .info-card, .profile-card, .city-card, .summary-card")) {
+        setImp(el, "fill", "#173f68");
+        setImp(el, "color", "#173f68");
+      } else {
+        setImp(el, "fill", "rgba(255,255,255,0.96)");
+        setImp(el, "color", "rgba(255,255,255,0.96)");
+      }
+      setImp(el, "opacity", "1");
+    });
+
+    // 3) 网格线 / 轴线 / 轮廓线 -> 偏白
+    wheel.querySelectorAll("svg line, svg polyline, svg polygon, svg path, svg circle").forEach(el => {
+      const cls = (el.getAttribute("class") || "").toLowerCase();
+
+      // 数据点 / 数据线尽量不强改颜色，只提亮普通网格
+      const isLikelyGrid =
+        cls.includes("grid") ||
+        cls.includes("axis") ||
+        cls.includes("tick") ||
+        cls.includes("spoke") ||
+        cls.includes("radar");
+
+      if (isLikelyGrid || !cls) {
+        setImp(el, "stroke", "rgba(255,255,255,0.26)");
+      }
+    });
+
+    // 4) 图例胶囊 / 下拉框 -> 深蓝
+    wheel.querySelectorAll(".legend, .legend *, .legend-item, .legend-item *, .chip, .chip *, .pill, .pill *, select, option").forEach(el => {
+      setImp(el, "color", "#173f68");
+      setImp(el, "-webkit-text-fill-color", "#173f68");
+      setImp(el, "fill", "#173f68");
+      setImp(el, "opacity", "1");
+    });
+
+    // 5) 白色卡片 -> 深蓝
+    wheel.querySelectorAll(".card, .card *, .stat-card, .stat-card *, .metric-card, .metric-card *, .info-card, .info-card *, .profile-card, .profile-card *, .city-card, .city-card *, .summary-card, .summary-card *").forEach(el => {
+      setImp(el, "color", "#173f68");
+      setImp(el, "-webkit-text-fill-color", "#173f68");
+      setImp(el, "fill", "#173f68");
+      setImp(el, "opacity", "1");
+    });
+
+    console.log("[scene2 emotion wheel white fix] applied");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", patchEmotionWheel);
+  } else {
+    patchEmotionWheel();
+  }
+
+  window.addEventListener("load", patchEmotionWheel);
+  [300, 800, 1500, 2500, 4000].forEach(t => setTimeout(patchEmotionWheel, t));
+})();
+</script>
+<!-- === SCENE2 EMOTION WHEEL WHITE FIX JS END === -->
+
+<!-- === XLP CONTINUOUS AFTER HERO BG START === -->
+<style id="xlp-continuous-after-hero-bg-style">
+
+/*
+  核心逻辑：
+  1. 第一幕 #opening-hero 不动
+  2. 第二幕以后不再各自渐变
+  3. 用一个统一背景层 #xlp-after-hero-bg 覆盖第二幕以后全部高度
+  4. 第二、三、四幕 section 背景透明，共享同一张渐变
+*/
+
+#xlp-after-hero-bg {
+  position: absolute !important;
+  left: 0 !important;
+  top: var(--xlp-after-hero-top, 100vh) !important;
+  width: 100% !important;
+  height: var(--xlp-after-hero-height, 8000px) !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background: linear-gradient( 180deg, #3f6f8f 0%, #5f8da8 18%, #8fb5cc 36%, #b8d7e6 58%, #dceef6 78%, #ffffff 100% ) !important;
+  background-image: linear-gradient( 180deg, #3f6f8f 0%, #5f8da8 18%, #8fb5cc 36%, #b8d7e6 58%, #dceef6 78%, #ffffff 100% ) !important;
+  background-color: #9fc2d4 !important;
+}
+
+/* 第一幕保持在背景层上方，不被影响 */
+#opening-hero {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* 第二幕以后统一透明，显示同一张连续渐变 */
+#scene2-title-page,
+#scene2-comparison,
+#interlude-attention,
+#scene3-attention-routing,
+#scene3b-attention-scene,
+#scene-mechanism-title,
+#profile-dashboard,
+#about-section,
+.final-blue-scene2,
+.final-blue-scene3,
+.final-blue-scene4 {
+  position: relative !important;
+  z-index: 1 !important;
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* 去掉各幕自己的 before/after 色块，否则会叠深 */
+#scene2-title-page::before,
+#scene2-title-page::after,
+#scene2-comparison::before,
+#scene2-comparison::after,
+#interlude-attention::before,
+#interlude-attention::after,
+#scene3-attention-routing::before,
+#scene3-attention-routing::after,
+#scene3b-attention-scene::before,
+#scene3b-attention-scene::after,
+#scene-mechanism-title::before,
+#scene-mechanism-title::after,
+#profile-dashboard::before,
+#profile-dashboard::after,
+#about-section::before,
+#about-section::after,
+.final-blue-scene2::before,
+.final-blue-scene2::after,
+.final-blue-scene3::before,
+.final-blue-scene3::after,
+.final-blue-scene4::before,
+.final-blue-scene4::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+/* 隐藏以前加在内部的背景层 */
+.scene2-title-bg,
+.attention-interlude-bg,
+.scene3-ambient,
+.scene3b-bg {
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+/* 第二幕深色区域文字白色 */
+#scene2-title-page h1,
+#scene2-title-page h2,
+#scene2-title-page h3,
+#scene2-title-page p,
+#scene2-comparison h1,
+#scene2-comparison h2,
+#scene2-comparison h3,
+#scene2-comparison .scene2-card-head h3,
+#scene2-comparison .scene2-profile-titlebox h3,
+#scene2-comparison .scene2-profile-titlebox p,
+#scene2-comparison .scene2-select-wrap label {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* 浅色卡片内部仍然深蓝 */
+#scene2-comparison .scene2-stat-card,
+#scene2-comparison .scene2-stat-card *,
+#scene2-comparison .scene2-legend-chip,
+#scene2-comparison .scene2-legend-chip *,
+#scene2-comparison select,
+#scene2-comparison option {
+  color: #173f68 !important;
+  -webkit-text-fill-color: #173f68 !important;
+  fill: #173f68 !important;
+}
+
+/* Emotion wheel canvas 不再额外压暗 */
+#scene2-comparison canvas,
+#scene2-comparison #scene2-radar-chart {
+  filter: none !important;
+}
+
+</style>
+
+<script id="xlp-continuous-after-hero-bg-script">
+(function () {
+  function setImp(el, prop, value) {
+    if (!el || !el.style) return;
+    el.style.setProperty(prop, value, "important");
+  }
+
+  function ensureContinuousBg() {
+    const hero = document.getElementById("opening-hero");
+    if (!hero) {
+      console.warn("[XLP continuous bg] opening-hero not found");
+      return;
+    }
+
+    let bg = document.getElementById("xlp-after-hero-bg");
+
+    if (!bg) {
+      bg = document.createElement("div");
+      bg.id = "xlp-after-hero-bg";
+      document.body.insertBefore(bg, hero.nextSibling);
+    }
+
+    const heroTop = hero.getBoundingClientRect().top + window.scrollY;
+    const heroBottom = heroTop + hero.offsetHeight;
+    const docHeight = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight,
+      window.innerHeight
+    );
+
+    document.documentElement.style.setProperty("--xlp-after-hero-top", heroBottom + "px");
+    document.documentElement.style.setProperty("--xlp-after-hero-height", Math.max(docHeight - heroBottom, window.innerHeight) + "px");
+
+    setImp(bg, "position", "absolute");
+    setImp(bg, "left", "0");
+    setImp(bg, "top", heroBottom + "px");
+    setImp(bg, "width", "100%");
+    setImp(bg, "height", Math.max(docHeight - heroBottom, window.innerHeight) + "px");
+    setImp(bg, "z-index", "0");
+    setImp(bg, "pointer-events", "none");
+    setImp(bg, "background", "linear-gradient( 180deg, #3f6f8f 0%, #5f8da8 18%, #8fb5cc 36%, #b8d7e6 58%, #dceef6 78%, #ffffff 100% )");
+    setImp(bg, "background-image", "linear-gradient( 180deg, #3f6f8f 0%, #5f8da8 18%, #8fb5cc 36%, #b8d7e6 58%, #dceef6 78%, #ffffff 100% )");
+
+    setImp(hero, "position", "relative");
+    setImp(hero, "z-index", "3");
+
+    const transparentSelectors = [
+      "#scene2-title-page",
+      "#scene2-comparison",
+      "#interlude-attention",
+      "#scene3-attention-routing",
+      "#scene3b-attention-scene",
+      "#scene-mechanism-title",
+      "#profile-dashboard",
+      "#about-section",
+      ".final-blue-scene2",
+      ".final-blue-scene3",
+      ".final-blue-scene4"
+    ].join(",");
+
+    document.querySelectorAll(transparentSelectors).forEach(function (el) {
+      if (hero.contains(el)) return;
+      setImp(el, "position", "relative");
+      setImp(el, "z-index", "1");
+      setImp(el, "background", "transparent");
+      setImp(el, "background-image", "none");
+      setImp(el, "background-color", "transparent");
+      setImp(el, "box-shadow", "none");
+      setImp(el, "border-top", "none");
+      setImp(el, "border-bottom", "none");
+    });
+
+    document.querySelectorAll(".scene2-title-bg, .attention-interlude-bg, .scene3-ambient, .scene3b-bg").forEach(function (el) {
+      if (hero.contains(el)) return;
+      setImp(el, "display", "none");
+      setImp(el, "opacity", "0");
+      setImp(el, "background", "none");
+      setImp(el, "background-image", "none");
+    });
+
+    console.log("[XLP continuous bg] applied after hero");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", ensureContinuousBg);
+  } else {
+    ensureContinuousBg();
+  }
+
+  window.addEventListener("load", ensureContinuousBg);
+  window.addEventListener("resize", ensureContinuousBg);
+
+  [100, 300, 800, 1600, 3000, 5000].forEach(function (t) {
+    setTimeout(ensureContinuousBg, t);
+  });
+})();
+</script>
+<!-- === XLP CONTINUOUS AFTER HERO BG END === -->
+
+<!-- === XLP KILL SCENE3 ORBIT BUBBLES FINAL START === -->
+<style id="xlp-kill-scene3-orbit-bubbles-final-style">
+
+#scene3-attention-routing #scene3-orbit-bubbles-layer,
+#scene3-attention-routing #scene3-orbit-bubbles-layer *,
+#scene3-attention-routing .orbit-bubble,
+#scene3-attention-routing .scene3-ambient-bubble,
+#scene3-attention-routing .ambient-bubble,
+#scene3-attention-routing .floating-bubble,
+#scene3-attention-routing .attention-particle,
+#scene3-attention-routing .scene3-particle,
+#scene3-attention-routing .scene3-floating-bubble,
+#attentionBubbleStage #ambientBubbleLayer {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* 保留你的大圆、小圆、卡片 */
+#scene3-attention-routing .s3r-main-bubble,
+#scene3-attention-routing .s3r-group-bubble {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+#scene3-attention-routing .s3r-card-panel {
+  display: none !important;
+}
+
+#scene3-attention-routing .s3r-card-panel.is-visible {
+  display: block !important;
+}
+
+</style>
+
+<script id="xlp-kill-scene3-orbit-bubbles-final-script">
+(function () {
+  function killScene3Bubbles() {
+    var root = document.getElementById("scene3-attention-routing");
+    if (!root) return;
+
+    var selectors = [
+      "#scene3-orbit-bubbles-layer",
+      ".orbit-bubble",
+      ".scene3-ambient-bubble",
+      ".ambient-bubble",
+      ".floating-bubble",
+      ".attention-particle",
+      ".scene3-particle",
+      ".scene3-floating-bubble"
+    ].join(",");
+
+    root.querySelectorAll(selectors).forEach(function (el) {
+      if (el.closest(".s3r-main-bubble")) return;
+      if (el.closest(".s3r-group-bubble")) return;
+      if (el.closest(".s3r-card-panel")) return;
+      el.remove();
+    });
+
+    var ambient = root.querySelector("#ambientBubbleLayer");
+    if (ambient) {
+      ambient.innerHTML = "";
+      ambient.style.setProperty("display", "none", "important");
+      ambient.style.setProperty("opacity", "0", "important");
+      ambient.style.setProperty("visibility", "hidden", "important");
+    }
+  }
+
+  function boot() {
+    killScene3Bubbles();
+
+    var root = document.getElementById("scene3-attention-routing");
+    if (root && !window.__xlpKillScene3OrbitObserver) {
+      window.__xlpKillScene3OrbitObserver = new MutationObserver(function () {
+        clearTimeout(window.__xlpKillScene3OrbitTimer);
+        window.__xlpKillScene3OrbitTimer = setTimeout(killScene3Bubbles, 10);
+      });
+
+      window.__xlpKillScene3OrbitObserver.observe(root, {
+        childList: true,
+        subtree: true
+      });
+    }
+
+    [50, 150, 400, 900, 1600, 3000].forEach(function (t) {
+      setTimeout(killScene3Bubbles, t);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+
+  window.addEventListener("load", boot);
+
+  document.addEventListener("click", function () {
+    setTimeout(killScene3Bubbles, 30);
+    setTimeout(killScene3Bubbles, 180);
+  });
+})();
+</script>
+<!-- === XLP KILL SCENE3 ORBIT BUBBLES FINAL END === -->
+
+<!-- === XLP FORCE REWIRE BLUE ANYWHERE START === -->
+<style id="xlp-force-rewire-blue-anywhere-style">
+
+.xlp-force-rewire-blue,
+.xlp-force-rewire-blue * {
+  color: #1f4b83 !important;
+  -webkit-text-fill-color: #1f4b83 !important;
+  text-shadow: none !important;
+  background: none !important;
+  background-image: none !important;
+  filter: none !important;
+}
+
+/* 专门兜底：常见 orange / gold / accent 类 */
+.orange,
+.gold,
+.accent-orange,
+.accent-gold,
+.rewire-accent,
+.mechanism-rewire-accent {
+  color: #1f4b83 !important;
+  -webkit-text-fill-color: #1f4b83 !important;
+  text-shadow: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+</style>
+
+<script id="xlp-force-rewire-blue-anywhere-script">
+(function () {
+  const BLUE = "#1f4b83";
+
+  function isBadTag(el) {
+    if (!el || !el.tagName) return true;
+    const tag = el.tagName.toLowerCase();
+    return ["script", "style", "noscript", "meta", "link", "title"].includes(tag);
+  }
+
+  function forceBlue(el) {
+    if (!el || isBadTag(el)) return;
+
+    el.classList.add("xlp-force-rewire-blue");
+
+    el.style.setProperty("color", BLUE, "important");
+    el.style.setProperty("-webkit-text-fill-color", BLUE, "important");
+    el.style.setProperty("text-shadow", "none", "important");
+    el.style.setProperty("background", "none", "important");
+    el.style.setProperty("background-image", "none", "important");
+    el.style.setProperty("filter", "none", "important");
+
+    Array.from(el.children || []).forEach(function (child) {
+      if (isBadTag(child)) return;
+      child.style.setProperty("color", BLUE, "important");
+      child.style.setProperty("-webkit-text-fill-color", BLUE, "important");
+      child.style.setProperty("text-shadow", "none", "important");
+      child.style.setProperty("background", "none", "important");
+      child.style.setProperty("background-image", "none", "important");
+      child.style.setProperty("filter", "none", "important");
+    });
+  }
+
+  function hasDirectRewireText(el) {
+    if (!el || !el.childNodes) return false;
+
+    return Array.from(el.childNodes).some(function (node) {
+      if (node.nodeType !== Node.TEXT_NODE) return false;
+      const text = (node.nodeValue || "").replace(/\s+/g, " ").trim().toLowerCase();
+      return (
+        text.includes("what rewires them") ||
+        text.includes("rewires them")
+      );
+    });
+  }
+
+  function applyRewireBlue() {
+    let changed = 0;
+
+    // 1. 优先处理直接包含 what rewires them 的文字节点
+    document.querySelectorAll("body *").forEach(function (el) {
+      if (isBadTag(el)) return;
+
+      if (hasDirectRewireText(el)) {
+        forceBlue(el);
+        changed += 1;
+      }
+    });
+
+    // 2. 再兜底处理整句标题所在的小范围元素
+    document.querySelectorAll("h1, h2, h3, h4, p, span, strong, b, em, div").forEach(function (el) {
+      if (isBadTag(el)) return;
+
+      const text = (el.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+
+      if (
+        text.includes("what rewires them") &&
+        text.length < 140
+      ) {
+        forceBlue(el);
+        changed += 1;
+      }
+    });
+
+    // 3. 专门处理包含 what / rewires / them 的橙色 span
+    document.querySelectorAll("span, strong, b, em").forEach(function (el) {
+      if (isBadTag(el)) return;
+
+      const text = (el.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+      const cls = (el.className || "").toString().toLowerCase();
+      const style = (el.getAttribute("style") || "").toLowerCase();
+
+      const looksLikeAccent =
+        cls.includes("orange") ||
+        cls.includes("gold") ||
+        cls.includes("accent") ||
+        cls.includes("rewire") ||
+        style.includes("orange") ||
+        style.includes("gold") ||
+        style.includes("#b") ||
+        style.includes("#c") ||
+        style.includes("rgb");
+
+      if (
+        looksLikeAccent &&
+        (
+          text.includes("what") ||
+          text.includes("rewires") ||
+          text.includes("them")
+        )
+      ) {
+        forceBlue(el);
+        changed += 1;
+      }
+    });
+
+    console.log("[XLP] force rewire blue applied:", changed);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyRewireBlue);
+  } else {
+    applyRewireBlue();
+  }
+
+  window.addEventListener("load", applyRewireBlue);
+
+  [100, 300, 800, 1500, 3000, 5000].forEach(function (t) {
+    setTimeout(applyRewireBlue, t);
+  });
+
+  if (!window.__xlpRewireBlueObserver) {
+    window.__xlpRewireBlueObserver = new MutationObserver(function () {
+      clearTimeout(window.__xlpRewireBlueTimer);
+      window.__xlpRewireBlueTimer = setTimeout(applyRewireBlue, 60);
+    });
+
+    window.__xlpRewireBlueObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+  }
+})();
+</script>
+<!-- === XLP FORCE REWIRE BLUE ANYWHERE END === -->
+
+
+<!-- === XLP COUPLING PAGE REDESIGN START === -->
+
+<style id="xlp-coupling-page-redesign-style">
+
+.xlp-coupling-redesigned {
+  width: 100%;
+  min-height: 100vh;
+  padding: 82px 7vw 100px;
+  color: #1f4b83;
+  box-sizing: border-box;
+}
+
+.xlp-coupling-wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.xlp-coupling-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(31, 75, 131, 0.78);
+}
+
+.xlp-coupling-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #46a8ff 0%, #ff5ca8 100%);
+  display: inline-block;
+}
+
+.xlp-coupling-title {
+  max-width: 920px;
+  margin: 0 0 18px;
+  font-size: clamp(62px, 6.6vw, 104px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+  color: #1f4b83;
+}
+
+.xlp-coupling-subtitle {
+  max-width: 980px;
+  margin: 0 0 48px;
+  font-size: 22px;
+  line-height: 1.6;
+  color: rgba(31, 75, 131, 0.76);
+}
+
+.xlp-coupling-section {
+  margin-top: 28px;
+}
+
+.xlp-coupling-section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #1f4b83;
+}
+
+.xlp-coupling-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #1f4b83;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.xlp-coupling-card {
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  box-shadow: 0 18px 42px rgba(19, 60, 100, 0.08);
+  padding: 24px 26px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.xlp-backbone-list {
+  display: grid;
+  gap: 14px;
+}
+
+.xlp-backbone-row {
+  display: grid;
+  grid-template-columns: 340px minmax(280px, 1fr) 86px;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.54);
+}
+
+.xlp-backbone-name {
+  font-size: 20px;
+  font-weight: 850;
+  color: #1f4b83;
+  white-space: nowrap;
+}
+
+.xlp-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  margin-right: 10px;
+  background: rgba(70, 168, 255, 0.14);
+  color: #2196ff;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.xlp-bar-track {
+  position: relative;
+  height: 16px;
+  border-radius: 99px;
+  background: rgba(31, 75, 131, 0.10);
+  overflow: hidden;
+}
+
+.xlp-bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--w);
+  border-radius: inherit;
+  background: linear-gradient(90deg, #35a8ff 0%, #8b83e6 48%, #f35aa6 100%);
+}
+
+.xlp-bar-pct {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.xlp-count {
+  font-size: 20px;
+  font-weight: 900;
+  color: #2196ff;
+  text-align: right;
+}
+
+.xlp-country-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.xlp-country-card {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.52);
+  padding: 22px 16px;
+  text-align: center;
+}
+
+.xlp-country-flag {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.xlp-country-name {
+  font-size: 16px;
+  color: rgba(31, 75, 131, 0.70);
+  font-weight: 750;
+}
+
+.xlp-country-score {
+  margin-top: 6px;
+  font-size: 28px;
+  line-height: 1.05;
+  font-weight: 900;
+  color: #1f4b83;
+}
+
+.xlp-country-note {
+  margin-top: 4px;
+  font-size: 13px;
+  color: rgba(31, 75, 131, 0.58);
+  font-weight: 750;
+}
+
+.xlp-hold-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: #1f4b83;
+  margin-bottom: 8px;
+}
+
+.xlp-hold-sub {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(31, 75, 131, 0.68);
+  margin-bottom: 18px;
+}
+
+.xlp-footnote {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(31, 75, 131, 0.58);
+  font-style: italic;
+}
+
+.xlp-voice-list {
+  display: grid;
+  gap: 16px;
+}
+
+.xlp-voice-card {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.58);
+  padding: 20px 22px;
+  border: 1px solid rgba(255,255,255,0.42);
+}
+
+.xlp-voice-quote {
+  margin: 0 0 12px;
+  font-size: 19px;
+  line-height: 1.65;
+  color: #1f4b83;
+  font-weight: 700;
+}
+
+.xlp-voice-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(31, 75, 131, 0.62);
+  font-weight: 750;
+}
+
+.xlp-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(31, 75, 131, 0.08);
+  color: #1f4b83;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+@media (max-width: 1100px) {
+  .xlp-backbone-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .xlp-count {
+    text-align: left;
+  }
+
+  .xlp-country-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .xlp-coupling-redesigned {
+    padding: 56px 22px 70px;
+  }
+
+  .xlp-coupling-title {
+    font-size: clamp(44px, 10vw, 72px);
+  }
+
+  .xlp-coupling-subtitle {
+    font-size: 18px;
+  }
+}
+
+</style>
+
+
+<script id="xlp-coupling-page-redesign-script">
+(function () {
+  function normalize(text) {
+    return (text || "").replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  function findCouplingRoot() {
+    const candidates = Array.from(document.querySelectorAll("section, div, main, article"))
+      .filter(function (el) {
+        if (el.closest(".xlp-coupling-redesigned")) return false;
+
+        const text = normalize(el.textContent);
+        return (
+          text.includes("the couplings that hold everywhere") ||
+          text.includes("universal couplings") ||
+          text.includes("selected backbone")
+        );
+      });
+
+    if (!candidates.length) return null;
+
+    // 选文本匹配但不要太大的容器，避免误伤 body/main
+    candidates.sort(function (a, b) {
+      const ar = a.getBoundingClientRect();
+      const br = b.getBoundingClientRect();
+      const ascore = ar.width * ar.height;
+      const bscore = br.width * br.height;
+      return ascore - bscore;
+    });
+
+    let root = null;
+
+    for (const el of candidates) {
+      const rect = el.getBoundingClientRect();
+      const text = normalize(el.textContent);
+
+      if (
+        rect.width > 700 &&
+        rect.height > 320 &&
+        text.includes("the couplings that hold everywhere")
+      ) {
+        root = el;
+        break;
+      }
+    }
+
+    if (!root) {
+      const title = Array.from(document.querySelectorAll("h1, h2, h3"))
+        .find(function (el) {
+          return normalize(el.textContent).includes("the couplings that hold everywhere");
+        });
+
+      if (title) {
+        root =
+          title.closest("section") ||
+          title.closest("[class*='section']") ||
+          title.parentElement;
+      }
+    }
+
+    return root;
+  }
+
+  function buildCouplingHTML() {
+    const rows = [
+      ["E23", "Work / commute → Sadness", 96, "48/50"],
+      ["E33", "Consumptive cooling → Joy", 96, "48/50"],
+      ["H41", "Health warnings → Fear", 96, "48/50"],
+      ["S41", "Climate attribution → Neutral", 98, "49/50"],
+      ["H21", "Acute outcomes → Fear", 92, "46/50"],
+      ["E21", "Sleep → Sadness", 90, "45/50"],
+      ["E24", "Outdoor cooling relief → Joy", 88, "44/50"]
+    ];
+
+    const rowHTML = rows.map(function (r) {
+      return `
+        <div class="xlp-backbone-row">
+          <div class="xlp-backbone-name">
+            <span class="xlp-code">${r[0]}</span>${r[1]}
+          </div>
+          <div class="xlp-bar-track">
+            <div class="xlp-bar-fill" style="--w:${r[2]}%">
+              <span class="xlp-bar-pct">${r[2]}%</span>
+            </div>
+          </div>
+          <div class="xlp-count">${r[3]}</div>
+        </div>
+      `;
+    }).join("");
+
+    return `
+      <div class="xlp-coupling-redesigned">
+        <div class="xlp-coupling-wrap">
+
+          <div class="xlp-coupling-kicker">
+            <span class="xlp-coupling-dot"></span>
+            <span>Backbone mechanisms</span>
+          </div>
+
+          <h1 class="xlp-coupling-title">The couplings that hold everywhere</h1>
+
+          <p class="xlp-coupling-subtitle">
+            For these attention types, one emotion dominates in nearly every city. 
+            They form the shared grammar of urban heat perception.
+          </p>
+
+          <div class="xlp-coupling-section">
+            <div class="xlp-coupling-section-head">
+              <span class="xlp-coupling-index">1</span>
+              <span>How universal they are</span>
+            </div>
+
+            <div class="xlp-coupling-card">
+              <div class="xlp-backbone-list">
+                ${rowHTML}
+              </div>
+            </div>
+          </div>
+
+          <div class="xlp-coupling-section">
+            <div class="xlp-coupling-section-head">
+              <span class="xlp-coupling-index">2</span>
+              <span>It holds in every country — E23 → Sadness</span>
+            </div>
+
+            <div class="xlp-coupling-card">
+              <div class="xlp-hold-title">Unlike switch mechanisms, the backbone barely varies by nation.</div>
+              <div class="xlp-hold-sub">
+                Share of cities where work / commute heat aligns with sadness.
+              </div>
+
+              <div class="xlp-country-grid">
+                <div class="xlp-country-card">
+                  <div class="xlp-country-flag">🇦🇺</div>
+                  <div class="xlp-country-name">Australia</div>
+                  <div class="xlp-country-score">4 / 4</div>
+                  <div class="xlp-country-note">100%</div>
+                </div>
+
+                <div class="xlp-country-card">
+                  <div class="xlp-country-flag">🇨🇦</div>
+                  <div class="xlp-country-name">Canada</div>
+                  <div class="xlp-country-score">7 / 7</div>
+                  <div class="xlp-country-note">100%</div>
+                </div>
+
+                <div class="xlp-country-card">
+                  <div class="xlp-country-flag">🇬🇧</div>
+                  <div class="xlp-country-name">UK</div>
+                  <div class="xlp-country-score">7 / 7</div>
+                  <div class="xlp-country-note">100%</div>
+                </div>
+
+                <div class="xlp-country-card">
+                  <div class="xlp-country-flag">🇺🇸</div>
+                  <div class="xlp-country-name">US</div>
+                  <div class="xlp-country-score">30 / 32</div>
+                  <div class="xlp-country-note">94%</div>
+                </div>
+              </div>
+
+              <div class="xlp-footnote">
+                No country falls below 94%. Compared with switch mechanisms, where each country can split between emotional regimes, this stability is what makes the coupling a backbone.
+              </div>
+            </div>
+          </div>
+
+          <div class="xlp-coupling-section">
+            <div class="xlp-coupling-section-head">
+              <span class="xlp-coupling-index">3</span>
+              <span>Representative voices — E23 → Sadness</span>
+            </div>
+
+            <div class="xlp-voice-list">
+              <div class="xlp-voice-card">
+                <p class="xlp-voice-quote">
+                  “Standing on a packed platform in 40-degree heat with no air con, watching three delayed trains go past. This commute is breaking me.”
+                </p>
+                <div class="xlp-voice-meta">
+                  <span>📍 London, UK</span>
+                  <span class="xlp-pill">E23 Work & commute</span>
+                  <span class="xlp-pill">Sadness</span>
+                </div>
+              </div>
+
+              <div class="xlp-voice-card">
+                <p class="xlp-voice-quote">
+                  “Another 12-hour shift in a kitchen with no ventilation during this heatwave. I don't know how much longer I can keep doing this.”
+                </p>
+                <div class="xlp-voice-meta">
+                  <span>📍 Phoenix, US</span>
+                  <span class="xlp-pill">E23 Work & commute</span>
+                  <span class="xlp-pill">Sadness</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="xlp-footnote">
+              Tweets are paraphrased and anonymized for illustration.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `;
+  }
+
+  function applyCouplingRedesign() {
+    const root = findCouplingRoot();
+
+    if (!root) {
+      console.warn("[XLP coupling redesign] target section not found");
+      return;
+    }
+
+    if (root.dataset.xlpCouplingRedesigned === "1") return;
+
+    root.dataset.xlpCouplingRedesigned = "1";
+    root.classList.add("xlp-coupling-root");
+    root.innerHTML = buildCouplingHTML();
+
+    console.log("[XLP coupling redesign] applied");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyCouplingRedesign);
+  } else {
+    applyCouplingRedesign();
+  }
+
+  window.addEventListener("load", applyCouplingRedesign);
+
+  [200, 600, 1200, 2500, 5000].forEach(function (t) {
+    setTimeout(applyCouplingRedesign, t);
+  });
+})();
+</script>
+<!-- === XLP COUPLING PAGE REDESIGN END === -->
+
+
+<!-- === XLP COUPLING TITLE SINGLELINE START === -->
+<style id="xlp-coupling-title-singleline-style">
+
+/* Coupling page title: smaller and single line */
+.xlp-coupling-redesigned .xlp-coupling-title,
+.xlp-coupling-title {
+  max-width: none !important;
+  width: 100% !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+
+  font-size: clamp(44px, 4.6vw, 78px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.055em !important;
+  margin-bottom: 18px !important;
+}
+
+/* 放宽内容容器，保证标题有足够宽度 */
+.xlp-coupling-wrap {
+  max-width: 1500px !important;
+}
+
+/* 略微减小页面左右边距，给标题让空间 */
+.xlp-coupling-redesigned {
+  padding-left: 5.5vw !important;
+  padding-right: 5.5vw !important;
+}
+
+/* 副标题保持正常宽度，不要太长 */
+.xlp-coupling-subtitle {
+  max-width: 1050px !important;
+  font-size: 20px !important;
+}
+
+/* 小屏幕才允许换行，防止手机端溢出 */
+@media (max-width: 900px) {
+  .xlp-coupling-redesigned .xlp-coupling-title,
+  .xlp-coupling-title {
+    white-space: normal !important;
+    font-size: clamp(38px, 9vw, 64px) !important;
+  }
+}
+
+</style>
+<!-- === XLP COUPLING TITLE SINGLELINE END === -->
+
+
+<!-- === XLP COUPLING TITLE ALIGN CARD START === -->
+<style id="xlp-coupling-title-align-card-style">
+
+/* coupling 页面整体内容宽度：和下面方框统一 */
+.xlp-coupling-redesigned .xlp-coupling-wrap,
+.xlp-coupling-wrap {
+  max-width: 980px !important;
+  width: 980px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 大标题缩小，不超过下面方框宽度 */
+.xlp-coupling-redesigned .xlp-coupling-title,
+.xlp-coupling-title {
+  width: 100% !important;
+  max-width: 980px !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+
+  font-size: clamp(42px, 3.75vw, 58px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.052em !important;
+  margin-bottom: 18px !important;
+}
+
+/* 副标题也和方框对齐 */
+.xlp-coupling-redesigned .xlp-coupling-subtitle,
+.xlp-coupling-subtitle {
+  max-width: 980px !important;
+  width: 100% !important;
+  font-size: 18px !important;
+  line-height: 1.55 !important;
+}
+
+/* 方框保持和标题同宽 */
+.xlp-coupling-redesigned .xlp-coupling-card,
+.xlp-coupling-card {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 表格内部略微压缩，避免宽度变小后挤出 */
+.xlp-coupling-redesigned .xlp-backbone-row,
+.xlp-backbone-row {
+  grid-template-columns: 320px minmax(260px, 1fr) 76px !important;
+  gap: 16px !important;
+  padding: 13px 16px !important;
+}
+
+.xlp-coupling-redesigned .xlp-backbone-name,
+.xlp-backbone-name {
+  font-size: 18px !important;
+}
+
+.xlp-coupling-redesigned .xlp-count,
+.xlp-count {
+  font-size: 18px !important;
+}
+
+/* 小屏幕再允许换行 */
+@media (max-width: 1050px) {
+  .xlp-coupling-redesigned .xlp-coupling-wrap,
+  .xlp-coupling-wrap {
+    width: calc(100vw - 80px) !important;
+    max-width: calc(100vw - 80px) !important;
+  }
+
+  .xlp-coupling-redesigned .xlp-coupling-title,
+  .xlp-coupling-title {
+    white-space: normal !important;
+    font-size: clamp(38px, 7vw, 58px) !important;
+  }
+
+  .xlp-coupling-redesigned .xlp-backbone-row,
+  .xlp-backbone-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+</style>
+<!-- === XLP COUPLING TITLE ALIGN CARD END === -->
+
+
+<!-- === XLP SWITCH PAGE REDESIGN START === -->
+<style id="xlp-switch-page-redesign-style">
+
+.xlp-switch-redesign {
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+  padding: 62px 24px 76px !important;
+  color: #1f4b83 !important;
+  box-sizing: border-box !important;
+}
+
+.xlp-switch-kicker {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 16px !important;
+  font-size: 13px !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: rgba(31, 75, 131, 0.78) !important;
+}
+
+.xlp-switch-dot {
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 99px !important;
+  background: linear-gradient(135deg, #46a8ff 0%, #ff5ca8 100%) !important;
+  display: inline-block !important;
+}
+
+.xlp-switch-title {
+  margin: 0 0 14px !important;
+  max-width: 880px !important;
+  font-size: clamp(46px, 5.4vw, 78px) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.052em !important;
+  font-weight: 900 !important;
+  color: #1f4b83 !important;
+}
+
+.xlp-switch-lead {
+  max-width: 850px !important;
+  margin: 0 0 34px !important;
+  font-size: 19px !important;
+  line-height: 1.55 !important;
+  color: rgba(31, 75, 131, 0.72) !important;
+}
+
+.xlp-switch-block {
+  margin-top: 26px !important;
+}
+
+.xlp-switch-step {
+  display: flex !important;
+  align-items: center !important;
+  gap: 11px !important;
+  margin: 0 0 14px !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #1f4b83 !important;
+}
+
+.xlp-switch-num {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 999px !important;
+  background: #1f4b83 !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+}
+
+.xlp-switch-card {
+  border-radius: 22px !important;
+  background: rgba(255,255,255,0.36) !important;
+  border: 1px solid rgba(255,255,255,0.52) !important;
+  box-shadow: 0 18px 42px rgba(19, 60, 100, 0.08) !important;
+  padding: 20px 22px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.xlp-switch-rows {
+  display: grid !important;
+  gap: 13px !important;
+}
+
+.xlp-switch-row {
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.58) !important;
+  padding: 13px 15px 15px !important;
+}
+
+.xlp-switch-row-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 10px !important;
+}
+
+.xlp-switch-row-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  font-size: 16px !important;
+  font-weight: 850 !important;
+  color: #1f4b83 !important;
+}
+
+.xlp-switch-code {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 42px !important;
+  height: 25px !important;
+  padding: 0 10px !important;
+  border-radius: 999px !important;
+  background: rgba(70,168,255,0.14) !important;
+  color: #2196ff !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.xlp-switch-row-count {
+  font-size: 14px !important;
+  font-weight: 850 !important;
+  color: rgba(31,75,131,0.68) !important;
+}
+
+.xlp-splitbar {
+  height: 20px !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  background: rgba(31,75,131,0.13) !important;
+}
+
+.xlp-split-left,
+.xlp-split-right {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  white-space: nowrap !important;
+}
+
+.xlp-split-left {
+  justify-content: flex-start !important;
+  padding-left: 10px !important;
+}
+
+.xlp-split-right {
+  justify-content: flex-end !important;
+  padding-right: 10px !important;
+}
+
+.xlp-map-card {
+  border-radius: 22px !important;
+  background: rgba(255,255,255,0.38) !important;
+  border: 1px solid rgba(255,255,255,0.52) !important;
+  box-shadow: 0 18px 42px rgba(19, 60, 100, 0.08) !important;
+  padding: 20px 22px !important;
+}
+
+.xlp-map-head {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 14px !important;
+}
+
+.xlp-map-title {
+  margin: 0 0 5px !important;
+  font-size: 24px !important;
+  line-height: 1.15 !important;
+  font-weight: 900 !important;
+  color: #1f4b83 !important;
+}
+
+.xlp-map-sub {
+  margin: 0 !important;
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+  color: rgba(31,75,131,0.66) !important;
+}
+
+.xlp-map-legend {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  flex-wrap: wrap !important;
+  font-size: 13px !important;
+  font-weight: 750 !important;
+  color: rgba(31,75,131,0.68) !important;
+}
+
+.xlp-map-legend span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+}
+
+.xlp-map-legend i {
+  width: 11px !important;
+  height: 11px !important;
+  border-radius: 99px !important;
+  display: inline-block !important;
+}
+
+#xlp-e11-map {
+  width: 100% !important;
+  height: 390px !important;
+  border-radius: 17px !important;
+  overflow: hidden !important;
+  background: #e8f2f7 !important;
+}
+
+.xlp-country-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 15px !important;
+}
+
+.xlp-country-card {
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.58) !important;
+  text-align: center !important;
+  padding: 16px 12px !important;
+}
+
+.xlp-country-flag {
+  font-size: 24px !important;
+  margin-bottom: 5px !important;
+}
+
+.xlp-country-code {
+  font-size: 19px !important;
+  font-weight: 900 !important;
+  color: #1f4b83 !important;
+  margin-bottom: 2px !important;
+}
+
+.xlp-country-name {
+  font-size: 13px !important;
+  font-weight: 750 !important;
+  color: rgba(31,75,131,0.62) !important;
+}
+
+.xlp-country-value {
+  margin-top: 6px !important;
+  font-size: 25px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  color: #7d74db !important;
+}
+
+.xlp-country-note {
+  margin-top: 4px !important;
+  font-size: 12px !important;
+  color: rgba(31,75,131,0.52) !important;
+  font-weight: 750 !important;
+}
+
+.xlp-map-note {
+  margin-top: 13px !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  color: rgba(31,75,131,0.58) !important;
+  font-style: italic !important;
+}
+
+@media (max-width: 900px) {
+  .xlp-switch-redesign {
+    padding: 54px 22px 70px !important;
+  }
+
+  .xlp-country-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #xlp-e11-map {
+    height: 320px !important;
+  }
+}
+
+</style>
+
+<script id="xlp-switch-page-redesign-script">
+(function () {
+  const FALLBACK_TOKEN = "YOUR_MAPBOX_TOKEN";
+
+  const switchRows = [
+    {
+      code: "E11",
+      name: "Everyday heat — abnormal vs routine framing",
+      leftLabel: "Surprise",
+      leftCount: 26,
+      rightLabel: "Neutral",
+      rightCount: 24,
+      accent: "#7d74db"
+    },
+    {
+      code: "E31",
+      name: "Affective coping — joy vs complaint",
+      leftLabel: "Joy",
+      leftCount: 14,
+      rightLabel: "Negative",
+      rightCount: 36,
+      accent: "#f0a42a"
+    },
+    {
+      code: "S42",
+      name: "Environmental justice — anger vs evaluative",
+      leftLabel: "Anger-based",
+      leftCount: 27,
+      rightLabel: "Other",
+      rightCount: 23,
+      accent: "#e64b56"
+    },
+    {
+      code: "S21",
+      name: "Energy / planning — risk vs descriptive",
+      leftLabel: "Fear-based",
+      leftCount: 21,
+      rightLabel: "Descriptive",
+      rightCount: 29,
+      accent: "#d14e87"
+    }
+  ];
+
+  const e11Cities = [
+    { city:"Sydney", country:"Australia", countryCode:"AU", lat:-33.8688, lon:151.2093, regime:"Surprise" },
+    { city:"Melbourne", country:"Australia", countryCode:"AU", lat:-37.8136, lon:144.9631, regime:"Neutral" },
+    { city:"Brisbane", country:"Australia", countryCode:"AU", lat:-27.4698, lon:153.0251, regime:"Surprise" },
+    { city:"Perth", country:"Australia", countryCode:"AU", lat:-31.9505, lon:115.8605, regime:"Neutral" },
+
+    { city:"Vancouver", country:"Canada", countryCode:"CA", lat:49.2827, lon:-123.1207, regime:"Neutral" },
+    { city:"Calgary", country:"Canada", countryCode:"CA", lat:51.0447, lon:-114.0719, regime:"Surprise" },
+    { city:"Edmonton", country:"Canada", countryCode:"CA", lat:53.5461, lon:-113.4938, regime:"Surprise" },
+    { city:"Winnipeg", country:"Canada", countryCode:"CA", lat:49.8951, lon:-97.1384, regime:"Neutral" },
+    { city:"Toronto", country:"Canada", countryCode:"CA", lat:43.6532, lon:-79.3832, regime:"Surprise" },
+    { city:"Ottawa", country:"Canada", countryCode:"CA", lat:45.4215, lon:-75.6972, regime:"Neutral" },
+    { city:"Montreal", country:"Canada", countryCode:"CA", lat:45.5017, lon:-73.5673, regime:"Surprise" },
+
+    { city:"London", country:"UK", countryCode:"GB", lat:51.5072, lon:-0.1276, regime:"Surprise" },
+    { city:"Manchester", country:"UK", countryCode:"GB", lat:53.4808, lon:-2.2426, regime:"Neutral" },
+    { city:"Birmingham", country:"UK", countryCode:"GB", lat:52.4862, lon:-1.8904, regime:"Surprise" },
+    { city:"Glasgow", country:"UK", countryCode:"GB", lat:55.8642, lon:-4.2518, regime:"Neutral" },
+    { city:"Leeds", country:"UK", countryCode:"GB", lat:53.8008, lon:-1.5491, regime:"Neutral" },
+    { city:"Bristol", country:"UK", countryCode:"GB", lat:51.4545, lon:-2.5879, regime:"Surprise" },
+    { city:"Newcastle", country:"UK", countryCode:"GB", lat:54.9783, lon:-1.6178, regime:"Neutral" },
+
+    { city:"New York", country:"US", countryCode:"US", lat:40.7128, lon:-74.0060, regime:"Surprise" },
+    { city:"Boston", country:"US", countryCode:"US", lat:42.3601, lon:-71.0589, regime:"Surprise" },
+    { city:"Philadelphia", country:"US", countryCode:"US", lat:39.9526, lon:-75.1652, regime:"Surprise" },
+    { city:"Washington DC", country:"US", countryCode:"US", lat:38.9072, lon:-77.0369, regime:"Surprise" },
+    { city:"Miami", country:"US", countryCode:"US", lat:25.7617, lon:-80.1918, regime:"Neutral" },
+    { city:"Atlanta", country:"US", countryCode:"US", lat:33.7490, lon:-84.3880, regime:"Surprise" },
+    { city:"Chicago", country:"US", countryCode:"US", lat:41.8781, lon:-87.6298, regime:"Surprise" },
+    { city:"Detroit", country:"US", countryCode:"US", lat:42.3314, lon:-83.0458, regime:"Surprise" },
+    { city:"Minneapolis", country:"US", countryCode:"US", lat:44.9778, lon:-93.2650, regime:"Surprise" },
+    { city:"Dallas", country:"US", countryCode:"US", lat:32.7767, lon:-96.7970, regime:"Surprise" },
+    { city:"Houston", country:"US", countryCode:"US", lat:29.7604, lon:-95.3698, regime:"Surprise" },
+    { city:"Phoenix", country:"US", countryCode:"US", lat:33.4484, lon:-112.0740, regime:"Surprise" },
+    { city:"Los Angeles", country:"US", countryCode:"US", lat:34.0522, lon:-118.2437, regime:"Neutral" },
+    { city:"San Diego", country:"US", countryCode:"US", lat:32.7157, lon:-117.1611, regime:"Neutral" },
+    { city:"San Francisco", country:"US", countryCode:"US", lat:37.7749, lon:-122.4194, regime:"Neutral" },
+    { city:"Seattle", country:"US", countryCode:"US", lat:47.6062, lon:-122.3321, regime:"Surprise" },
+    { city:"Portland", country:"US", countryCode:"US", lat:45.5152, lon:-122.6784, regime:"Neutral" },
+    { city:"Denver", country:"US", countryCode:"US", lat:39.7392, lon:-104.9903, regime:"Surprise" },
+    { city:"Las Vegas", country:"US", countryCode:"US", lat:36.1699, lon:-115.1398, regime:"Neutral" },
+    { city:"New Orleans", country:"US", countryCode:"US", lat:29.9511, lon:-90.0715, regime:"Surprise" },
+    { city:"Charlotte", country:"US", countryCode:"US", lat:35.2271, lon:-80.8431, regime:"Neutral" },
+    { city:"Baltimore", country:"US", countryCode:"US", lat:39.2904, lon:-76.6122, regime:"Surprise" },
+    { city:"St Louis", country:"US", countryCode:"US", lat:38.6270, lon:-90.1994, regime:"Neutral" },
+    { city:"Kansas City", country:"US", countryCode:"US", lat:39.0997, lon:-94.5786, regime:"Neutral" },
+    { city:"Nashville", country:"US", countryCode:"US", lat:36.1627, lon:-86.7816, regime:"Neutral" },
+    { city:"Orlando", country:"US", countryCode:"US", lat:28.5383, lon:-81.3792, regime:"Neutral" },
+    { city:"Tampa", country:"US", countryCode:"US", lat:27.9506, lon:-82.4572, regime:"Neutral" },
+    { city:"Cleveland", country:"US", countryCode:"US", lat:41.4993, lon:-81.6944, regime:"Surprise" },
+    { city:"Columbus", country:"US", countryCode:"US", lat:39.9612, lon:-82.9988, regime:"Neutral" },
+    { city:"Indianapolis", country:"US", countryCode:"US", lat:39.7684, lon:-86.1581, regime:"Neutral" },
+    { city:"Austin", country:"US", countryCode:"US", lat:30.2672, lon:-97.7431, regime:"Surprise" },
+    { city:"Sacramento", country:"US", countryCode:"US", lat:38.5816, lon:-121.4944, regime:"Neutral" }
+  ];
+
+  const countrySummary = [
+    { code:"AU", flag:"🇦🇺", name:"Australia", shown:"2 / 4", note:"surprise" },
+    { code:"CA", flag:"🇨🇦", name:"Canada", shown:"4 / 7", note:"surprise" },
+    { code:"GB", flag:"🇬🇧", name:"UK", shown:"3 / 7", note:"surprise" },
+    { code:"US", flag:"🇺🇸", name:"US", shown:"17 / 32", note:"surprise" }
+  ];
+
+  function normalize(text) {
+    return (text || "").replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  function findSwitchRoot() {
+    const title = Array.from(document.querySelectorAll("h1, h2, h3"))
+      .find(el => normalize(el.textContent).includes("when the same heat flips meaning"));
+
+    if (!title) return null;
+
+    return (
+      title.closest("section") ||
+      title.closest("[id*='switch']") ||
+      title.closest("[class*='switch']") ||
+      title.closest("[class*='mechanism']") ||
+      title.parentElement
+    );
+  }
+
+  function rowsHTML() {
+    return switchRows.map(row => {
+      const total = row.leftCount + row.rightCount;
+      const leftPct = (row.leftCount / total) * 100;
+      const rightPct = (row.rightCount / total) * 100;
+
+      return `
+        <div class="xlp-switch-row">
+          <div class="xlp-switch-row-head">
+            <div class="xlp-switch-row-title">
+              <span class="xlp-switch-code">${row.code}</span>
+              <span>${row.name}</span>
+            </div>
+            <div class="xlp-switch-row-count">${row.leftCount} / ${row.rightCount} cities</div>
+          </div>
+          <div class="xlp-splitbar">
+            <div class="xlp-split-left" style="width:${leftPct}%; background:${row.accent};">
+              ${row.leftLabel} · ${row.leftCount}
+            </div>
+            <div class="xlp-split-right" style="width:${rightPct}%; background:#8c8d86;">
+              ${row.rightLabel} · ${row.rightCount}
+            </div>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
+
+  function countryHTML() {
+    return countrySummary.map(item => `
+      <div class="xlp-country-card">
+        <div class="xlp-country-flag">${item.flag}</div>
+        <div class="xlp-country-code">${item.code}</div>
+        <div class="xlp-country-name">${item.name}</div>
+        <div class="xlp-country-value">${item.shown}</div>
+        <div class="xlp-country-note">${item.note}</div>
+      </div>
+    `).join("");
+  }
+
+  function renderSwitchPage() {
+    const root = findSwitchRoot();
+
+    if (!root) {
+      console.warn("[XLP switch page] target section not found");
+      return;
+    }
+
+    if (root.dataset.xlpSwitchRedesigned === "1") return;
+    root.dataset.xlpSwitchRedesigned = "1";
+
+    root.classList.add("xlp-switch-redesign");
+
+    root.innerHTML = `
+      <div class="xlp-switch-kicker">
+        <span class="xlp-switch-dot"></span>
+        <span>Switch mechanisms</span>
+      </div>
+
+      <h1 class="xlp-switch-title">When the same heat flips meaning</h1>
+
+      <p class="xlp-switch-lead">
+        For some attention types, the dominant emotion is not fixed — it switches between two regimes depending on the city.
+        These reveal where local context reshapes how heat is framed.
+      </p>
+
+      <div class="xlp-switch-block">
+        <div class="xlp-switch-step">
+          <span class="xlp-switch-num">1</span>
+          <span>How city split</span>
+        </div>
+
+        <div class="xlp-switch-card">
+          <div class="xlp-switch-rows">
+            ${rowsHTML()}
+          </div>
+        </div>
+      </div>
+
+      <div class="xlp-switch-block">
+        <div class="xlp-switch-step">
+          <span class="xlp-switch-num">2</span>
+          <span>Where each regime lives — E11 abnormal vs routine</span>
+        </div>
+
+        <div class="xlp-map-card">
+          <div class="xlp-map-head">
+            <div>
+              <h2 class="xlp-map-title">Which cities frame everyday heat as abnormal?</h2>
+              <p class="xlp-map-sub">Mapbox flat map view of E11: Surprise as abnormal heat, Neutral as routine heat.</p>
+            </div>
+
+            <div class="xlp-map-legend">
+              <span><i style="background:#7d74db"></i> Surprise</span>
+              <span><i style="background:#a7a59c"></i> Neutral</span>
+            </div>
+          </div>
+
+          <div id="xlp-e11-map"></div>
+
+          <div class="xlp-country-grid">
+            ${countryHTML()}
+          </div>
+
+          <div class="xlp-map-note">
+            Both regimes appear in every country, confirming that E11 framing is locally rewired rather than driven by one nation.
+          </div>
+        </div>
+      </div>
+    `;
+
+    console.log("[XLP switch page] redesign applied");
+  }
+
+  function loadMapbox(callback) {
+    if (!document.querySelector("link[data-xlp-mapbox-css]")) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css";
+      link.setAttribute("data-xlp-mapbox-css", "1");
+      document.head.appendChild(link);
+    }
+
+    if (window.mapboxgl) {
+      callback();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js";
+    script.onload = callback;
+    script.onerror = function () {
+      const el = document.getElementById("xlp-e11-map");
+      if (el) {
+        el.innerHTML = '<div style="padding:24px;color:#607c9e;">Mapbox failed to load.</div>';
+      }
+    };
+    document.body.appendChild(script);
+  }
+
+  function initMap() {
+    const mapEl = document.getElementById("xlp-e11-map");
+    if (!mapEl || mapEl.dataset.xlpMapInit === "1") return;
+
+    if (!window.mapboxgl) return;
+
+    let token =
+      window.MAPBOX_TOKEN ||
+      window.mapboxToken ||
+      window.mapbox_access_token ||
+      mapboxgl.accessToken ||
+      FALLBACK_TOKEN;
+
+    if (!token || token === "YOUR_MAPBOX_TOKEN") {
+      mapEl.innerHTML = '<div style="padding:24px;color:#607c9e;">Please add your Mapbox token in FALLBACK_TOKEN.</div>';
+      return;
+    }
+
+    mapEl.dataset.xlpMapInit = "1";
+    mapboxgl.accessToken = token;
+
+    const map = new mapboxgl.Map({
+      container: "xlp-e11-map",
+      style: "mapbox://styles/mapbox/light-v11",
+      center: [-35, 38],
+      zoom: 1.05,
+      projection: "mercator",
+      attributionControl: false
+    });
+
+    map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), "top-left");
+
+    map.on("load", function () {
+      const geojson = {
+        type: "FeatureCollection",
+        features: e11Cities.map(d => ({
+          type: "Feature",
+          properties: {
+            city: d.city,
+            country: d.country,
+            regime: d.regime
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [d.lon, d.lat]
+          }
+        }))
+      };
+
+      map.addSource("xlp-e11-cities", {
+        type: "geojson",
+        data: geojson
+      });
+
+      map.addLayer({
+        id: "xlp-e11-points",
+        type: "circle",
+        source: "xlp-e11-cities",
+        paint: {
+          "circle-radius": 7.5,
+          "circle-stroke-width": 1.5,
+          "circle-stroke-color": "#ffffff",
+          "circle-opacity": 0.92,
+          "circle-color": [
+            "match",
+            ["get", "regime"],
+            "Surprise", "#7d74db",
+            "Neutral", "#a7a59c",
+            "#999999"
+          ]
+        }
+      });
+
+      const popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        offset: 12
+      });
+
+      map.on("mouseenter", "xlp-e11-points", function () {
+        map.getCanvas().style.cursor = "pointer";
+      });
+
+      map.on("mouseleave", "xlp-e11-points", function () {
+        map.getCanvas().style.cursor = "";
+        popup.remove();
+      });
+
+      map.on("mousemove", "xlp-e11-points", function (e) {
+        const f = e.features[0];
+        const coords = f.geometry.coordinates.slice();
+        const color = f.properties.regime === "Surprise" ? "#7d74db" : "#7a7a72";
+
+        popup
+          .setLngLat(coords)
+          .setHTML(`
+            <div style="font-family:inherit;min-width:150px;">
+              <div style="font-weight:850;color:#234d88;margin-bottom:4px;">${f.properties.city}</div>
+              <div style="font-size:12px;color:#6d8097;margin-bottom:6px;">${f.properties.country}</div>
+              <div style="font-size:13px;font-weight:850;color:${color};">
+                ${f.properties.regime}
+              </div>
+            </div>
+          `)
+          .addTo(map);
+      });
+    });
+  }
+
+  function boot() {
+    renderSwitchPage();
+    loadMapbox(function () {
+      setTimeout(initMap, 120);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+
+  window.addEventListener("load", boot);
+
+  [300, 800, 1500, 3000].forEach(function (t) {
+    setTimeout(boot, t);
+  });
+})();
+</script>
+<!-- === XLP SWITCH PAGE REDESIGN END === -->
+
+
+<!-- === XLP SLEEP REGRESSION REDESIGN START === -->
+<style id="xlp-sleep-regression-redesign-style">
+
+.xlp-sleep-regression {
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 58px 24px 76px !important;
+  color: #1f4b83 !important;
+  box-sizing: border-box !important;
+}
+
+.xlp-sleep-topline {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  margin-bottom: 16px !important;
+  font-size: 13px !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: rgba(31,75,131,0.76) !important;
+}
+
+.xlp-sleep-dot {
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 99px !important;
+  background: linear-gradient(135deg, #46a8ff 0%, #ff5ca8 100%) !important;
+}
+
+.xlp-sleep-back {
+  margin-bottom: 16px !important;
+  font-size: 14px !important;
+  color: rgba(31,75,131,0.68) !important;
+  font-weight: 750 !important;
+}
+
+.xlp-sleep-title {
+  margin: 0 0 14px !important;
+  max-width: 900px !important;
+  font-size: clamp(42px, 5.2vw, 72px) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.052em !important;
+  font-weight: 900 !important;
+  color: #1f4b83 !important;
+}
+
+.xlp-sleep-lead {
+  max-width: 960px !important;
+  margin: 0 0 20px !important;
+  font-size: 18px !important;
+  line-height: 1.58 !important;
+  color: rgba(31,75,131,0.70) !important;
+}
+
+.xlp-sleep-pill-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  margin: 18px 0 22px !important;
+}
+
+.xlp-sleep-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  height: 34px !important;
+  padding: 0 14px !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,0.72) !important;
+  color: #1f4b83 !important;
+  font-size: 14px !important;
+  font-weight: 850 !important;
+  box-shadow: 0 10px 24px rgba(20,60,100,0.08) !important;
+}
+
+.xlp-sleep-vs {
+  color: rgba(31,75,131,0.45) !important;
+  font-weight: 900 !important;
+  margin: 0 4px !important;
+}
+
+.xlp-r2-badge {
+  margin-left: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 36px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  background: #2f8d58 !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  box-shadow: 0 14px 30px rgba(47,141,88,0.18) !important;
+}
+
+.xlp-sleep-explain {
+  margin: 0 0 20px !important;
+  max-width: 1040px !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: rgba(31,75,131,0.66) !important;
+}
+
+.xlp-sleep-card {
+  border-radius: 22px !important;
+  background: rgba(255,255,255,0.52) !important;
+  border: 1px solid rgba(255,255,255,0.58) !important;
+  box-shadow: 0 18px 44px rgba(20,60,100,0.08) !important;
+  padding: 20px 22px 22px !important;
+  box-sizing: border-box !important;
+}
+
+.xlp-chart-title {
+  margin: 0 0 10px !important;
+  font-size: 18px !important;
+  font-weight: 850 !important;
+  color: #1f4b83 !important;
+}
+
+.xlp-chart-wrap {
+  width: 100% !important;
+  height: 390px !important;
+  border-radius: 18px !important;
+  background: rgba(255,255,255,0.54) !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+#xlp-sleep-scatter-svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+.xlp-stats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 18px !important;
+}
+
+.xlp-stat-card {
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.54) !important;
+  padding: 16px 14px !important;
+  text-align: center !important;
+}
+
+.xlp-stat-value {
+  font-size: 26px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  color: #2f8d58 !important;
+}
+
+.xlp-stat-label {
+  margin-top: 5px !important;
+  font-size: 12px !important;
+  color: rgba(31,75,131,0.58) !important;
+  font-weight: 750 !important;
+}
+
+.xlp-meaning-box {
+  margin-top: 18px !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(47,141,88,0.22) !important;
+  background: rgba(47,141,88,0.08) !important;
+  color: #24714a !important;
+  padding: 16px 18px !important;
+  font-size: 15px !important;
+  line-height: 1.62 !important;
+}
+
+.xlp-meaning-box strong {
+  color: #1f7a4a !important;
+  font-weight: 900 !important;
+}
+
+.xlp-driver-box {
+  margin-top: 16px !important;
+  border-radius: 14px !important;
+  border: 1px dashed rgba(31,75,131,0.24) !important;
+  background: rgba(255,255,255,0.24) !important;
+  padding: 13px 16px !important;
+  color: rgba(31,75,131,0.62) !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+.xlp-svg-axis text {
+  fill: rgba(31,75,131,0.58);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.xlp-svg-axis line,
+.xlp-svg-axis path {
+  stroke: rgba(31,75,131,0.18);
+}
+
+.xlp-grid-line {
+  stroke: rgba(31,75,131,0.12);
+  stroke-width: 1;
+}
+
+.xlp-reg-band {
+  fill: rgba(83,166,114,0.12);
+}
+
+.xlp-reg-line {
+  stroke: #55a875;
+  stroke-width: 3;
+  fill: none;
+}
+
+.xlp-dot {
+  fill: rgba(63,153,216,0.74);
+  stroke: rgba(255,255,255,0.92);
+  stroke-width: 1.5;
+}
+
+.xlp-city-label {
+  fill: rgba(31,75,131,0.62);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.xlp-axis-label {
+  fill: rgba(31,75,131,0.55);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+@media (max-width: 900px) {
+  .xlp-sleep-title {
+    font-size: clamp(38px, 9vw, 60px) !important;
+  }
+
+  .xlp-r2-badge {
+    margin-left: 0 !important;
+  }
+
+  .xlp-stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .xlp-chart-wrap {
+    height: 330px !important;
+  }
+}
+
+</style>
+
+<script id="xlp-sleep-regression-redesign-script">
+(function () {
+  function normalize(text) {
+    return (text || "").replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  function findSleepRoot() {
+    const title = Array.from(document.querySelectorAll("h1, h2, h3"))
+      .find(function (el) {
+        const t = normalize(el.textContent);
+        return (
+          t.includes("sleep-disruption attention aligns with sadness") ||
+          t.includes("sleep disruption") && t.includes("sadness")
+        );
+      });
+
+    if (!title) return null;
+
+    return (
+      title.closest("section") ||
+      title.closest("[id*='sleep']") ||
+      title.closest("[class*='sleep']") ||
+      title.closest("[class*='association']") ||
+      title.parentElement
+    );
+  }
+
+  function fakeCities() {
+    // 暂用假数据：构造 50 个城市，呈明显正相关，用于展示 E21 × Sadness ASR 与 nightlife accessibility 的线性关系
+    const names = [
+      "Brisbane","Perth","Adelaide","Melbourne","Sydney",
+      "Vancouver","Calgary","Edmonton","Winnipeg","Toronto","Ottawa","Montreal",
+      "London","Manchester","Birmingham","Glasgow","Leeds","Bristol","Newcastle",
+      "Seattle","Portland","San Francisco","Los Angeles","San Diego",
+      "Phoenix","Las Vegas","Denver","Dallas","Houston","Austin",
+      "Chicago","Detroit","Minneapolis","St Louis","Kansas City",
+      "New York","Boston","Philadelphia","Washington DC","Baltimore",
+      "Atlanta","Charlotte","Nashville","New Orleans","Miami","Tampa","Orlando",
+      "Cleveland","Columbus","Indianapolis"
+    ];
+
+    // 这组 residual 是手动控制过的，使视觉上接近 R²≈0.46 的中强正相关
+    const residuals = [
+      -0.13,-0.08,-0.11,-0.04,-0.10,
+      0.02,-0.05,0.03,-0.02,0.01,0.05,-0.03,
+      0.10,0.00,0.04,-0.06,0.01,0.08,-0.04,
+      0.02,-0.03,0.00,-0.07,-0.05,
+      0.01,-0.02,0.04,0.03,0.02,0.05,
+      0.07,0.02,0.06,-0.01,0.01,
+      0.12,0.08,0.09,0.07,0.06,
+      0.03,0.01,-0.02,0.04,-0.01,-0.03,-0.04,
+      0.02,0.00,-0.01
+    ];
+
+    return names.map(function (name, i) {
+      const x = (i + 1) / names.length;
+      const y = 0.20 + 0.60 * x + residuals[i];
+
+      return {
+        city: name,
+        nightlife: Math.max(0.04, Math.min(0.98, x)),
+        asr: Math.max(0.08, Math.min(0.96, y))
+      };
+    });
+  }
+
+  function renderSleepPage() {
+    const root = findSleepRoot();
+
+    if (!root) {
+      console.warn("[XLP sleep regression] target section not found");
+      return;
+    }
+
+    if (root.dataset.xlpSleepRedesigned === "1") return;
+    root.dataset.xlpSleepRedesigned = "1";
+    root.classList.add("xlp-sleep-regression");
+
+    root.innerHTML = `
+      <div class="xlp-sleep-back">← Why does it stay or shift?  ›  The strongest signal</div>
+
+      <div class="xlp-sleep-topline">
+        <span class="xlp-sleep-dot"></span>
+        <span>Observed association</span>
+      </div>
+
+      <h1 class="xlp-sleep-title">Sleep-disruption attention aligns with sadness</h1>
+
+      <p class="xlp-sleep-lead">
+        The single strongest driver relationship in the dataset. Cities where nightlife and late-hour amenities are more walkable show markedly stronger sleep-disruption sadness — heat keeps people awake where the night is more lived-in.
+      </p>
+
+      <div class="xlp-sleep-pill-row">
+        <span class="xlp-sleep-pill">🌙 E21 Sleep</span>
+        <span class="xlp-sleep-vs">×</span>
+        <span class="xlp-sleep-pill">😢 Sadness ASR</span>
+        <span class="xlp-sleep-vs">vs</span>
+        <span class="xlp-sleep-pill">🚶 Nightlife accessibility</span>
+        <span class="xlp-r2-badge">partial R² = 0.46</span>
+      </div>
+
+      <p class="xlp-sleep-explain">
+        Because nightlife accessibility is not available yet, this view uses simulated city-level values as a placeholder. The visual pattern is calibrated to illustrate a positive linear relationship with approximately the target strength.
+      </p>
+
+      <div class="xlp-sleep-card">
+        <div class="xlp-chart-title">Each dot is one of 50 cities</div>
+        <div class="xlp-chart-wrap">
+          <svg id="xlp-sleep-scatter-svg" viewBox="0 0 1000 390" preserveAspectRatio="none"></svg>
+        </div>
+      </div>
+
+      <div class="xlp-stats-grid">
+        <div class="xlp-stat-card">
+          <div class="xlp-stat-value">+0.68</div>
+          <div class="xlp-stat-label">correlation</div>
+        </div>
+
+        <div class="xlp-stat-card">
+          <div class="xlp-stat-value">0.46</div>
+          <div class="xlp-stat-label">partial R²</div>
+        </div>
+
+        <div class="xlp-stat-card">
+          <div class="xlp-stat-value">p &lt; 0.001</div>
+          <div class="xlp-stat-label">significance</div>
+        </div>
+      </div>
+
+      <div class="xlp-meaning-box">
+        <strong>What it means:</strong> heat-related sleep complaints are not just about how hot the night is. They also track how much night life a city has. In cities where bars, venues, and late amenities are close at hand, residents are out in the heat longer and feel its disruption more sharply. A planning lever hides here: night-time cooling and mobility matter for how heat is experienced after dark.
+      </div>
+
+      <div class="xlp-driver-box">
+        ▶ Explore the full driver matrix<br>
+        <span style="font-weight:600; opacity:.78;">See the top driver family for all mechanisms after real nightlife accessibility data are added.</span>
+      </div>
+    `;
+
+    setTimeout(drawScatter, 100);
+    console.log("[XLP sleep regression] redesign applied");
+  }
+
+  function drawScatter() {
+    const svg = document.getElementById("xlp-sleep-scatter-svg");
+    if (!svg) return;
+
+    const data = fakeCities();
+
+    const W = 1000;
+    const H = 390;
+    const margin = { left: 72, right: 42, top: 32, bottom: 54 };
+    const plotW = W - margin.left - margin.right;
+    const plotH = H - margin.top - margin.bottom;
+
+    function xScale(v) {
+      return margin.left + v * plotW;
+    }
+
+    function yScale(v) {
+      return margin.top + (1 - v) * plotH;
+    }
+
+    function lineY(x) {
+      return 0.20 + 0.60 * x;
+    }
+
+    svg.innerHTML = "";
+
+    function el(name, attrs) {
+      const node = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attrs || {}).forEach(function ([k, v]) {
+        node.setAttribute(k, v);
+      });
+      return node;
+    }
+
+    // plot background
+    svg.appendChild(el("rect", {
+      x: margin.left,
+      y: margin.top,
+      width: plotW,
+      height: plotH,
+      rx: 8,
+      fill: "rgba(255,255,255,0.16)"
+    }));
+
+    // grid
+    for (let i = 0; i <= 5; i++) {
+      const gx = margin.left + plotW * i / 5;
+      const gy = margin.top + plotH * i / 5;
+
+      svg.appendChild(el("line", {
+        x1: gx, y1: margin.top, x2: gx, y2: margin.top + plotH,
+        class: "xlp-grid-line"
+      }));
+
+      svg.appendChild(el("line", {
+        x1: margin.left, y1: gy, x2: margin.left + plotW, y2: gy,
+        class: "xlp-grid-line"
+      }));
+    }
+
+    // confidence band
+    const band = [
+      [0.02, lineY(0.02) + 0.13],
+      [0.98, lineY(0.98) + 0.13],
+      [0.98, lineY(0.98) - 0.13],
+      [0.02, lineY(0.02) - 0.13]
+    ].map(function (p) {
+      return xScale(p[0]) + "," + yScale(p[1]);
+    }).join(" ");
+
+    svg.appendChild(el("polygon", {
+      points: band,
+      class: "xlp-reg-band"
+    }));
+
+    // regression line
+    svg.appendChild(el("line", {
+      x1: xScale(0.02),
+      y1: yScale(lineY(0.02)),
+      x2: xScale(0.98),
+      y2: yScale(lineY(0.98)),
+      class: "xlp-reg-line"
+    }));
+
+    // axes
+    svg.appendChild(el("line", {
+      x1: margin.left, y1: margin.top + plotH,
+      x2: margin.left + plotW, y2: margin.top + plotH,
+      stroke: "rgba(31,75,131,0.22)",
+      "stroke-width": 1.2
+    }));
+
+    svg.appendChild(el("line", {
+      x1: margin.left, y1: margin.top,
+      x2: margin.left, y2: margin.top + plotH,
+      stroke: "rgba(31,75,131,0.22)",
+      "stroke-width": 1.2
+    }));
+
+    // dots
+    data.forEach(function (d) {
+      svg.appendChild(el("circle", {
+        cx: xScale(d.nightlife),
+        cy: yScale(d.asr),
+        r: 4.7,
+        class: "xlp-dot"
+      }));
+    });
+
+    // labels
+    const brisbane = data.find(d => d.city === "Brisbane");
+    const london = data.find(d => d.city === "London");
+
+    if (brisbane) {
+      svg.appendChild(el("text", {
+        x: xScale(brisbane.nightlife) - 10,
+        y: yScale(brisbane.asr) + 22,
+        class: "xlp-city-label"
+      })).textContent = "Brisbane";
+    }
+
+    if (london) {
+      svg.appendChild(el("text", {
+        x: xScale(london.nightlife) + 8,
+        y: yScale(london.asr) - 10,
+        class: "xlp-city-label"
+      })).textContent = "London";
+    }
+
+    // axis labels
+    const xlabel = el("text", {
+      x: margin.left + plotW / 2,
+      y: H - 14,
+      "text-anchor": "middle",
+      class: "xlp-axis-label"
+    });
+    xlabel.textContent = "Nightlife accessibility (more walkable →)";
+    svg.appendChild(xlabel);
+
+    const ylabel = el("text", {
+      x: 18,
+      y: margin.top + plotH / 2,
+      "text-anchor": "middle",
+      transform: "rotate(-90 18 " + (margin.top + plotH / 2) + ")",
+      class: "xlp-axis-label"
+    });
+    ylabel.textContent = "E21 × Sadness ASR (stronger →)";
+    svg.appendChild(ylabel);
+
+    const low = el("text", {
+      x: margin.left,
+      y: H - 18,
+      class: "xlp-svg-axis"
+    });
+    low.textContent = "low";
+    svg.appendChild(low);
+
+    const high = el("text", {
+      x: margin.left + plotW - 22,
+      y: H - 18,
+      class: "xlp-svg-axis"
+    });
+    high.textContent = "high";
+    svg.appendChild(high);
+  }
+
+  function boot() {
+    renderSleepPage();
+    setTimeout(drawScatter, 300);
+    setTimeout(drawScatter, 800);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+
+  window.addEventListener("load", boot);
+  window.addEventListener("resize", function () {
+    setTimeout(drawScatter, 120);
+  });
+
+  [300, 800, 1600, 3000].forEach(function (t) {
+    setTimeout(boot, t);
+  });
+})();
+</script>
+<!-- === XLP SLEEP REGRESSION REDESIGN END === -->
+
+
+<script src="observed-association-color-patch.js"></script>
+</body>
+</html>

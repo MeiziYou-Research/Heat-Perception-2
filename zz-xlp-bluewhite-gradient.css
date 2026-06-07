@@ -1,0 +1,153 @@
+
+/* =====================================================
+   XLP FINAL BLUE TO WHITE GRADIENT
+   soft deep blue -> white
+===================================================== */
+
+:root {
+  --xlp-top: #5f85a6;      /* 顶部：中深蓝，不会太黑 */
+  --xlp-mid1: #89aecd;     /* 中间偏蓝 */
+  --xlp-mid2: #bfd6e7;     /* 更浅蓝 */
+  --xlp-bottom: #ffffff;   /* 底部白色 */
+
+  --xlp-text-main: #173f68;
+  --xlp-text-sub: #4f7396;
+}
+
+/* 整站背景 */
+html,
+body {
+  min-height: 100% !important;
+  background:
+    linear-gradient(
+      180deg,
+      var(--xlp-top) 0%,
+      var(--xlp-mid1) 34%,
+      var(--xlp-mid2) 70%,
+      var(--xlp-bottom) 100%
+    ) !important;
+  background-color: var(--xlp-top) !important;
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--xlp-top) 0%,
+      var(--xlp-mid1) 34%,
+      var(--xlp-mid2) 70%,
+      var(--xlp-bottom) 100%
+    ) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* 第一幕大地球保留深色宇宙感 */
+#opening-hero {
+  background:
+    radial-gradient(circle at 50% 62%, rgba(75, 114, 145, 0.18), transparent 30%),
+    radial-gradient(circle at 50% 46%, rgba(5, 18, 32, 0.72), transparent 48%),
+    linear-gradient(180deg, #030812 0%, #071421 58%, #132638 100%) !important;
+  background-color: #071421 !important;
+}
+
+/* 其他页面容器透明，让全局渐变露出来 */
+body > section:not(#opening-hero),
+body > main,
+main,
+section:not(#opening-hero),
+div[id^="scene"]:not(#scene-hero):not(#scene-earth):not(#opening-hero),
+section[id^="scene"]:not(#scene-hero):not(#scene-earth):not(#opening-hero),
+.scene:not(.scene-hero):not(.earth-hero),
+.story-section,
+.story-scene,
+.interlude-section,
+.scene2-title-page,
+.scene2-comparison,
+.attention-interlude,
+.page-shell,
+.story-shell,
+.section-shell,
+.scene-shell,
+.scene-wrap,
+.scene-container,
+.wrapper,
+.container {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 清掉旧 final-blue 类背景 */
+.final-blue-scene2,
+.final-blue-scene3,
+.final-blue-scene4,
+#profile-dashboard.final-blue-scene3,
+#about-section.final-blue-scene4 {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 清掉旧背景层 */
+.scene2-title-bg,
+.attention-interlude-bg,
+.global-bg,
+.page-bg,
+.site-bg,
+.story-bg,
+.bg-layer,
+.overlay-bg,
+.gradient-bg,
+.noise-bg {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  opacity: 0 !important;
+  display: none !important;
+}
+
+/* 去掉非 hero 的伪元素背景 */
+body > section:not(#opening-hero)::before,
+body > section:not(#opening-hero)::after,
+section:not(#opening-hero)::before,
+section:not(#opening-hero)::after,
+div[id^="scene"]:not(#scene-hero):not(#scene-earth)::before,
+div[id^="scene"]:not(#scene-hero):not(#scene-earth)::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+/* 卡片：在蓝底上更清楚一点 */
+.card,
+.panel,
+.stat-card,
+.metric-card,
+.scene2-stat-card,
+.mechanism-card,
+.driver-card,
+.attention-floating-card,
+.profile-card,
+.info-card,
+.content-card {
+  background: rgba(255,255,255,0.42) !important;
+  border: 1px solid rgba(255,255,255,0.70) !important;
+  box-shadow: 0 18px 48px rgba(60, 95, 125, 0.12) !important;
+}
+
+/* 深色上半部分的标题尽量清晰 */
+body > section:not(#opening-hero) h1,
+body > section:not(#opening-hero) h2,
+body > section:not(#opening-hero) h3 {
+  color: var(--xlp-text-main) !important;
+  text-shadow: none !important;
+}
+
+body > section:not(#opening-hero) p,
+.subtitle,
+.scene-subtitle,
+.section-subtitle {
+  color: var(--xlp-text-sub) !important;
+  text-shadow: none !important;
+}

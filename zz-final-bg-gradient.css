@@ -1,0 +1,132 @@
+
+/* =====================================================
+   FINAL BACKGROUND GRADIENT OVERRIDE
+   Generated: 20260606_233653
+===================================================== */
+
+:root {
+  --final-bg-top: #dceaf2;
+  --final-bg-mid: #edf5f8;
+  --final-bg-bottom: #ffffff;
+  --final-text-main: #173f68;
+  --final-text-sub: #4f7396;
+}
+
+/* 全站最终背景：浅蓝到白色 */
+html,
+body {
+  min-height: 100% !important;
+  background:
+    linear-gradient(
+      180deg,
+      var(--final-bg-top) 0%,
+      #e7f1f6 28%,
+      var(--final-bg-mid) 58%,
+      #fafcfd 82%,
+      var(--final-bg-bottom) 100%
+    ) !important;
+  background-color: var(--final-bg-top) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* 所有普通页面容器透明，露出全局渐变 */
+body > section:not(#opening-hero):not(#hero),
+body > main,
+main,
+section:not(#opening-hero):not(#hero),
+div[id^="scene"]:not(#opening-hero):not(#hero):not(#scene-hero):not(#scene-earth),
+section[id^="scene"]:not(#opening-hero):not(#hero):not(#scene-hero):not(#scene-earth),
+.scene:not(.hero):not(.scene-hero):not(.earth-hero),
+.story-section,
+.story-scene,
+.interlude-section,
+.section-shell,
+.scene-shell,
+.scene-wrap,
+.scene-container,
+.page-shell,
+.story-shell,
+.wrapper,
+.container {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 具体场景也强制透明 */
+#scene2-comparison,
+#scene3-attention-routing,
+#scene3b-attention-scene,
+#scene4-mechanism,
+#scene5-drivers,
+#mechanism-section,
+#drivers-section,
+#about-section,
+#ending-section {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 去掉非 hero 的伪元素背景 */
+section:not(#opening-hero):not(#hero)::before,
+section:not(#opening-hero):not(#hero)::after,
+div[id^="scene"]:not(#opening-hero):not(#hero):not(#scene-hero):not(#scene-earth)::before,
+div[id^="scene"]:not(#opening-hero):not(#hero):not(#scene-hero):not(#scene-earth)::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+}
+
+/* 保留第一幕大地球深色 */
+#opening-hero,
+#hero,
+.hero,
+.hero-section,
+.scene-hero,
+.earth-hero,
+#scene-hero,
+#scene-earth {
+  background:
+    radial-gradient(circle at 50% 62%, rgba(75, 114, 145, 0.16), transparent 30%),
+    radial-gradient(circle at 50% 46%, rgba(5, 18, 32, 0.68), transparent 48%),
+    linear-gradient(180deg, #030812 0%, #071421 58%, #132638 100%) !important;
+  background-color: #071421 !important;
+}
+
+/* 卡片维持轻玻璃感 */
+.card,
+.panel,
+.stat-card,
+.metric-card,
+.scene2-stat-card,
+.mechanism-card,
+.driver-card,
+.attention-floating-card,
+.profile-card,
+.info-card,
+.content-card {
+  background: rgba(255,255,255,0.34) !important;
+  border: 1px solid rgba(255,255,255,0.62) !important;
+  box-shadow: 0 18px 48px rgba(80,115,145,0.10) !important;
+}
+
+/* 文字颜色 */
+body:not(.hero) h1,
+body:not(.hero) h2,
+body:not(.hero) h3 {
+  color: var(--final-text-main) !important;
+  text-shadow: none !important;
+}
+
+body:not(.hero) p,
+.subtitle,
+.scene-subtitle,
+.section-subtitle {
+  color: var(--final-text-sub) !important;
+  text-shadow: none !important;
+}
