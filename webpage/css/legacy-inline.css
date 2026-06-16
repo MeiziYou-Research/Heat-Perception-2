@@ -1,0 +1,246 @@
+
+
+
+
+html,
+body {
+  background:
+    linear-gradient(
+      180deg,
+      #06172b 0%,
+      #0a213c 26%,
+      #244e70 48%,
+      #7fa6bf 72%,
+      #e7f3fb 100%
+    ) !important;
+}
+
+
+.final-blue-scene2 {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(112, 188, 255, 0.16), transparent 32%),
+    linear-gradient(
+      180deg,
+      #06172b 0%,
+      #0a213c 42%,
+      #173856 76%,
+      #244e70 100%
+    ) !important;
+  background-color: #06172b !important;
+  margin: 0 !important;
+  padding-top: 92px !important;
+  padding-bottom: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+#profile-dashboard.final-blue-scene3,
+.final-blue-scene3 {
+  background:
+    radial-gradient(circle at 22% 8%, rgba(174, 220, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 78% 32%, rgba(237, 105, 173, 0.08), transparent 32%),
+    linear-gradient(
+      180deg,
+      #244e70 0%,
+      #4f7894 34%,
+      #91b5ca 68%,
+      #d4e8f3 100%
+    ) !important;
+  background-color: #91b5ca !important;
+  margin: 0 !important;
+  padding-top: 88px !important;
+  padding-bottom: 96px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+#about-section.final-blue-scene4,
+.final-blue-scene4 {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(128, 194, 255, 0.14), transparent 30%),
+    radial-gradient(circle at 78% 22%, rgba(237, 105, 173, 0.07), transparent 30%),
+    linear-gradient(
+      180deg,
+      #d4e8f3 0%,
+      #ecf7fc 55%,
+      #f8fcff 100%
+    ) !important;
+  background-color: #ecf7fc !important;
+  margin: 0 !important;
+  padding-top: 96px !important;
+  padding-bottom: 116px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.final-blue-scene2::before,
+.final-blue-scene2::after,
+.final-blue-scene3::before,
+.final-blue-scene3::after,
+.final-blue-scene4::before,
+.final-blue-scene4::after,
+#profile-dashboard::before,
+#profile-dashboard::after,
+#about-section::before,
+#about-section::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+.final-blue-scene2-title {
+  font-size: clamp(42px, 3.75vw, 60px) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.035em !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+
+.final-blue-scene2-kicker {
+  font-size: 11px !important;
+  letter-spacing: 0.28em !important;
+  opacity: 0.76 !important;
+  margin-bottom: 12px !important;
+}
+
+
+.final-blue-scene2-subtitle {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  max-width: 680px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+.final-blue-row-title {
+  font-size: clamp(34px, 3.1vw, 46px) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.03em !important;
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+}
+
+
+#profile-dashboard h3,
+#profile-dashboard .chart-title,
+#profile-dashboard .profile-chart-title {
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+}
+
+
+#profile-dashboard .chart-card,
+#profile-dashboard .profile-card,
+#profile-dashboard .card,
+#profile-dashboard .panel,
+.final-blue-scene3 .chart-card,
+.final-blue-scene3 .profile-card,
+.final-blue-scene3 .card,
+.final-blue-scene3 .panel {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  box-shadow: 0 14px 34px rgba(16, 45, 70, 0.10) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+
+#profile-dashboard canvas,
+#profile-dashboard .echarts-for-react,
+#profile-dashboard [id*="chart"],
+#profile-dashboard [class*="chart"] {
+  background-color: transparent !important;
+}
+
+
+#about-section .about-minimal-heading {
+  font-size: 19px !important;
+}
+
+#about-section .about-minimal-text p {
+  font-size: 16px !important;
+  line-height: 1.66 !important;
+}
+
+
+.final-blue-scene2 + #profile-dashboard,
+.final-blue-scene2 + .final-blue-scene3,
+#profile-dashboard + #about-section,
+.final-blue-scene3 + .final-blue-scene4 {
+  margin-top: 0 !important;
+}
+
+
+.final-blue-scene2 .safe-map-shell,
+.final-blue-scene2 .map-shell,
+.final-blue-scene2 .map-wrapper,
+.final-blue-scene2 #global-map {
+  margin-bottom: 0 !important;
+}
+
+
+@media (max-width: 900px) {
+  .final-blue-scene2-title {
+    font-size: clamp(34px, 7vw, 46px) !important;
+  }
+
+  .final-blue-row-title {
+    font-size: clamp(30px, 6vw, 38px) !important;
+  }
+}
+
+
+
+
+[id*="attention"],
+[class*="attention-scene"],
+[class*="day-in-heat"],
+[class*="vignette"],
+#scene3b,
+#scene3b-attention-scene {
+  visibility: visible !important;
+}
+
+
+:root {
+  --xlp-page-gradient: linear-gradient(180deg, #A4C8F0 0%, #D9ECFA 48%, #FFFFFF 100%);
+  --xlp-page-top-blue: #A4C8F0;
+}
+
+html,
+body {
+  min-height: 100% !important;
+  background: var(--xlp-page-gradient) !important;
+  background-color: var(--xlp-page-top-blue) !important;
+  background-image: var(--xlp-page-gradient) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+body > section,
+#opening-hero,
+#scene2-title-page,
+#scene2-comparison,
+#profile-dashboard,
+#about-section {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#xlp-after-hero-bg,
+.scene2-title-bg,
+.attention-interlude-bg,
+.scene3-ambient,
+.scene3b-bg {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+

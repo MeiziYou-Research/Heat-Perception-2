@@ -1,0 +1,378 @@
+
+
+:root {
+  --site-bg: #F5F8FC;
+  --site-bg-soft: #FAFCFF;
+  --site-text: #3A3A3A;
+  --site-text-soft: rgba(58, 58, 58, 0.72);
+  --site-text-muted: rgba(58, 58, 58, 0.56);
+  --site-border: rgba(58, 58, 58, 0.14);
+  --site-card: rgba(255, 255, 255, 0.64);
+}
+
+
+html,
+body {
+  background: var(--site-bg) !important;
+  background-color: var(--site-bg) !important;
+  background-image: none !important;
+  color: var(--site-text) !important;
+}
+
+
+#xlp-true-page-gradient,
+#xlp-after-hero-bg {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+
+#opening-hero,
+.clean-opening-hero,
+#three-hero-stage,
+#scene2-title-page,
+#scene2-comparison,
+#interlude-attention,
+#scene3-attention-routing,
+#scene3b-attention-scene,
+#scene-mechanism-title,
+#profile-dashboard,
+#about-section,
+.about-minimal-section {
+  background: var(--site-bg) !important;
+  background-color: var(--site-bg) !important;
+  background-image: none !important;
+  color: var(--site-text) !important;
+}
+
+
+#opening-hero canvas,
+#three-hero-stage canvas {
+  background: var(--site-bg) !important;
+  background-color: var(--site-bg) !important;
+}
+
+
+body,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p,
+body span,
+body div,
+body button,
+body a,
+body label,
+body select,
+body option,
+body li,
+body td,
+body th {
+  color: var(--site-text) !important;
+  -webkit-text-fill-color: var(--site-text) !important;
+  text-shadow: none !important;
+}
+
+
+body p,
+.scene2-title-sub,
+.scene2-desc,
+.s2f-desc,
+.about-minimal-text p,
+.about-contact-text,
+.about-team-role,
+.scene2-map-meta,
+.scene2-legend-inline {
+  color: var(--site-text-soft) !important;
+  -webkit-text-fill-color: var(--site-text-soft) !important;
+}
+
+
+#hero-title-image {
+  filter: brightness(0) !important;
+  opacity: 0.78 !important;
+}
+
+
+#opening-hero .opening-mini {
+  color: var(--site-text) !important;
+  -webkit-text-fill-color: var(--site-text) !important;
+  opacity: 0.72 !important;
+}
+
+
+#opening-hero #hero-enter-btn,
+#opening-hero #enter-atlas-btn,
+#opening-hero .enter-atlas-trigger,
+#opening-hero [data-enter-atlas="true"] {
+  color: var(--site-text) !important;
+  -webkit-text-fill-color: var(--site-text) !important;
+  background: rgba(255, 255, 255, 0.50) !important;
+  background-color: rgba(255, 255, 255, 0.50) !important;
+  background-image: none !important;
+  border: 1.2px solid var(--site-border) !important;
+  box-shadow: 0 10px 28px rgba(70, 82, 96, 0.08) !important;
+  text-shadow: none !important;
+}
+
+#opening-hero #hero-enter-btn:hover,
+#opening-hero #enter-atlas-btn:hover,
+#opening-hero .enter-atlas-trigger:hover,
+#opening-hero [data-enter-atlas="true"]:hover {
+  background: rgba(255, 255, 255, 0.72) !important;
+  border-color: rgba(58, 58, 58, 0.28) !important;
+}
+
+
+#xlp-global-about-btn,
+#hero-about-btn,
+.top-about-fixed {
+  color: var(--site-text) !important;
+  -webkit-text-fill-color: var(--site-text) !important;
+  text-shadow: none !important;
+  background: transparent !important;
+  background-image: none !important;
+}
+
+
+#scene2-title-page .scene2-title-main {
+  color: var(--site-text) !important;
+  -webkit-text-fill-color: var(--site-text) !important;
+  background: none !important;
+  background-image: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+#scene2-title-page .scene2-title-sub {
+  color: var(--site-text-soft) !important;
+  -webkit-text-fill-color: var(--site-text-soft) !important;
+}
+
+
+#scene2-comparison .scene2-main-title,
+#scene2-comparison .scene2-profile-title,
+#scene2-comparison .scene2-cityname,
+#scene2-comparison .scene2-map-title {
+  color: var(--site-text) !important;
+  -webkit-text-fill-color: var(--site-text) !important;
+}
+
+#scene2-comparison .scene2-left,
+#scene2-comparison .scene2-right,
+#scene2-comparison .scene2-map-panel,
+#scene2-comparison .scene2-mapbox,
+#scene2-comparison .scene2-compare-btn,
+#scene2-comparison .scene2-metric-card,
+#scene2-comparison .s2f-card {
+  background: var(--site-card) !important;
+  background-color: var(--site-card) !important;
+  background-image: none !important;
+  border-color: var(--site-border) !important;
+  box-shadow: 0 18px 48px rgba(70, 82, 96, 0.08) !important;
+}
+
+
+#about-section,
+#about-section * {
+  color: var(--site-text) !important;
+  -webkit-text-fill-color: var(--site-text) !important;
+  text-shadow: none !important;
+}
+
+#about-section .about-minimal-text p,
+#about-section .about-contact-text,
+#about-section .about-team-role {
+  color: var(--site-text-soft) !important;
+  -webkit-text-fill-color: var(--site-text-soft) !important;
+}
+
+
+svg text,
+svg tspan {
+  fill: var(--site-text) !important;
+}
+
+
+
+#opening-hero #hero-enter-btn,
+#opening-hero #enter-atlas-btn,
+#opening-hero .enter-atlas-trigger,
+#opening-hero [data-enter-atlas="true"],
+#hero-enter-btn,
+#enter-atlas-btn {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+
+  background: rgba(255, 255, 255, 0.58) !important;
+  background-color: rgba(255, 255, 255, 0.58) !important;
+  background-image: none !important;
+
+  border: 1.2px solid rgba(58, 58, 58, 0.22) !important;
+  border-radius: 999px !important;
+
+  box-shadow: 0 10px 28px rgba(70, 82, 96, 0.08) !important;
+  text-shadow: none !important;
+  filter: none !important;
+
+  opacity: 1 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+#opening-hero #hero-enter-btn *,
+#opening-hero #enter-atlas-btn *,
+#opening-hero .enter-atlas-trigger *,
+#opening-hero [data-enter-atlas="true"] * {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+  text-shadow: none !important;
+}
+
+#opening-hero #hero-enter-btn:hover,
+#opening-hero #enter-atlas-btn:hover,
+#opening-hero .enter-atlas-trigger:hover,
+#opening-hero [data-enter-atlas="true"]:hover,
+#hero-enter-btn:hover,
+#enter-atlas-btn:hover {
+  color: #2F2F2F !important;
+  -webkit-text-fill-color: #2F2F2F !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  background-color: rgba(255, 255, 255, 0.78) !important;
+  border-color: rgba(58, 58, 58, 0.34) !important;
+}
+
+
+
+
+
+
+
+#scene2-title-page,
+#scene2-title-page *,
+#scene2-comparison,
+#scene2-comparison * {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+  text-shadow: none !important;
+}
+
+
+#scene2-title-page .scene2-title-main,
+#scene2-title-page h1,
+#scene2-title-page h2,
+#scene2-title-page h3 {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+  background: none !important;
+  background-image: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+#scene2-title-page .scene2-title-sub,
+#scene2-title-page p {
+  color: rgba(58, 58, 58, 0.72) !important;
+  -webkit-text-fill-color: rgba(58, 58, 58, 0.72) !important;
+}
+
+
+#scene2-comparison .scene2-main-title,
+#scene2-comparison h1,
+#scene2-comparison h2,
+#scene2-comparison h3,
+#scene2-comparison .scene2-profile-title,
+#scene2-comparison .scene2-map-title,
+#scene2-comparison .scene2-cityname,
+#scene2-comparison #scene2ProfileCity {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+  text-shadow: none !important;
+}
+
+
+#scene2-comparison .scene2-desc,
+#scene2-comparison .scene2-map-meta,
+#scene2-comparison .scene2-legend-inline,
+#scene2-comparison .scene2-stacklabels,
+#scene2-comparison .scene2-stacklabels *,
+#scene2-comparison #scene2StackLabels,
+#scene2-comparison #scene2StackLabels *,
+#scene2-comparison #scene2MapMeta,
+#scene2-comparison #scene2LegendCity,
+#scene2-comparison .scene2-map-notice {
+  color: rgba(58, 58, 58, 0.76) !important;
+  -webkit-text-fill-color: rgba(58, 58, 58, 0.76) !important;
+  text-shadow: none !important;
+}
+
+
+#scene2-comparison .scene2-pills button,
+#scene2-comparison .scene2-pills .scene2-pill,
+#scene2-comparison #scene2EmotionPills button,
+#scene2-comparison #scene2EmotionPills .scene2-pill {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+  text-shadow: none !important;
+}
+
+
+#scene2-comparison .scene2-pills button.is-active,
+#scene2-comparison #scene2EmotionPills button.is-active,
+#scene2-comparison .scene2-pill.is-active {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+}
+
+
+#scene2-comparison .scene2-radar-wrap,
+#scene2-comparison .scene2-radar-wrap *,
+#scene2-comparison canvas + *,
+#scene2-comparison .scene2-axis-label,
+#scene2-comparison .scene2-radar-label {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+}
+
+
+#scene2-comparison .scene2-metric-cards,
+#scene2-comparison .scene2-metric-cards *,
+#scene2-comparison #scene2MetricCards,
+#scene2-comparison #scene2MetricCards *,
+#scene2-comparison .scene2-metric-card,
+#scene2-comparison .scene2-metric-card * {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+  text-shadow: none !important;
+}
+
+
+#scene2-comparison .scene2-compare-btn,
+#scene2-comparison #scene2CompareBtn {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+  text-shadow: none !important;
+}
+
+
+#scene2-comparison svg text,
+#scene2-comparison svg tspan {
+  fill: #3A3A3A !important;
+}
+
+
+#scene2-comparison [style*="255,255,255"],
+#scene2-comparison [style*="255, 255, 255"],
+#scene2-title-page [style*="255,255,255"],
+#scene2-title-page [style*="255, 255, 255"] {
+  color: #3A3A3A !important;
+  -webkit-text-fill-color: #3A3A3A !important;
+}
+
+
