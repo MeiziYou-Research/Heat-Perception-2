@@ -1,0 +1,17 @@
+Domain,Correlate,Operationalisation,Period
+Climatic heat regime,Mean temperature,Warm-season mean near-surface air temperature (°C),2022
+Climatic heat regime,Diurnal temperature range,"Warm-season mean diurnal temperature range (DTR; daily Tmax − Tmin, °C)",2022
+Climatic heat regime,Hot days,Number of warm-season days in 2022 with daily Tmax exceeding the city- and calendar-day-specific 90th-percentile threshold derived from the 2002–2021 baseline,2022; baseline 2002–2021
+Climatic heat regime,Hot nights,Number of warm-season nights in 2022 with daily Tmin exceeding the city- and calendar-day-specific 90th-percentile threshold derived from the 2002–2021 baseline,2022; baseline 2002–2021
+Urban environmental structure,Greenness,"Warm-season mean Normalised Difference Vegetation Index (NDVI), city-averaged over the built-up footprint",2022
+Urban environmental structure,Green exposure,Population-weighted greenness exposure within a 1-km residential buffer,2022
+Urban environmental structure,Inequality in green access,Population-weighted Gini coefficient of green exposure across residents (higher = more unequal green access),2022
+Urban environmental structure,Urbanisation intensity,Mean VIIRS day–night band night-time lights radiance,2022
+Socio-demographic context,Income level,City income indicator standardised across 50 cities,2021/2022
+Socio-demographic context,Ageing,Share of residents aged ≥65 years,2022
+Governance,Climate governance index (CGI),Composite index (0–100) based on climate action plan presence + C40 membership + ICLEI membership,as-of 31 Dec 2022
+Governance,Heat governance readiness index (HGI),Composite index (0–100) based on heat action plan (or actionable heat chapter) + official cooling-spaces network,as-of 31 Dec 2022
+Governance,Total governance index (TGI),Weighted mean of HG and CG,as-of 31 Dec 2022
+15-minute accessibility,15-min accessible population (*_p),"For each service category, *_p is the number of residents living in spatial units whose walk-time accessibility to the nearest destination in that category is within 15 minutes.",2022
+15-minute accessibility,15-min coverage share (*_c),"For each service category, *_c is the share of the city population that falls within the 15-minute walking threshold to at least one destination in that category.",2022
+15-minute accessibility,Population-weighted mean walk time (*_w),"For each service category, *_w is the population-weighted mean walking time (minutes) to the nearest destination in that category.",2022

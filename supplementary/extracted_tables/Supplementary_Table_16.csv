@@ -1,0 +1,7 @@
+Task,Granularity,Cohen's κ,Raw agreement,Interpretation†
+Emotion,7-class (overall),0.762,79.8%,Substantial
+Attention,24-code (overall),0.799,81.3%,Substantial → Almost Perfect
+Attention,"Channel (E/H/S, 3-way)",0.873,92.1%,Substantial to almost perfect
+Attention,"Within-Exposure (E channel, 10 codes)",0.829,86.1%,Almost Perfect
+Attention,"Within-Health (H channel, 6 codes)",0.873,89.5%,Almost Perfect
+Attention,"Within-Systems (S channel, 8 codes)",0.896,91.0%,Almost Perfect

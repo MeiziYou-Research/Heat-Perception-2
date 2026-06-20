@@ -1,0 +1,9 @@
+Service category,Conceptual definition,OSM POI types included
+Mobility,Walking access to public transport and shared-mobility entry points.,bicycle rental; bus station; car sharing; platform; station; stop position; subway entrance; tram stop
+Health & well-being,Access to healthcare and health-supporting services (high-priority basic service).,clinic; dentist; doctors; hospital; nursing home; pharmacy; veterinary; bank
+Education,Access to learning resources from childcare to higher education.,child care; childcare; college; kindergarten; school; university
+Food choices,Access to food retail and dining options (daily provisioning).,supermarket; convenience; marketplace; wholesale; farm; greengrocer; restaurant; fast food; food court; cafe; ice cream; bakery; baking oven; butcher; dairy; deli; frozen food; cheese; seafood; spices; pasta; health food
+Community space,Social infrastructure and civic/community destinations supporting social cohesion.,community centre; social centre; social facility; townhall; library; public bookcase; allotments; fountain; coworking; place of worship
+Active living,Destinations enabling physical activity and outdoor recreation.,park; garden; playground; dog park; gym; fitness centre; fitness station; sports centre; pitch; track; swimming pool; swimming area
+Nightlife,Leisure/entertainment and night-time social destinations.,bar; pub; biergarten; cinema; theatre; arts centre; events venue; amusement arcade; casino; nightclub; dance
+All POIs,Pooled destinations across all categories.,union of all above POI types

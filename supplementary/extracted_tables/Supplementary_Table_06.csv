@@ -1,0 +1,25 @@
+Outcome label,Subtype(s),Emotion / definition,Expected sign,Cities with expected sign,Cities with |ASR|>1
+Everyday heat monitoring – Surprise,E11,Surprise,+,48/50,38/50
+Everyday heat monitoring – Neutral,E11,Neutral,+,46/50,40/50
+Everyday heat monitoring – Fear,E11,Fear,−,48/50,44/50
+Everyday heat monitoring – Sadness,E11,Sadness,−,49/50,46/50
+Sleep burden – Sadness,E21,Sadness,+,45/50,41/50
+Sleep burden – Joy,E21,Joy,−,44/50,20/50
+Sleep burden – Neutral,E21,Neutral,−,45/50,28/50
+Work/commute burden – Sadness,E23,Sadness,+,48/50,47/50
+Work/commute burden – Joy,E23,Joy,−,50/50,43/50
+Work/commute burden – Neutral,E23,Neutral,−,50/50,45/50
+Home/companionship enjoyment – Joy,E22,Joy,+,34/50,26/50
+Outdoor enjoyment – Joy,E24,Joy,+,44/50,36/50
+Organised social events – Joy,E25,Joy,+,31/50,23/50
+Consumptive cooling – Joy,E33,Joy,+,48/50,42/50
+Acute health outcomes – Fear,H21,Fear,+,46/50,45/50
+Broader health impacts – Fear,H31,Fear,+,21/50,18/50
+Health warnings/advice – Fear,H41,Fear,+,48/50,46/50
+Health composite - Fear,H21/H31/H41,"Fear composite (mean Fear-ASR across H21, H31, H41)",+,49/50,46/50
+Climate attribution – Neutral,S41,Neutral,+,49/50,42/50
+Climate attribution – Fear,S41,Fear,+,40/50,33/50
+Background climate risk – Fear,S43,Fear,+,40/50,29/50
+Systems/climate - Neutral,S41/S43/S44,"Neutral composite (mean Neutral-ASR across S41, S43, S44)",+,47/50,32/50
+Systems/climate - Fear,S41/S43/S44,"Fear composite (mean Fear-ASR across S41, S43, S44)",+,47/50,31/50
+Climate-Fear,S41/S44,1 if any Fear-ASR>0 in S41 or S44; 0 otherwise,+,46/50,

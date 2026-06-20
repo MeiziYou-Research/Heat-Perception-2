@@ -1,0 +1,23 @@
+Outcome,Top correlate reduced,Family reduced,Effect reduced,Sign reduced,Top correlate baseline,Family baseline,Effect baseline,Sign baseline,Family same R vs B,Sign same R vs B
+E11-Neutral,Population,Socio-demographic context,0.08,+,Population,Socio-demographic context,0.09,+,TRUE,TRUE
+E11-Surprise,Community proportion,15-min accessibility,0.22,+,Community proportion,15-min accessibility,0.22,+,TRUE,TRUE
+E21-Sadness,Nightlife proportion,15-min accessibility,0.54,+,Nightlife proportion,15-min accessibility,0.46,+,TRUE,TRUE
+E22-Joy,Mean temperature,Climatic heat regime,0.15,-,Nightlife coverage,15-min accessibility,0.14,+,FALSE,FALSE
+E23-Sadness,Nightlife proportion,15-min accessibility,0.12,+,Nightlife proportion,15-min accessibility,0.12,+,TRUE,TRUE
+E24-Joy,Climate governance,Governance,0.09,-,Total government index,Governance,0.18,-,TRUE,TRUE
+E25-Joy,Healthcare proportion,15-min accessibility,0.06,+,Hot night days,Climatic heat regime,0.09,+,FALSE,TRUE
+E33-Joy,Green space Gini index,Urban environmental structure,0.11,-,Green space Gini index,Urban environmental structure,0.11,-,TRUE,TRUE
+Health Composite-Fear,Community proportion,15-min accessibility,0.25,+,Community proportion,15-min accessibility,0.27,+,TRUE,TRUE
+H21-Fear,POIs proportion,15-min accessibility,0.13,+,POIs proportion,15-min accessibility,0.14,+,TRUE,TRUE
+H31-Fear,NDVI,Urban environmental structure,0.04,+,Green exposure within 1 km,Urban environmental structure,0.04,+,TRUE,TRUE
+H41-Fear,Population,Socio-demographic context,0.3,+,Population,Socio-demographic context,0.33,+,TRUE,TRUE
+S41-Neutral,Mobility proportion,15-min accessibility,0.15,+,Mobility proportion,15-min accessibility,0.14,+,TRUE,TRUE
+System-Fear,65+ age proportion,Socio-demographic context,0.22,+,65+ age proportion,Socio-demographic context,0.26,+,TRUE,TRUE
+Climate-Neutral,Nightlife proportion,15-min accessibility,0.2,+,Nightlife proportion,15-min accessibility,0.19,+,TRUE,TRUE
+E11 Abnormality,Household income,Socio-demographic context,0.05,+,Mobility proportion,15-min accessibility,0.05,+,FALSE,TRUE
+E31-Joy-dominant,Community coverage,15-min accessibility,0.15,+,Household income,Socio-demographic context,0.07,+,FALSE,TRUE
+E32-Surprise>0,Mean temperature,Climatic heat regime,0.08,-,Diurnal temperature range,Climatic heat regime,0.05,+,TRUE,FALSE
+S11-Anger>0,Mobility proportion,15-min accessibility,0.09,+,Mobility proportion,15-min accessibility,0.08,+,TRUE,TRUE
+S21-Fear>0,Food weighted,15-min accessibility,0.1,-,Food weighted,15-min accessibility,0.14,-,TRUE,TRUE
+S42-Anger>0,Mean temperature,Climatic heat regime,0.09,-,Green exposure within 1 km,Urban environmental structure,0.12,+,FALSE,FALSE
+System-Fear>0,Education weighted,15-min accessibility,0.2,-,65+ age proportion,Socio-demographic context,0.25,+,FALSE,FALSE

@@ -1,0 +1,7 @@
+Alternative scheme,Theoretical derivability,Emotional discriminability,Coverage,Coding feasibility,Why less suitable for the present task
+"Data-driven topic models (LDA, BERTopic)",Limited,Limited: topics tend to mix narrative focus and emotion,Mixed,"Can be automated, but unstable across cities",Does not preserve the attention–emotion separation required for the present analysis; weak theoretical anchoring for cross-city comparison
+IPCC risk framework (hazard–exposure–vulnerability–adaptation),Strong,Limited: oriented toward expert risk structure,Limited: weak coverage of everyday lived experience,Limited in short first-person texts,Better suited to expert risk assessment than to first-person heat discourse
+DPSIR framework,Strong,Limited,Limited: correlates and pressures are often absent from posts,Limited,Better suited to environmental-system analysis than to perceived experience in short texts
+Sentiment-only / valence-only approaches,Not applicable to narrative focus,Not applicable,Not applicable,Strong,Removes the attention dimension entirely and loses contextual specificity
+Binary experiential-versus-structural split,Moderate,Limited: collapses exposure and health,Strong,Strong,Obscures the health-related Fear profile and reduces policy-relevant distinction
+Expanded four-channel scheme,Strong,Mixed,Strong,Limited: less clear channel boundaries,Adds complexity and ambiguity with limited gain over the current three-channel scheme

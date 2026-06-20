@@ -1,0 +1,5 @@
+Model /sample,Topics or components,Selection basis,NMI with 3 channels,Cramér’s V with 3 channels,NMI with 24 subcategories,Cramér’s V with 24 subcategories,NMI with emotion,Cramér’s V with emotion,Interpretation
+"LDA, raw corpus",6,Combined diagnostics,0.015,0.135,0.030,0.159,0.010,0.083,Dominated by exposure-related vocabulary; useful as a raw-corpus lexical baseline
+"LDA, balanced sample",12,Coherence/diversity trade-off after balancing,0.018,0.182,0.069,0.202,0.012,0.095,"Recovers a broader set of lexical clusters, but correspondence with the 24-category taxonomy remains limited"
+"NMF, raw corpus",6,Exploratory TF–IDF baseline,0.066,0.294,0.082,0.347,0.023,0.124,"Aligns more clearly than LDA, but still does not recover the full theory-driven taxonomy"
+"NMF, balanced sample",6,"Same configuration as raw-corpus NMF, used to assess persistence after balancing",0.070,0.275,0.128,0.441,0.024,0.125,"Shows the strongest correspondence with attention subcategories, but still merges functionally distinct categories and therefore serves only as lexical triangulation"

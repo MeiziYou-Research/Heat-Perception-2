@@ -1,0 +1,6 @@
+Variant,Design,Prompt components,Ablation rationale,Emotion Acc. / κ,Attention Acc. / κ
+V0,Full baseline,"Codebook definitions, tie-breaking rules and output-format constraints",Reference prompt,78.4% / 0.746,71.0% / 0.691
+V1,Labels only,"Label names and output-format constraints, without codebook definitions",Tests whether codebook definitions are necessary beyond label names alone,77.2% / 0.733,15.9% / 0.101
+V2,Few-shot,V0 plus annotated examples,Tests whether annotated examples improve the full baseline,78.8% / 0.751,76.0% / 0.745
+V3,Minimal,One-sentence instruction and label list,Lower-bound comparator for prompt specificity,76.4% / 0.723,15.4% / 0.077
+V4,Role-play,V0 plus a domain-expert role frame,Tests whether domain-expert role framing improves the full baseline,74.3% / 0.699,70.2% / 0.683

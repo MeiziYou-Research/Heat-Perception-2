@@ -1,0 +1,298 @@
+Attention-Emotion Codebook for Urban Heat Perception
+
+Purpose
+This codebook defines the closed-set annotation scheme used to classify English-language social-media posts about urban heat perception. The scheme assigns each in-scope post one attention label and one emotion label. It is designed for short social-media texts and supports downstream attention-emotion coupling analysis.
+
+Role of the annotator or model
+You are acting as a careful closed-set annotator. Your task is not to discover new themes, infer hidden motives, generate explanations or freely interpret the post. Your task is to apply the predefined labels in this codebook as consistently as possible.
+
+Analytical axes
+1. Attention axis: identify the dominant narrative or discursive focus of the post: what aspect of heat perception is being foregrounded, elaborated or used to frame the message.
+2. Emotion axis: identify the dominant affective appraisal expressed toward heat, heat-related conditions, cooling, heat risk, heat burden or institutional response.
+
+Unit of annotation
+The unit of annotation is one social-media post. Each in-scope post receives exactly one attention_channel, exactly one attention_code and exactly one emotion_label.
+
+Single-label rule
+Use one label per axis. If more than one label seems possible, choose the label that best captures the main reason the author posted the message. The goal is to identify the dominant focus and dominant emotional stance, not every possible theme or emotion.
+
+In-scope heat-perception content
+A post is in scope if it contains explicit expression of the author own thermal feeling, heat-related burden, heat-risk appraisal or immediate coping behaviour. Examples include feeling hot or humid, sleep disruption, commuting or working in heat, outdoor activity affected by heat, using shade/fans/AC/cold drinks, heat-health risk, vulnerable groups, cooling infrastructure, planning, energy systems, institutional heat response or climate-related heat framing.
+
+Out-of-scope content
+Treat a post as out of scope if it only contains metaphorical use of heat unrelated to ambient conditions, generic weather without perception/burden/risk/coping/governance content, non-ambient heat such as cooking heat, or text with no analyzable semantic content.
+
+Attention-channel decision rules
+1. Personal lived experience, routine discomfort, daily disruption or personal coping should be coded as E unless explicit health-risk or systems/governance framing is dominant.
+2. Explicit health outcomes, health warnings, vulnerable groups or animal heat-risk content should be coded as H.
+3. Institutions, infrastructure, planning, inequality, climate justice, energy systems, climate attribution or governance should be coded as S.
+4. If a post contains both personal experience and institutional blame, choose the label that best explains the main point of the post.
+5. If an animal is mentioned as companionship in ordinary home life, use E22. If animal illness, injury, dehydration, burns or death risk is central, use H12.
+6. If air conditioning, fans, shade or staying indoors are personal coping actions, use E32. If public cooling centres or institutional provision are central, use S31.
+7. If a post vents, jokes, exaggerates or uses memes about heat without a more specific life-domain or health-risk focus, use E31.
+8. If a post links heat explicitly to climate change or global warming, use S41 unless the main focus is contesting or denying climate claims, in which case use S42.
+
+Attention codebook
+
+E11 - Everyday thermal sensation statements
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Appraisal
+Category: Sensory thermal state
+Definition: Reports an immediate thermal sensation or comfort state (e.g., hot/cold/warm/cool/comfortable/uncomfortable) as a descriptive, present-focused state report.
+Theoretical role: Perceptual appraisal
+
+E12 - Interpreting thermal feel (humid/muggy/sticky; dry/humid)
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Appraisal
+Category: Situational interpretation of thermal discomfort
+Definition: Explains, attributes, or compares why the thermal experience feels a certain way by providing a situational interpretation of the sensation, without anchoring the statement to a specific life-domain disruption or explicit health-risk framing.
+Theoretical role: Interpretive appraisal (meaning-making about the stressor)
+
+E21 - Nighttime heat & sleep disruption (non-medical)
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Situated disruptions
+Category: Nighttime heat & sleep disruption (non-medical)
+Definition: Heat framed as disrupting sleep/routines (difficulty falling asleep, restless night, sweating at night) without clinical diagnosis or medical risk framing.
+Theoretical role: Domain disruption (sleep/routine)
+
+E22 - Home life & everyday companionship cooling (non-risk)
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Situated disruptions
+Category: Home life & everyday companionship cooling (non-risk)
+Definition: Home-based everyday life under heat (domestic routines, family/companionship, including pets as companionship) without centring explicit animal health risk or institutional service provision.
+Theoretical role: Domain disruption (home-life context)
+
+E23 - Work & commute
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Situated disruptions
+Category: Work & commute burden (non-medical)
+Definition: Heat interferes with work or commuting (PPE discomfort, productivity loss, travel inconvenience) without clinical/medical framing.
+Theoretical role: Domain disruption (role/obligation)
+
+E24 - Personal outdoor activity experience
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Situated disruptions
+Category: Personal outdoor activity experience
+Definition: Heat experienced during self-directed outdoor activities (walking/running/leisure/travel) emphasizing constraints, adjustments, and personal experience rather than organized events.
+Theoretical role: Domain disruption (self-directed activity)
+
+E25 - Organized events & mass-activity heat experience
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Situated disruptions
+Category: Organized events & mass-activity heat experience
+Definition: Heat experienced in organized settings (sports events, festivals, venues, crowds, queues, event rules/operations) where the structured context is central.
+Theoretical role: Domain disruption (organized/structured context)
+
+E31 - Affective coping (venting, humor, celebration/savoring)
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Coping
+Category: Affective coping (venting, humor, celebration/savoring)
+Definition: Emotion expressed as regulation/social coping: negative venting (ranting, swearing, exaggerated complaint) and/or positive savoring/celebration of warmth; excludes clinical mental health burden framing.
+Theoretical role: Emotion-focused coping (affect regulation)
+
+E32 - Device/spatial cooling strategies
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Coping
+Category: Device/spatial cooling strategies
+Definition: Cooling via devices or spatial strategies (AC, fans, shade, staying indoors, seeking cooler indoor spaces) when framed as personal coping rather than institutional provision.
+Theoretical role: Problem-focused coping (resource/behavioral adjustment)
+
+E33 - Consumptive cooling (food/drink)
+Parent channel: E
+Theory anchor: Transactional Stress & Coping
+Stage/domain: Coping
+Category: Consumptive cooling (food/drink)
+Definition: Cooling/relief via beverages or food (ice cream, cold drinks, chilled foods; treat framing) as a personal coping practice.
+Theoretical role: Problem-focused coping (consumptive strategy)
+
+H11 - Vulnerable populations at risk (incl. occupational exposure)
+Parent channel: H
+Theory anchor: Environmental Health Risk Pathway
+Stage/domain: Vulnerability
+Category: Vulnerable populations at risk (incl. occupational exposure)
+Definition: Highlights heightened heat risk for specific groups (older adults, children, unhoused, chronically ill, marginalized groups) and/or occupational exposure, framed as vulnerability rather than outcomes.
+Theoretical role: Vulnerability (differential susceptibility/exposure)
+
+H12 - Animal health risk
+Parent channel: H
+Theory anchor: Environmental Health Risk Pathway
+Stage/domain: Vulnerability
+Category: Animal health risk
+Definition: Heat-related illness/risk/death concerns for pets or wildlife (overheating, dehydration, rescue) framed as animal vulnerability.
+Theoretical role: Non-human vulnerability
+
+H21 - Individual physical health outcomes
+Parent channel: H
+Theory anchor: Environmental Health Risk Pathway
+Stage/domain: Outcomes
+Category: Individual physical health outcomes
+Definition: Explicit physical symptoms or medical framing (heat illness, dehydration, fainting, nausea; ER/hospital; symptom-tied advice).
+Theoretical role: Individual physical outcomes
+
+H22 - Individual mental health risk & burden
+Parent channel: H
+Theory anchor: Environmental Health Risk Pathway
+Stage/domain: Outcomes
+Category: Individual mental health risk & burden
+Definition: Heat framed as mental health risk/burden (anxiety/depression, psychological distress, mental health system strain) beyond everyday venting/humor.
+Theoretical role: Mental health outcomes/burden
+
+H31 - Population/system health burden
+Parent channel: H
+Theory anchor: Environmental Health Risk Pathway
+Stage/domain: Outcomes
+Category: Population/system health burden
+Definition: Population-level impacts (mortality, hospitalizations, epidemiological statistics, health system overload) are framed as a collective burden.
+Theoretical role: Population/system outcomes
+
+H41 - Health warnings & preventive advice
+Parent channel: H
+Theory anchor: Environmental Health Risk Pathway
+Stage/domain: Public health action
+Category: Health warnings & preventive advice
+Definition: Heat alerts, risk reminders, and prevention guidance (hydration, check-ins, stay indoors) framed as action-oriented public health messaging.
+Theoretical role: Public health action/response
+
+S11 - Structural inequality & climate justice framing
+Parent channel: S
+Theory anchor: Socio-technical Risk Governance
+Stage/domain: Structural vulnerability & equity
+Category: Structural inequality & climate justice framing
+Definition: Structural correlates of unequal heat exposure/cooling access (housing/renting, resource distribution, justice claims; includes refugee/justice narratives).
+Theoretical role: Equity/justice governance frame (structural vulnerability)
+
+S21 - Urban planning shaping heat exposure & cooling conditions
+Parent channel: S
+Theory anchor: Socio-technical Risk Governance
+Stage/domain: Built environment
+Category: Urban form/planning shaping heat exposure & cooling conditions
+Definition: System-level mechanisms linking urban design/materials/greenery/infrastructure/planning to heat exposure and cooling conditions; excludes institutional “cooling centre” operations.
+Theoretical role: Built-environment mechanism (exposure shaping)
+
+S22 - Power grid/energy system vulnerability & response
+Parent channel: S
+Theory anchor: Socio-technical Risk Governance
+Stage/domain: Critical infrastructure
+Category: Power grid/energy system vulnerability & response
+Definition: Heat-driven grid stress, outages, peak demand, resilience measures, and infrastructure response; reliability and cascading impacts are central.
+Theoretical role: Critical infrastructure risk (system vulnerability/resilience)
+
+S31 - Institutional heat response & urban operations
+Parent channel: S
+Theory anchor: Risk Governance (operations)
+Stage/domain: Institutional response
+Category: Institutional heat response & urban operations
+Definition: Institutional provision and operational adjustments under heat (cooling centres/public buildings as refuges; service rescheduling; emergency operations; governance decisions). May include public-safety linkage narratives when framed as a governance-relevant risk.
+Theoretical role: Operational governance response (service provision and institutional adaptation)
+
+S41 - Climate change attribution framing
+Parent channel: S
+Theory anchor: Public Discourse & Risk Framing
+Stage/domain: Framing (Why)
+Category: Climate change attribution framing
+Definition: Explicitly links current heat/extreme weather to climate change/global warming via causal attribution language.
+Theoretical role: Causal attribution (“why is this happening?”)
+
+S42 - Climate controversy/contestation framing
+Parent channel: S
+Theory anchor: Public Discourse & Risk Framing
+Stage/domain: Framing (Contest)
+Category: Climate controversy/contestation framing
+Definition: Debates around climate change claims (science communication vs skepticism/denial/conspiracy), persuasion and contestation are central.
+Theoretical role: Contestation (“which interpretation is contested?”)
+
+S43 - Long-term climate/seasonal background framing
+Parent channel: S
+Theory anchor: Public Discourse & Risk Framing
+Stage/domain: Framing (Context)
+Category: Long-term climate/seasonal background framing
+Definition: Places heat within long-term trends, seasonality, or climate background as context without explicit causal attribution.
+Theoretical role: Temporal backgrounding (“what is the broader context?”)
+
+S44 - Extreme heat & compound extremes framing
+Parent channel: S
+Theory anchor: Public Discourse & Risk Framing
+Stage/domain: Framing (Risk type)
+Category: Extreme heat & compound extremes framing
+Definition: Frames heat as part of compound/multi-hazard events (heat + drought/flood/fire/smoke), emphasizing cascading risks and hazard complexity.
+Theoretical role: Hazard complexity (“what kind of risk is it?”)
+
+Emotion-label decision rules
+Assign the dominant emotion expressed toward heat, heat-related conditions, cooling, risk, burden or systems/governance. If the post quotes or forwards information and expresses no author stance, use Neutral. For sarcasm, classify the underlying affect rather than the surface wording.
+
+Emotion priority rules
+1. Clear blame, injustice or norm violation -> Anger.
+2. Risk, danger, health harm or safety threat -> Fear.
+3. Physical revulsion, sensory aversion or contamination -> Disgust.
+4. Unexpectedness, abnormality or record-breaking emphasis -> Surprise.
+5. Enjoyment, pleasure, comfort or relief -> Joy.
+6. Depletion, exhaustion, demotivation or loss of wellbeing -> Sadness.
+7. No clear affective stance -> Neutral.
+
+Emotion codebook
+
+Joy
+Core appraisal: Heat or cooling is appraised as pleasant, welcome, or relieving; the situation is manageable or even desirable (treat, comfort, leisure).
+Typical narrative role: Everyday coping and relief; playful adaptation to heat; positive framing of cooling practices (e.g. treats, holidays, cosy warmth).
+Illustrative cues: “love this weather”, “finally nice and warm”, “this AC is heaven”, “ice cream saves my life”
+
+Surprise
+Core appraisal: Heat conditions are appraised as unexpected, abnormal or record-breaking, relative to local or seasonal expectations.
+Typical narrative role: Monitoring and remarking on abnormality; emphasising records, anomalies or temporal shifts (“still this hot?”, “in this season?”).
+Illustrative cues: “can’t believe it’s this hot”, “30°C in October??”, “still this warm at night”, “never seen heat like this”
+
+Neutral
+Core appraisal: Situation is appraised in a descriptive, informational way with minimal affect; focus is on reporting rather than evaluation.
+Typical narrative role: Observation, monitoring and reporting: forecasts, warnings, statistics, factual descriptions that provide context but little emotional stance.
+Illustrative cues: “it’s 33°C today”, “heat warning in effect”, “forecast 35°C all week”, “UV index is 10”
+
+Sadness
+Core appraisal: Heat is appraised as burden, exhaustion or loss of ease/opportunity; people feel worn down, drained or constrained.
+Typical narrative role: Encoding perceived disruption of routines and wellbeing: sleep loss, lack of energy, curtailed activities, emotional fatigue.
+Illustrative cues: “this heat is depressing”, “no energy to do anything”, “can’t face another hot night”, “summer is ruining my mood”
+
+Fear
+Core appraisal: Heat is appraised as a threat to health, safety or systems, with anticipated harm to self, others or the climate.
+Typical narrative role: Risk alerting and anticipatory concern: health warnings, worry about vulnerable groups, linking heat to serious climate risks.
+Illustrative cues: “worried about heatstroke”, “this heat is dangerous for the elderly”, “scared for people sleeping rough”, “terrifying what climate change is doing”
+
+Anger
+Core appraisal: Heat-related conditions are appraised as unfair, avoidable or caused/worsened by someone’s decisions; perceived norm violation or injustice.
+Typical narrative role: Governance and justice framing; blaming landlords, authorities or systems for inadequate protection, infrastructure or response.
+Illustrative cues: “can’t believe the landlord still won’t fix the AC”, “this city never plans for heatwaves”, “it’s outrageous the train has no AC in this heat”
+
+Disgust
+Core appraisal: Heat is appraised through revulsion, contamination or environmental spoilage, often bodily or sensory.
+Typical narrative role: Marking environmental degradation and bodily discomfort: sweaty, smelly, ‘sauna-like’ spaces, or dirty, stifling environments.
+Illustrative cues: “so sweaty and gross”, “the bus smells disgusting in this heat”, “my apartment feels like a sticky sauna”, “it’s nasty out there”
+
+Output schema
+{
+  "attention_channel": "E/H/S",
+  "attention_code": "E11/E12/E21/E22/E23/E24/E25/E31/E32/E33/H11/H12/H21/H22/H31/H41/S11/S21/S22/S31/S41/S42/S43/S44",
+  "emotion_label": "Joy/Sadness/Anger/Fear/Surprise/Disgust/Neutral"
+}
+
+Quality-control checklist
+1. Is the post truly about ambient heat, warm/hot/humid conditions, heat exposure, cooling, heat burden or heat risk?
+2. What is the dominant attention focus?
+3. Is the focus personal lived experience, health/risk or systems/governance?
+4. Is a more specific subtype available?
+5. Is the emotion directed toward heat or heat-related conditions?
+6. Is the post sarcastic?
+7. Is there blame, risk, depletion, surprise, disgust, joy or no clear affect?
+8. Does the selected attention label explain why the author posted the message?
+9. Does the selected emotion label capture the strongest affective appraisal?
+10. Are the attention and emotion labels independently selected rather than forced to match each other?
+
+Relationship to other files
+This text file is the complete coding manual. The structured table versions are provided as Supplementary_Table_1_attention_taxonomy.csv and Supplementary_Table_2_emotion_scheme.csv. Prompt files operationalise this codebook for LLM-based closed-set classification and include prompt variants used for ablation analyses.

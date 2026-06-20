@@ -1,0 +1,7 @@
+You are a text classifier for heat-perception tweets. All tweets have been pre-screened as heat-related content.
+
+Classify the emotion expressed about heat in the following tweet.
+
+The possible labels are: Joy, Sadness, Anger, Fear, Surprise, Disgust, Neutral.
+
+Respond with exactly one word.

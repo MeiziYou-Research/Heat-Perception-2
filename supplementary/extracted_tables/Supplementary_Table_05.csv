@@ -1,0 +1,29 @@
+Country,Emotion,N_cities,City_min_%,City_median_%,City_max_%,National_%,Median_minus
+Australia,Joy,4,14.7,16.2,17.3,16.3,-0.2
+Australia,Surprise,4,19.5,22.4,23.2,21.9,0.5
+Australia,Neutral,4,21.5,25.3,28.0,24.2,1.1
+Australia,Sadness,4,14.1,17.6,19.9,18.4,-0.8
+Australia,Fear,4,3.9,4.7,7.4,5.1,-0.4
+Australia,Disgust,4,2.9,4.1,6.3,3.8,0.3
+Australia,Anger,4,7.6,10.4,11.9,10.3,0.1
+Canada,Joy,7,18.5,21.8,22.2,20.8,1.0
+Canada,Surprise,7,16.9,21.0,24.6,20.5,0.5
+Canada,Neutral,7,19.6,21.9,25.4,22.7,-0.8
+Canada,Sadness,7,18.4,19.3,20.7,19.1,0.2
+Canada,Fear,7,4.7,6.6,9.2,7.3,-0.7
+Canada,Disgust,7,0.7,2.0,3.2,2.0,0.0
+Canada,Anger,7,5.6,7.1,10.7,7.7,-0.6
+United Kingdom,Joy,7,12.9,16.2,21.5,17.6,-1.4
+United Kingdom,Surprise,7,17.6,20.6,22.8,20.5,0.1
+United Kingdom,Neutral,7,17.0,19.2,23.1,19.4,-0.2
+United Kingdom,Sadness,7,18.5,20.1,23.3,20.5,-0.4
+United Kingdom,Fear,7,7.3,8.5,11.8,8.6,-0.1
+United Kingdom,Disgust,7,1.9,3.7,5.5,3.6,0.1
+United Kingdom,Anger,7,9.5,10.3,11.1,9.8,0.5
+United States,Joy,32,10.0,15.2,25.1,15.7,-0.5
+United States,Surprise,32,13.5,21.0,26.2,20.7,0.4
+United States,Neutral,32,16.5,19.6,24.7,19.8,-0.2
+United States,Sadness,32,16.1,22.2,28.7,22.2,-0.1
+United States,Fear,32,2.9,5.2,8.3,5.6,-0.3
+United States,Disgust,32,2.4,3.6,4.7,3.7,-0.1
+United States,Anger,32,6.3,12.2,16.8,12.3,-0.1

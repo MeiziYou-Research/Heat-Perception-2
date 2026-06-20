@@ -1,0 +1,8 @@
+Metric,Value
+Emotion accuracy,78.8%
+Attention accuracy,76.0%
+Expected joint accuracy (independence),59.9%
+Observed joint accuracy,59.9%
+Joint-label macro-F1,0.579
+Joint-label weighted-F1,0.603
+Joint-label Cohen’s κ,0.594

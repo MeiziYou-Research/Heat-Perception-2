@@ -1,0 +1,51 @@
+Country,City,Köppen–Geiger climate classification,Warm season,Coastal/Inland
+Australia,Brisbane,Cfa,"12,1,2,3",Coastal
+Australia,Melbourne,Cfb,"12,1,2,3",Coastal
+Australia,Perth,Csa,"12,1,2,3",Coastal
+Australia,Sydney,Cfa,"12,1,2,3",Coastal
+Canada,Calgary,Dfc,"6,7,8,9",Inland
+Canada,Edmonton,Dfb,"6,7,8,9",Inland
+Canada,London,Dfb,"6,7,8,9",Inland
+Canada,Ottawa,Dfb,"6,7,8,9",Inland
+Canada,Toronto,Dfa,"6,7,8,9",Coastal
+Canada,Vancouver,Dfb,"6,7,8,9",Coastal
+Canada,Winnipeg,Dfb,"6,7,8,9",Inland
+United Kingdom,Birmingham,Cfb,"6,7,8,9",Inland
+United Kingdom,Bristol,Cfb,"6,7,8,9",Coastal
+United Kingdom,Leeds,Cfb,"6,7,8,9",Inland
+United Kingdom,Liverpool,Cfb,"6,7,8,9",Coastal
+United Kingdom,London,Cfb,"6,7,8,9",Coastal
+United Kingdom,Manchester,Dfb,"6,7,8,9",Inland
+United Kingdom,Sheffield,Cfb,"6,7,8,9",Inland
+United States,Arlington,Cfa,"6,7,8,9",Inland
+United States,Atlanta,Cfa,"6,7,8,9",Inland
+United States,Austin,Cfa,"6,7,8,9",Inland
+United States,Baltimore,Cfa,"6,7,8,9",Coastal
+United States,Birmingham,Cfb,"6,7,8,9",Inland
+United States,Boston,Dfb,"6,7,8,9",Coastal
+United States,Charlotte,Cfa,"6,7,8,9",Inland
+United States,Chicago,Dfa,"6,7,8,9",Coastal
+United States,Columbus,Dfa,"6,7,8,9",Inland
+United States,Dallas,Cfa,"6,7,8,9",Inland
+United States,Denver,Dfc,"6,7,8,9",Inland
+United States,Fort Worth,Cfa,"6,7,8,9",Inland
+United States,Fresno,Csb,"6,7,8,9",Inland
+United States,Houston,Cfa,"6,7,8,9",Coastal
+United States,Indianapolis,Dfa,"6,7,8,9",Inland
+United States,Las Vegas,BSk,"6,7,8,9",Inland
+United States,Louisville,Cfa,"6,7,8,9",Inland
+United States,Madison,Dfa,"6,7,8,9",Inland
+United States,Miami,Af,"6,7,8,9",Coastal
+United States,Nashville,Cfa,"6,7,8,9",Inland
+United States,New Orleans,Cfa,"6,7,8,9",Coastal
+United States,New York,Cfa,"6,7,8,9",Coastal
+United States,Paradise,Csa,"6,7,8,9",Inland
+United States,Philadelphia,Dfa,"6,7,8,9",Coastal
+United States,Phoenix,BSh,"6,7,8,9",Inland
+United States,Portland,Csb,"6,7,8,9",Coastal
+United States,Richmond,Cfa,"6,7,8,9",Inland
+United States,San Antonio,BSh,"6,7,8,9",Inland
+United States,San Diego,BSh,"7,8,9,10",Coastal
+United States,San Francisco,Csb,"7,8,9,10",Coastal
+United States,Seattle,Csb,"6,7,8,9",Coastal
+United States,Vancouver,Dfb,"6,7,8,9",Inland

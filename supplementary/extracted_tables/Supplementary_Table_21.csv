@@ -1,0 +1,4 @@
+Panel,Content,Coverage,Purpose
+Panel a,Typical correctly classified attention–emotion combinations,"24 attention subcategories, with four representative examples per subcategory",Shows how each attention category is operationalised jointly with emotion labels.
+Panel b,Difficult boundary cases and adjudication rationale,40 cases,Documents how human reference labels were assigned when adjacent attention or emotion labels were plausible.
+Panel c,Cross-model consensus errors and systematic misclassification patterns,35 cases,"Diagnoses recurring model blind spots, including emotion-level, attention-level and joint-label errors."

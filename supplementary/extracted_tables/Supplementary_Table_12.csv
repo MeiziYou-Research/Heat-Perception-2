@@ -1,0 +1,9 @@
+Outcome,Full-sample leading associated factor,Factor family,Exact factor preservation,Broad family preservation,Replacement leading factors and families,Stability assessment
+SysFear-binary,65+ age proportion,Socio-demographic,49/50 (98%),49/50 (98%),Household income (Socio-demographic; 1),Robust
+S42-Anger-bin,Green exposure,Urban environmental,48/50 (96%),50/50 (100%),Urbanisation intensity (Urban environmental; 1); Green space Gini index (Urban environmental; 1),Robust
+S11-Anger-bin,Mobility proportion,15-min accessibility,48/50 (96%),48/50 (96%),Mean temperature (Climatic heat regime; 2),Robust
+E31-JoyDominant,Household income,Socio-demographic,47/50 (94%),48/50 (96%),Green space Gini index (Urban environmental; 1); Total governance index (Governance; 1),Robust
+S21-Fear-bin,Food weighted,15-min accessibility,46/50 (92%),50/50 (100%),Food coverage (15-min accessibility; 3); Activity weighted (15-min accessibility; 1),Robust
+Climate-index,Activity coverage,15-min accessibility,45/50 (90%),48/50 (96%),Green space Gini index (Urban environmental; 2); Activity weighted (15-min accessibility; 2); Education weighted (15-min accessibility; 1),Robust
+E32-Surprise-bin,Diurnal temperature range,Climatic heat regime,44/50 (88%),50/50 (100%),Mean temperature (Climatic heat regime; 6),Largely stable†
+E11-Abnormality,Mobility proportion,15-min accessibility,25/50 (50%),31/50 (62%),Household income (Socio-demographic; 18); Community coverage (15-min accessibility; 3); Nightlife proportion (15-min accessibility; 3); Mean temperature (Climatic heat regime; 1),Sensitive‡

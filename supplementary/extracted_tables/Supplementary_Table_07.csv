@@ -1,0 +1,8 @@
+Mechanism family,Indicator,Conceptual contrast,Operational rule (indicator = 1),Cities with indicator
+Everyday sensations,E11-Abnormality,Abnormal vs background framing of everyday heat,"E11-Surprise > Neutral, ASR",26/50
+Affective coping,E31-Joy-dominant,Joy-dominant vs complaining coping,Joy is the largest positive ASR and Joy-ASR > 0 for E31,14/50
+Functional coping,E32-Surprise,Surprise-leaning vs routine cooling,"E32-Surprise, ASR > 0",25/50
+Climate-justice,S11-Anger,Anger-based vs other justice emotions,"S11-Anger, ASR > 0",27/50
+Planning and urban form,S21 Fear,Planning-as-risk vs descriptive/diagnostic framing,"S21-Fear, ASR > 0",21/50
+Systems & climate risk,System,Any system-level Fear vs none,"System-Fear, ASR > 0",47/50
+Climate controversy,S42,Anger-dominated vs other controversy frames,"S42-Anger, ASR > 0",4/50

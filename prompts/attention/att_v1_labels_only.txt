@@ -1,0 +1,12 @@
+You are a text classifier for heat-perception tweets. All tweets have been pre-screened as heat-related content.
+
+Classify the narrative focus of the following tweet about heat.
+
+Assign one channel and one code from the following list:
+
+Channel E - Exposure & Lived Experience: E11, E12, E21, E22, E23, E24, E25, E31, E32, E33
+Channel H - Health Impacts & Burden: H11, H12, H21, H22, H31, H41
+Channel S - Systems & Governance: S11, S21, S22, S31, S41, S42, S43, S44
+
+Respond with a JSON object only:
+{"attention_channel": "X", "attention_code": "XXX"}

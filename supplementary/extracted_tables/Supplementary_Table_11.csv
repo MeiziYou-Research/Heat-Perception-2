@@ -1,0 +1,16 @@
+Outcome,Full-sample leading associated factor,Factor family,Exact factor preservation,Broad family preservation,Replacement leading factors and families,Stability assessment
+ClimateNeutral,Nightlife proportion,15-min accessibility,50/50 (100%),50/50 (100%),None,Robust
+SysFear,65+ age proportion,Socio-demographic,50/50 (100%),50/50 (100%),None,Robust
+H41-Fear,Population,Socio-demographic,50/50 (100%),50/50 (100%),None,Robust
+E21-Sadness,Nightlife proportion,15-min accessibility,49/50 (98%),50/50 (100%),Mobility proportion (15-min accessibility; 1),Robust
+E22-Joy,Nightlife coverage,15-min accessibility,49/50 (98%),49/50 (98%),Mean temperature (Climatic heat regime; 1),Robust
+E11-Surprise,Community proportion,15-min accessibility,49/50 (98%),49/50 (98%),Population (Socio-demographic; 1),Robust
+E23-Sadness,Nightlife proportion,15-min accessibility,49/50 (98%),49/50 (98%),Climate governance index (Governance; 1),Robust
+E24-Joy,Total governance index,Governance,48/50 (96%),50/50 (100%),Climate governance index (Governance; 2),Robust
+E11-Neutral,Population,Socio-demographic,48/50 (96%),48/50 (96%),65+ age proportion (Socio-demographic; 1); Climate governance index (Governance; 1),Robust
+H21-Fear,POIs proportion,15-min accessibility,48/50 (96%),49/50 (98%),Green exposure (Urban environmental; 1); Mobility proportion (15-min accessibility; 1),Robust
+E33-Joy,Green space Gini index,Urban environmental,47/50 (94%),49/50 (98%),Nightlife proportion (15-min accessibility; 1),Robust
+H31-Fear,Green exposure,Urban environmental,47/50 (94%),47/50 (94%),Mobility proportion (15-min accessibility; 3),Robust
+E25-Joy,Hot nights,Climatic heat regime,46/50 (92%),46/50 (92%),POIs proportion (15-min accessibility; 2); Activity proportion (15-min accessibility; 2),Robust
+HealthFear,Community proportion,15-min accessibility,41/50 (82%),50/50 (100%),POIs proportion (15-min accessibility; 7); Nightlife proportion (15-min accessibility; 2),Largely stable†
+V41-Neutral,Mobility proportion,15-min accessibility,43/50 (86%),50/50 (100%),Nightlife proportion (15-min accessibility; 5); Community coverage (15-min accessibility; 1); Mobility weighted (15-min accessibility; 1),Largely stable†
