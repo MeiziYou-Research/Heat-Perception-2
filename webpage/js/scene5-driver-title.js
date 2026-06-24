@@ -7,7 +7,7 @@
     return `
       <section id="scene-driver-title" class="driver-title-section">
         <div class="driver-title-inner">
-          <div class="driver-title-kicker">Urban drivers</div>
+          <div class="driver-title-kicker">Associated factors</div>
           <h2 class="driver-title-main">Why does it stay or shift?</h2>
           <p class="driver-title-sub"><strong>Access and people, not climate,</strong> explain local rewiring.</p>
         </div>
