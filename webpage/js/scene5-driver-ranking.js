@@ -129,12 +129,12 @@
     return `
       <section id="scene-driver-ranking" class="driver-ranking-section">
         <div class="driver-ranking-shell">
-          <div class="driver-ranking-kicker">Driver ranking</div>
-          <h2 class="driver-ranking-title">Which driver matters most?</h2>
+          
+          <h2 class="driver-ranking-title">Which associated factors matter most?</h2>
 
           <div class="driver-ranking-main-card">
             <div class="driver-ranking-card-head">
-              <h3>Top driver families</h3>
+              <h3>Top associated factors</h3>
             </div>
             <div class="driver-bar-list">${rows}</div>
           </div>
