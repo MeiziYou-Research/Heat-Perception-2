@@ -59,13 +59,6 @@ Heat-Perception-2/
 │   ├── README.md
 │   └── Supplementary_Table_19_representative_examples_revised.xlsx
 │
-├── supplementary/
-│   ├── README.md
-│   └── extracted_tables/
-│       ├── Supplementary_Table_01.csv
-│       ├── Supplementary_Table_02.csv
-│       └── ...
-│
 ├── source_data/
 │   ├── README.md
 │   ├── Source_Data_Fig_2.xlsx
