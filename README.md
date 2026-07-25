@@ -7,8 +7,6 @@ Meizi You, Tianren Yang, Jianxiang Huang, Waishan Qiu, Zhengyu Yang, ChengHe Gua
 
 **Submission and review status:** Manuscript submitted to *Nature Climate Change* and currently under review.
 
-If you need additional data or have questions about the repository, please contact **Meizi You** at **meizi.you2026@gmail.com**.
-
 ## Interactive visualisation webpage
 
 The interactive visualisation webpage can be accessed at:
@@ -110,16 +108,11 @@ The `validation\\\_examples/` folder contains paraphrased representative example
 
 Raw Twitter/X posts are not redistributed because of platform data-use restrictions. This repository provides codebook materials, prompt variants, derived visualisation JSON files, supplementary tables and paraphrased validation examples that support auditability of the classification workflow and the interactive visualisation.
 
-For additional data requests, please contact:
-
-**Meizi You**  
-Email: **meizi.you2026@gmail.com**
-
 ## Contacts and contributions
 
 **Research contact**  
-Meizi You  
-Email: **meizi.you2026@gmail.com**
+Meizi You, John S. Ji
+Email: **meizi.you2026@gmail.com**, **johnji@tsinghua.edu.cn**
 
 **Visualisation development**  
 Waishan Qiu, Laipeng Xu, and Meizi You
