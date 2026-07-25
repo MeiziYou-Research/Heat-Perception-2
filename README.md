@@ -29,42 +29,50 @@ The repository is designed to support transparency during peer review and to hel
 ```text
 Heat-Perception-2/
 ├── README.md
-├── DATA\\\_AVAILABILITY.md
-├── CODE\\\_AVAILABILITY.md
-├── UPLOAD\\\_TO\\\_GITHUB.md
+├── DATA_AVAILABILITY.md
+├── CODE_AVAILABILITY.md
+├── UPLOAD_TO_GITHUB.md
 │
 ├── codebook/
 │   ├── README.md
-│   ├── codebook\\\_full\\\_attention\\\_emotion.txt
-│   ├── Supplementary\\\_Table\\\_1\\\_attention\\\_taxonomy.csv
-│   └── Supplementary\\\_Table\\\_2\\\_emotion\\\_scheme.csv
+│   ├── codebook_full_attention_emotion.txt
+│   ├── Supplementary_Table_1_attention_taxonomy.csv
+│   └── Supplementary_Table_2_emotion_scheme.csv
 │
 ├── prompts/
 │   ├── README.md
 │   ├── attention/
-│   │   ├── att\\\_v0\\\_full\\\_codebook.txt
-│   │   ├── att\\\_v1\\\_labels\\\_only.txt
-│   │   ├── att\\\_v2\\\_production\\\_fewshot.txt
-│   │   ├── att\\\_v3\\\_minimal.txt
-│   │   └── att\\\_v4\\\_expert\\\_role.txt
+│   │   ├── att_v0_full_codebook.txt
+│   │   ├── att_v1_labels_only.txt
+│   │   ├── att_v2_production_fewshot.txt
+│   │   ├── att_v3_minimal.txt
+│   │   └── att_v4_expert_role.txt
 │   └── emotion/
-│       ├── emo\\\_v0\\\_full\\\_codebook.txt
-│       ├── emo\\\_v1\\\_labels\\\_only.txt
-│       ├── emo\\\_v2\\\_production\\\_fewshot.txt
-│       ├── emo\\\_v3\\\_minimal.txt
-│       └── emo\\\_v4\\\_expert\\\_role.txt
+│       ├── emo_v0_full_codebook.txt
+│       ├── emo_v1_labels_only.txt
+│       ├── emo_v2_production_fewshot.txt
+│       ├── emo_v3_minimal.txt
+│       └── emo_v4_expert_role.txt
 │
-├── validation\\\_examples/
+├── validation_examples/
 │   ├── README.md
-│   └── Supplementary\\\_Table\\\_19\\\_representative\\\_examples\\\_revised.xlsx
+│   └── Supplementary_Table_19_representative_examples_revised.xlsx
 │
 ├── supplementary/
 │   ├── README.md
-│   ├── Supplementary\\\_Information.docx
-│   └── extracted tables/
-│       ├── Supplementary\\\_Table\\\_01.csv
-│       ├── Supplementary\\\_Table\\\_02.csv
+│   ├── Supplementary_Information.docx
+│   └── extracted_tables/
+│       ├── Supplementary_Table_01.csv
+│       ├── Supplementary_Table_02.csv
 │       └── ...
+│
+├── source_data/
+│   ├── README.md
+│   ├── Source_Data_Fig_2.xlsx
+│   ├── Source_Data_Fig_3.xlsx
+│   ├── Source_Data_Fig_4.xlsx
+│   ├── Source_Data_Fig_5.xlsx
+│   └── Source_Data_Fig_6.xlsx
 │
 ├── data/
 │   └── Derived JSON files used by the interactive webpage
