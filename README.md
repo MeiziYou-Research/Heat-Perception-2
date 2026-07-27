@@ -118,10 +118,6 @@ The [`source_data/`](source_data/) folder contains the numerical source data und
 
 Each Excel workbook is organised by figure and contains the data required to reproduce the corresponding visualised results.
 
-## Supplementary Materials
-
-The [`supplementary/`](supplementary/) folder contains the Supplementary Information document and extracted supplementary tables in reusable formats.
-
 ## Data Availability
 
 Raw Twitter/X posts are not redistributed because of platform data-use restrictions.
