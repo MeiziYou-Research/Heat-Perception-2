@@ -154,9 +154,6 @@ For questions concerning the research materials or classification workflow, plea
 **Meizi You**  
 Email: [meizi.you2026@gmail.com](mailto:meizi.you2026@gmail.com)
 
-**John S. Ji**  
-Email: [johnji@tsinghua.edu.cn](mailto:johnji@tsinghua.edu.cn)
-
 ## Website and Visualisation Development
 
 The interactive webpage and associated visualisations were developed by Waishan Qiu, Laipeng Xu and Meizi You.
