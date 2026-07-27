@@ -1,0 +1,32 @@
+/* Phase 1 safe performance layer — 2026-07-25
+   No visual redesign. It reduces initial paint/layout work for off-screen scenes. */
+
+@supports (content-visibility: auto) {
+  #scene2-title-page,
+  #scene2-comparison,
+  #attention-title-page,
+  #profile-dashboard,
+  #scene4-title-page,
+  #scene4-mechanism-wrapper,
+  #scene4-switch-wrapper,
+  #scene-driver-title,
+  #scene5-driver-title-wrapper,
+  #scene-driver-ranking,
+  #scene5-driver-ranking-wrapper,
+  #about-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 920px;
+  }
+
+  #opening-hero,
+  #atlas-intro-slides,
+  #xlp-global-about-btn,
+  #xlpCompareCityPanel {
+    content-visibility: visible;
+  }
+}
+
+/* Decode images independently from the main rendering path. */
+img {
+  image-rendering: auto;
+}
