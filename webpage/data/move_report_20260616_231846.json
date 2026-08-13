@@ -1,0 +1,29 @@
+{
+  "source": "C:\\Users\\86191\\Desktop\\thermal-voices-github-upload-final_20260613_165400_clean_20260616_220821",
+  "output": "C:\\Users\\86191\\Desktop\\thermal-voices-github-upload-final_20260613_165400_clean_20260616_220821_webpage_20260616_231846",
+  "moved_to_webpage": [
+    "assets",
+    "css",
+    "data",
+    "js",
+    "vendor"
+  ],
+  "rewritten_files": {
+    "index.html": 19,
+    "webpage\\js\\hero-three-clean.js": 1,
+    "webpage\\js\\scene3b-attention-scene.js": 2
+  },
+  "missing_index_references": [
+    "scene2-safe.css?v=restore_static_global_20260612_151509",
+    "scene2-final.css?v=restore_static_global_20260612_151509",
+    "webpage/assets/texture1_clean_2048.jpg",
+    "scene2-title-size.css?v=restore_static_global_20260612_151509",
+    "scene2-borderless-final.css?v=restore_static_global_20260612_151509",
+    "scene5-city-implications.js?v=citydata_20260607_125930",
+    "scene4-mechanism.js?v=restore_static_global_20260612_151509",
+    "scene4-switch.js?v=restore_static_global_20260612_151509",
+    "scene5-driver-signal.js?v=restore_scene5_20260612_210240",
+    "observed-association-color-patch.js",
+    "scene3-profile.js?v=dayheat_20260607_131006"
+  ]
+}
