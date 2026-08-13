@@ -1,0 +1,802 @@
+
+
+#scene2-comparison {
+  background: transparent !important;
+  color: #333333 !important;
+}
+
+
+#scene2-comparison .scene2-wrap {
+  width: min(94vw, 1540px) !important;
+  max-width: 1540px !important;
+  margin: 0 auto !important;
+  padding: 0 0 56px !important;
+}
+
+
+#scene2-comparison .scene2-main-title {
+  margin: 0 0 28px !important;
+  text-align: center !important;
+  font-family: "Microsoft YaHei", "Microsoft YaHei UI", "微软雅黑", Arial, sans-serif !important;
+  font-size: clamp(38px, 4.2vw, 58px) !important;
+  line-height: 1.04 !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.035em !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  text-shadow: none !important;
+}
+
+
+#scene2-comparison .scene2-grid {
+  display: grid !important;
+  grid-template-columns: minmax(760px, 1.75fr) minmax(390px, 0.95fr) !important;
+  gap: 62px !important;
+  align-items: start !important;
+}
+
+
+html body #scene2-comparison .scene2-left,
+html body #scene2-comparison .scene2-right {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html body #scene2-comparison .scene2-left {
+  padding: 0 !important;
+}
+
+html body #scene2-comparison .scene2-right {
+  position: relative !important;
+  padding: 0 0 0 48px !important;
+}
+
+
+html body #scene2-comparison .scene2-right::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -32px !important;
+  top: 0 !important;
+  width: 1px !important;
+  height: 100% !important;
+  background: rgba(51, 51, 51, 0.12) !important;
+  display: block !important;
+}
+
+
+html body #scene2-comparison .scene2-left::before,
+html body #scene2-comparison .scene2-left::after,
+html body #scene2-comparison .scene2-right::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+}
+
+
+#scene2-comparison *:not(canvas):not(.mapboxgl-map):not(.mapboxgl-map *) {
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  text-shadow: none !important;
+  font-family: "Microsoft YaHei", "Microsoft YaHei UI", "微软雅黑", Arial, sans-serif !important;
+}
+
+
+#scene2-comparison .scene2-stacklabels,
+#scene2-comparison .scene2-stacklabels * {
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+
+#scene2-comparison .scene2-desc {
+  margin: 0 0 26px !important;
+  max-width: 940px !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 18px !important;
+  line-height: 1.38 !important;
+  font-weight: 700 !important;
+}
+
+
+#scene2-comparison #scene2EmotionPills,
+#scene2-comparison .scene2-pills {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 13px !important;
+  margin: 0 0 30px !important;
+  padding: 0 0 4px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+}
+
+#scene2-comparison #scene2EmotionPills::-webkit-scrollbar,
+#scene2-comparison .scene2-pills::-webkit-scrollbar {
+  display: none !important;
+}
+
+#scene2-comparison #scene2EmotionPills button,
+#scene2-comparison #scene2EmotionPills .scene2-pill,
+#scene2-comparison .scene2-pills button,
+#scene2-comparison .scene2-pill {
+  height: 44px !important;
+  min-width: auto !important;
+  padding: 0 20px !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  box-shadow: 0 7px 18px rgba(30, 45, 65, 0.08) !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+#scene2-comparison #scene2EmotionPills .is-active,
+#scene2-comparison #scene2EmotionPills button.is-active,
+#scene2-comparison .scene2-pill.is-active {
+  background: #f5a623 !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+}
+
+
+#scene2-comparison .scene2-map-panel {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+
+#scene2-comparison .scene2-map-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: baseline !important;
+  gap: 20px !important;
+  margin: 0 0 14px !important;
+}
+
+#scene2-comparison .scene2-map-title {
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 23px !important;
+  font-weight: 850 !important;
+}
+
+#scene2-comparison .scene2-map-meta,
+#scene2-comparison #scene2MapMeta {
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 15px !important;
+  font-weight: 750 !important;
+}
+
+
+#scene2-comparison .scene2-mapbox,
+#scene2-comparison #scene2Map {
+  height: 510px !important;
+  min-height: 510px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+
+#scene2-comparison .scene2-profile-title {
+  margin: 8px 0 12px !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 24px !important;
+  font-weight: 850 !important;
+}
+
+#scene2-comparison .scene2-cityline {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 0 22px !important;
+}
+
+#scene2-comparison .scene2-legend-inline,
+#scene2-comparison .scene2-legend-inline *,
+#scene2-comparison #scene2LegendCity {
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+#scene2-comparison .scene2-cityname,
+#scene2-comparison #scene2ProfileCity {
+  min-height: 44px !important;
+  padding: 0 24px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 22px rgba(30, 45, 65, 0.08) !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+
+#scene2-comparison .scene2-radar-wrap {
+  width: 100% !important;
+  height: 410px !important;
+  min-height: 410px !important;
+  margin: 8px 0 26px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+#scene2-comparison #scene2Radar {
+  width: 100% !important;
+  max-width: 440px !important;
+  height: 400px !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+
+#scene2-comparison .xlp-radar-overlay {
+  position: absolute !important;
+  z-index: 40 !important;
+  pointer-events: none !important;
+  overflow: visible !important;
+}
+
+#scene2-comparison .xlp-radar-overlay svg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+}
+
+#scene2-comparison .xlp-radar-grid-line {
+  fill: none !important;
+  stroke: rgba(51, 51, 51, 0.24) !important;
+  stroke-width: 1.2 !important;
+}
+
+#scene2-comparison .xlp-radar-axis-line {
+  stroke: rgba(51, 51, 51, 0.18) !important;
+  stroke-width: 1.1 !important;
+}
+
+#scene2-comparison .xlp-radar-label {
+  position: absolute !important;
+  z-index: 50 !important;
+  transform: translate(-50%, -50%) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-family: "Microsoft YaHei", "Microsoft YaHei UI", "微软雅黑", Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 3px rgba(245,248,252,0.95) !important;
+}
+
+#scene2-comparison .xlp-radar-label .emoji {
+  font-size: 14px !important;
+}
+
+
+#scene2-comparison .scene2-metric-cards,
+#scene2-comparison #scene2MetricCards {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0 !important;
+  margin: 8px 0 22px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#scene2-comparison .scene2-metric-card,
+#scene2-comparison #scene2MetricCards > * {
+  position: relative !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 12px 12px !important;
+  text-align: center !important;
+}
+
+#scene2-comparison .scene2-metric-card:not(:last-child)::after,
+#scene2-comparison #scene2MetricCards > *:not(:last-child)::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 12px !important;
+  right: 0 !important;
+  width: 1px !important;
+  height: calc(100% - 24px) !important;
+  background: rgba(60, 60, 60, 0.15) !important;
+}
+
+
+#scene2-comparison .scene2-divider {
+  display: none !important;
+}
+
+#scene2-comparison .scene2-compare-btn,
+#scene2-comparison #scene2CompareBtn {
+  height: 58px !important;
+  width: 100% !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  box-shadow: 0 8px 22px rgba(30, 45, 65, 0.08) !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+}
+
+
+@media (max-width: 1200px) {
+  #scene2-comparison .scene2-grid {
+    grid-template-columns: 1fr !important;
+    gap: 42px !important;
+  }
+
+  #scene2-comparison .scene2-right {
+    padding-left: 0 !important;
+  }
+
+  #scene2-comparison .scene2-right::before {
+    display: none !important;
+  }
+}
+
+
+
+
+
+#scene2-comparison {
+  background: #f5f8fc !important;
+  color: #23262d !important;
+  min-height: 100vh !important;
+  padding: 28px 4vw 42px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+#scene2-comparison,
+#scene2-comparison * {
+  font-family: "Microsoft YaHei", "Microsoft YaHei UI", "微软雅黑", Arial, sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+
+#scene2-comparison .s2f-shell {
+  width: min(1500px, calc(100vw - 72px)) !important;
+  max-width: 1500px !important;
+  margin: 0 auto !important;
+}
+
+#scene2-comparison .s2f-title {
+  text-align: center !important;
+  margin: 0 0 30px !important;
+  font-size: clamp(36px, 3.7vw, 54px) !important;
+  line-height: 1.02 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.045em !important;
+  color: #23262d !important;
+  -webkit-text-fill-color: #23262d !important;
+}
+
+
+#scene2-comparison .s2f-baseline-block {
+  width: 100% !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+}
+
+#scene2-comparison .s2f-baseline-title {
+  margin: 0 0 10px !important;
+  color: #23262d !important;
+  -webkit-text-fill-color: #23262d !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 850 !important;
+}
+
+#scene2-comparison .s2f-stackbox {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#scene2-comparison .s2f-stack {
+  width: 100% !important;
+  display: flex !important;
+  gap: 7px !important;
+  height: 8px !important;
+  min-height: 8px !important;
+  align-items: center !important;
+}
+
+#scene2-comparison .s2f-stack-seg,
+#scene2-comparison .s2clean-stack-seg,
+#scene2-comparison .xlp2-stack-seg {
+  height: 8px !important;
+  min-height: 8px !important;
+  border-radius: 999px !important;
+}
+
+#scene2-comparison .s2f-stack-labels {
+  width: 100% !important;
+  display: flex !important;
+  gap: 7px !important;
+  margin-top: 8px !important;
+}
+
+#scene2-comparison .s2f-stack-label,
+#scene2-comparison .s2clean-stack-label,
+#scene2-comparison .xlp2-stack-label {
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+  font-size: 11px !important;
+  line-height: 1.15 !important;
+  font-weight: 850 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+
+#scene2-comparison .s2f-desc {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 28px !important;
+  padding: 0 !important;
+  color: #23262d !important;
+  -webkit-text-fill-color: #23262d !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 850 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+
+#scene2-comparison .s2f-grid {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.72fr) minmax(390px, 0.88fr) !important;
+  gap: 54px !important;
+  align-items: start !important;
+  margin: 0 !important;
+}
+
+#scene2-comparison .s2f-card,
+#scene2-comparison .s2f-left,
+#scene2-comparison .s2f-right {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+
+
+#scene2-comparison .s2f-left {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#scene2-comparison .s2f-map-head {
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  margin: 0 0 14px !important;
+}
+
+#scene2-comparison .s2f-map-title,
+#scene2-comparison .s2f-profile-title {
+  font-size: 26px !important;
+  line-height: 1.05 !important;
+  font-weight: 900 !important;
+  color: #23262d !important;
+  -webkit-text-fill-color: #23262d !important;
+}
+
+#scene2-comparison .s2f-map-meta {
+  font-size: 15px !important;
+  font-weight: 850 !important;
+  color: #23262d !important;
+  -webkit-text-fill-color: #23262d !important;
+  white-space: nowrap !important;
+}
+
+#scene2-comparison .s2f-pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin: 0 0 16px !important;
+  padding: 0 !important;
+}
+
+#scene2-comparison .s2f-pill {
+  height: 36px !important;
+  padding: 0 18px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,0.88) !important;
+  box-shadow: 0 8px 20px rgba(30,45,65,0.08) !important;
+  color: #23262d !important;
+  -webkit-text-fill-color: #23262d !important;
+  font-size: 14px !important;
+  font-weight: 850 !important;
+}
+
+#scene2-comparison .s2f-pill.is-active {
+  background: var(--emotion-color, #f2a32f) !important;
+}
+
+#scene2-comparison .s2f-map {
+  width: 100% !important;
+  height: 490px !important;
+  min-height: 490px !important;
+  max-height: 490px !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  background: #d9dee5 !important;
+  box-shadow: none !important;
+}
+
+
+#scene2-comparison .s2f-right {
+  position: relative !important;
+  padding-left: 36px !important;
+}
+
+#scene2-comparison .s2f-right::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -20px !important;
+  top: 2px !important;
+  width: 1px !important;
+  height: calc(100% - 4px) !important;
+  background: rgba(51,51,51,0.12) !important;
+}
+
+#scene2-comparison .s2f-profile-head {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  margin: 0 0 10px !important;
+}
+
+#scene2-comparison .s2f-legend {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 14px !important;
+  font-size: 14px !important;
+  font-weight: 850 !important;
+  color: #23262d !important;
+}
+
+#scene2-comparison .s2f-city-btn {
+  min-width: 178px !important;
+  height: 42px !important;
+  padding: 0 20px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,0.86) !important;
+  box-shadow: 0 10px 24px rgba(30,45,65,0.08) !important;
+  color: #23262d !important;
+  font-size: 14px !important;
+  font-weight: 850 !important;
+}
+
+#scene2-comparison .s2f-radar-wrap {
+  width: 100% !important;
+  height: 405px !important;
+  min-height: 405px !important;
+  margin: 10px 0 18px !important;
+  overflow: visible !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#scene2-comparison .s2f-radar-wrap canvas,
+#scene2-comparison .s2f-radar-wrap svg {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+}
+
+#scene2-comparison .s2f-metrics {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  margin: 6px 0 22px !important;
+}
+
+#scene2-comparison .s2f-metric {
+  position: relative !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 12px 8px !important;
+  text-align: center !important;
+}
+
+#scene2-comparison .s2f-metric:not(:last-child)::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 12px !important;
+  right: 0 !important;
+  width: 1px !important;
+  height: calc(100% - 24px) !important;
+  background: rgba(51,51,51,0.14) !important;
+}
+
+#scene2-comparison .s2f-compare {
+  width: 100% !important;
+  height: 56px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,0.86) !important;
+  box-shadow: 0 10px 24px rgba(30,45,65,0.08) !important;
+  color: #23262d !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+}
+
+@media (max-width: 1280px) {
+  #scene2-comparison .s2f-shell {
+    width: min(100%, calc(100vw - 48px)) !important;
+  }
+
+  #scene2-comparison .s2f-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  #scene2-comparison .s2f-right {
+    padding-left: 0 !important;
+  }
+
+  #scene2-comparison .s2f-right::before {
+    display: none !important;
+  }
+
+  #scene2-comparison .s2f-desc {
+    white-space: normal !important;
+  }
+}
+
+
+
+
+
+
+#scene2-comparison .s2f-baseline-title,
+#scene2-comparison .scene2-baseline-title,
+#scene2-comparison .xlp-baseline-title,
+#scene2-comparison .scene2-topnote-title,
+#scene2-comparison .scene2-top-title {
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  margin: 0 0 10px !important;
+}
+
+
+#scene2-comparison .s2f-stack,
+#scene2-comparison #s2fStack,
+#scene2-comparison #scene2StackBars,
+#scene2-comparison #s2cleanStackBars,
+#scene2-comparison .scene2-stack,
+#scene2-comparison .scene2-stack-bars,
+#scene2-comparison .s2clean-stack-bars {
+  min-height: 12px !important;
+  height: 12px !important;
+  max-height: 12px !important;
+  align-items: stretch !important;
+}
+
+
+#scene2-comparison .s2f-stack-seg,
+#scene2-comparison .xlp2-stack-seg,
+#scene2-comparison .s2clean-stack-seg,
+#scene2-comparison .scene2-stack-seg {
+  min-height: 12px !important;
+  height: 12px !important;
+  max-height: 12px !important;
+  border-radius: 999px !important;
+}
+
+
+#scene2-comparison .s2f-stackbox,
+#scene2-comparison .scene2-stackbox,
+#scene2-comparison .scene2-baseline-wrap {
+  margin-bottom: 8px !important;
+}
+
+
+#scene2-comparison .s2f-stack-labels,
+#scene2-comparison #s2fStackLabels,
+#scene2-comparison .scene2-stacklabels,
+#scene2-comparison #scene2StackLabels,
+#scene2-comparison #s2cleanStackLabels {
+  margin-top: 6px !important;
+}
+
+
+#scene2-comparison .s2f-desc,
+#scene2-comparison .scene2-desc,
+#scene2-comparison .scene2-topnote,
+#scene2-comparison .scene2-summary-note {
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  color: #333333 !important;
+  -webkit-text-fill-color: #333333 !important;
+  margin: 0 0 28px !important;
+  max-width: none !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+
+#scene2-comparison .s2f-desc br,
+#scene2-comparison .scene2-desc br,
+#scene2-comparison .scene2-topnote br,
+#scene2-comparison .scene2-summary-note br {
+  display: none !important;
+}
+
+

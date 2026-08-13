@@ -1,0 +1,86 @@
+
+
+:root {
+  --site-font-yahei: "Microsoft YaHei", "Microsoft YaHei UI", "微软雅黑", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+}
+
+
+html,
+body {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+body,
+body *:not(i):not(svg):not(path):not(circle):not(rect):not(line):not(polyline):not(polygon):not(canvas) {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+button,
+input,
+textarea,
+select,
+option,
+label {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+#opening-hero,
+#opening-hero *,
+#hero-enter-btn,
+#hero-about-btn,
+#xlp-global-about-btn {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+#scene2-title-page,
+#scene2-title-page *,
+#scene2-comparison,
+#scene2-comparison * {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+#scene3-attention-routing,
+#scene3-attention-routing *,
+#scene3b-attention-scene,
+#scene3b-attention-scene * {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+#about-section,
+#about-section * {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+svg text,
+svg tspan {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+.mapboxgl-popup,
+.mapboxgl-popup *,
+.mapboxgl-ctrl,
+.mapboxgl-ctrl * {
+  font-family: var(--site-font-yahei) !important;
+}
+
+
+.scene2-title-main,
+.scene2-title-sub,
+.scene2-main-title,
+.scene2-profile-title,
+.scene2-map-title,
+.scene2-cityname,
+.opening-mini,
+.about-minimal-heading,
+.about-minimal-text,
+.about-team-role {
+  font-family: var(--site-font-yahei) !important;
+}
