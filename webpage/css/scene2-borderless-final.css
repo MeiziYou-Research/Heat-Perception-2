@@ -1,0 +1,161 @@
+/* Placeholder created during Phase 1 cleanup.
+   The original package referenced scene2-borderless-final.css, but the file was absent.
+   Current inline fallback styles remain authoritative. */
+
+/* XLP_SCENE2_BASELINE_LAYOUT_V25_START */
+
+html body #scene2-comparison .xlp-static-baseline-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+html body #scene2-comparison .xlp-static-baseline-bar,
+html body #scene2-comparison .xlp-static-baseline-labels {
+  display: grid !important;
+  grid-template-columns:
+    minmax(0, 21.6fr)
+    minmax(0, 20.7fr)
+    minmax(0, 20fr)
+    minmax(0, 16.4fr)
+    minmax(0, 11.5fr)
+    minmax(0, 5.6fr)
+    minmax(0, 4.2fr) !important;
+  column-gap: 5px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+html body #scene2-comparison .xlp-static-baseline-bar {
+  height: 10px !important;
+  align-items: stretch !important;
+}
+
+html body #scene2-comparison .xlp-static-baseline-seg {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: 10px !important;
+  margin: 0 !important;
+  border-radius: 999px !important;
+}
+
+html body #scene2-comparison .xlp-static-baseline-labels {
+  margin-top: 7px !important;
+  align-items: start !important;
+}
+
+html body #scene2-comparison .xlp-static-baseline-item {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  text-align: center !important;
+  overflow: visible !important;
+}
+
+html body #scene2-comparison .xlp-static-baseline-item .lbl {
+  display: block !important;
+  width: max-content !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.015em !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+
+html body #scene2-comparison
+  .xlp-static-baseline-item:nth-child(6) .lbl {
+  font-size: 11px !important;
+}
+
+html body #scene2-comparison
+  .xlp-static-baseline-item:nth-child(7) {
+  justify-content: flex-end !important;
+  text-align: right !important;
+}
+
+html body #scene2-comparison
+  .xlp-static-baseline-item:nth-child(7) .lbl {
+  font-size: 11px !important;
+  text-align: right !important;
+}
+
+/* XLP_SCENE2_BASELINE_LAYOUT_V25_END */
+
+/* XLP_SCENE2_EMOTION_TABS_V27_START */
+
+/*
+  Exact target only:
+  #s2cleanPills is the seven-button row above the Scene 2 map.
+  The row uses the same width already assigned to the map.
+*/
+html body #scene2-comparison #s2cleanPills.s2clean-pills {
+  display: grid !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  column-gap: 12px !important;
+  row-gap: 0 !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  box-sizing: border-box !important;
+  align-items: stretch !important;
+  flex-wrap: nowrap !important;
+}
+
+/*
+  Each button fills one equal grid column.
+  Removing the old horizontal padding prevents Disgust from leaving
+  an extra blank area on the right.
+*/
+html body #scene2-comparison
+  #s2cleanPills.s2clean-pills
+  > .s2clean-pill {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  height: 36px !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+
+/* Slightly tighten the two longest labels without changing the other five. */
+html body #scene2-comparison
+  #s2cleanPills.s2clean-pills
+  > .s2clean-pill:nth-child(2),
+html body #scene2-comparison
+  #s2cleanPills.s2clean-pills
+  > .s2clean-pill:nth-child(7) {
+  font-size: 13px !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* XLP_SCENE2_EMOTION_TABS_V27_END */
