@@ -1,0 +1,11 @@
+model,task,kappa,acc,n
+GPT-5-mini,emotion,0.751,78.8,800
+GPT-5-mini,attention,0.745,76.0,800
+GPT-4o,emotion,0.761,79.6,800
+GPT-4o,attention,0.738,75.4,800
+Claude,emotion,0.732,77.1,800
+Claude,attention,0.781,79.4,800
+Gemini,emotion,0.751,78.8,800
+Gemini,attention,0.724,74.1,795
+DeepSeek-V3,emotion,0.693,73.9,800
+DeepSeek-V3,attention,0.629,65.4,800

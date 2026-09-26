@@ -1,177 +1,56 @@
-# Heat Perception: Open Materials and Interactive Visualisation
+# Heat perception: research materials and interactive visualisation
 
-This repository provides the open materials accompanying the manuscript:
+This repository accompanies *Attention–emotion signatures of urban heat perception* by Meizi You and colleagues. It provides the classification codebook and prompts, paraphrased validation examples, numerical figure source data, validation summaries, and the interactive visualisation. The manuscript is undergoing final editorial preparation; this repository does not claim a publication DOI or acceptance date.
 
-***Attention–emotion signatures of urban heat perception***  
-Meizi You, Tianren Yang, Jianxiang Huang, Waishan Qiu, Zhengyu Yang, ChengHe Guan, Yuming Guo and John S. Ji
+## Find the materials
 
-**Manuscript Status:** Under review at *Nature Climate Change*.
+| Material | Location | Scope |
+|---|---|---|
+| Attention taxonomy | [`codebook/Extended_Data_Table_1_attention_taxonomy.csv`](codebook/Extended_Data_Table_1_attention_taxonomy.csv) | The 24 attention subcategories; companion to Extended Data Table 1. |
+| Detailed attention codebook table | [`codebook/attention_taxonomy_detailed.csv`](codebook/attention_taxonomy_detailed.csv) | Additional theoretical context; not the manuscript's Extended Data Table 1. |
+| Emotion scheme | [`codebook/Extended_Data_Table_2_emotion_scheme.csv`](codebook/Extended_Data_Table_2_emotion_scheme.csv) | The seven emotion labels; companion to Extended Data Table 2. |
+| Complete coding manual | [`codebook/codebook_full_attention_emotion.txt`](codebook/codebook_full_attention_emotion.txt) | Classification definitions and decision rules. |
+| Prompt variants | [`prompts/`](prompts/) | V0–V4 for attention and emotion; V2 was the production configuration. |
+| Paraphrased validation examples | [`validation_examples/Supplementary_Table_18_representative_examples.xlsx`](validation_examples/Supplementary_Table_18_representative_examples.xlsx) | Companion workbook for Supplementary Table 18. |
+| Figure source data | [`source_data/Source_Data_NCC_Figures.xlsx`](source_data/Source_Data_NCC_Figures.xlsx) | One workbook with separate sheets for main Figs. 2–6 and Extended Data Figs. 1–7. Fig. 1 is conceptual and has no numerical source-data sheet. |
+| Validation summaries | [`validation_summary/`](validation_summary/) | Overall model metrics and the country-stratified summary underlying Supplementary Fig. 17. |
+| Interactive visualisation | [`index.html`](index.html), [`webpage/`](webpage/) | Website entry point, scripts, styles and assets; [open the hosted page](https://meiziyou-research.github.io/Heat-Perception-2/). |
 
-## Interactive Visualisation Webpage
+The source-data workbook contains aggregate and figure-level values, not the original Twitter/X post text or user identifiers. It is the current consolidated version; the earlier split Fig. 2–6 workbooks are superseded. Sheet names follow the published figure numbering.
 
-The interactive visualisation webpage is available at:
-
-[https://meiziyou-research.github.io/Heat-Perception-2/](https://meiziyou-research.github.io/Heat-Perception-2/)
-
-The webpage provides browsable visualisations of the attention taxonomy, validation examples, city-level attention–emotion signatures and derived JSON data used for visualisation. It is intended to facilitate inspection of the revised analysis during peer review and support future reuse.
-
-## Repository Purpose
-
-This repository contains three types of materials:
-
-1. **Interactive visualisation materials** used by the project webpage.
-2. **Classification audit materials** supporting the LLM-based closed-set classification workflow, including the complete attention–emotion codebook, structured codebook tables, prompt variants and representative validation examples.
-3. **Source data and supplementary materials** supporting the figures, tables and analyses reported in the manuscript.
-
-The repository is designed to support transparency during peer review and enable readers to inspect how the attention–emotion classification system was constructed, implemented and validated.
-
-## Repository Structure
+## Repository layout
 
 ```text
 Heat-Perception-2/
 ├── README.md
 ├── DATA_AVAILABILITY.md
 ├── CODE_AVAILABILITY.md
-├── UPLOAD_TO_GITHUB.md
-│
+├── index.html
 ├── codebook/
-│   ├── README.md
-│   ├── codebook_full_attention_emotion.txt
-│   ├── Supplementary_Table_1_attention_taxonomy.csv
-│   └── Supplementary_Table_2_emotion_scheme.csv
-│
 ├── prompts/
-│   ├── README.md
 │   ├── attention/
-│   │   ├── att_v0_full_codebook.txt
-│   │   ├── att_v1_labels_only.txt
-│   │   ├── att_v2_production_fewshot.txt
-│   │   ├── att_v3_minimal.txt
-│   │   └── att_v4_expert_role.txt
 │   └── emotion/
-│       ├── emo_v0_full_codebook.txt
-│       ├── emo_v1_labels_only.txt
-│       ├── emo_v2_production_fewshot.txt
-│       ├── emo_v3_minimal.txt
-│       └── emo_v4_expert_role.txt
-│
 ├── validation_examples/
-│   ├── README.md
-│   └── Supplementary_Table_19_representative_examples_revised.xlsx
-│
+├── validation_summary/
 ├── source_data/
-│   ├── README.md
-│   ├── Source_Data_Fig_2.xlsx
-│   ├── Source_Data_Fig_3.xlsx
-│   ├── Source_Data_Fig_4.xlsx
-│   ├── Source_Data_Fig_5.xlsx
-│   └── Source_Data_Fig_6.xlsx
-│
-├── data/
-│   └── Derived JSON files used by the interactive webpage
-│
-└── assets/
-    └── Static assets used by the interactive webpage
+└── webpage/
+    ├── assets/
+    ├── css/
+    ├── data/
+    ├── js/
+    └── vendor/
 ```
 
-## Codebook
+The `webpage/data/` directory contains files used by the interactive page; it is not a substitute for the figure Source Data workbook. Internal website identifiers do not define the manuscript's statistical terminology.
 
-The classification codebook comprises three linked materials:
+## Reuse and limitations
 
-- **Complete Coding Manual**  
-  [`codebook/codebook_full_attention_emotion.txt`](codebook/codebook_full_attention_emotion.txt)  
-  A complete plain-text coding manual covering the task scope, annotator role, inclusion and exclusion criteria, single-label decision rules, definitions of all 24 attention subcategories and seven emotion categories, the required output schema and a quality-control checklist.
+The numerical source data support inspection of the plotted results. Some analyses depend on restricted post-level data and external geospatial sources; the published workbook alone is not a complete raw-data reproduction package. See [Data Availability](DATA_AVAILABILITY.md) for data access and [Code Availability](CODE_AVAILABILITY.md) for the software currently included. The prompt and validation-example files contain illustrative text; the original post corpus is not redistributed.
 
-- **Attention Taxonomy**  
-  [`codebook/Supplementary_Table_1_attention_taxonomy.csv`](codebook/Supplementary_Table_1_attention_taxonomy.csv)  
-  A structured table describing the 24 attention subcategories, including their parent channels, theoretical anchors, operational definitions and theoretical roles.
-
-- **Emotion Classification Scheme**  
-  [`codebook/Supplementary_Table_2_emotion_scheme.csv`](codebook/Supplementary_Table_2_emotion_scheme.csv)  
-  A structured table describing the seven emotion categories, including their core appraisals, narrative roles and illustrative cues.
-
-## Prompt Variants
-
-The [`prompts/`](prompts/) folder contains the attention and emotion prompt variants evaluated in the prompt-ablation analyses.
-
-The same five prompt configurations were evaluated for both attention and emotion classification:
-
-| Variant | Description |
-|:---:|---|
-| V0 | Full codebook definitions and decision rules |
-| V1 | Label names only |
-| V2 | Full codebook definitions with annotated examples |
-| V3 | Minimal task instructions |
-| V4 | Domain-expert role framing |
-
-The production prompt used in the main classification workflow was **V2**.
-
-## Validation Examples
-
-The [`validation_examples/`](validation_examples/) folder contains paraphrased representative examples, difficult boundary cases and cross-model consensus-error cases.
-
-These materials improve the transparency and auditability of the classification workflow without redistributing the original text of Twitter/X posts.
-
-## Source Data
-
-The [`source_data/`](source_data/) folder contains the numerical source data underlying Figures 2–6 of the manuscript.
-
-Each Excel workbook is organised by figure and contains the data required to reproduce the corresponding visualised results.
-
-## Data Availability
-
-Raw Twitter/X posts are not redistributed because of platform data-use restrictions.
-
-This repository provides:
-
-- the complete classification codebook;
-- all prompt variants evaluated in the prompt-ablation analyses;
-- paraphrased validation examples;
-- figure-level source data;
-- extracted supplementary tables; and
-- derived JSON files used by the interactive visualisation.
-
-These materials support auditing and reuse of the classification workflow without redistributing restricted original post content.
-
-For further details, see [`DATA_AVAILABILITY.md`](DATA_AVAILABILITY.md).
-
-## Code Availability
-
-Code and materials used to generate the interactive visualisation are provided in this repository.
-
-The [`data/`](data/) folder contains derived JSON files used by the webpage, while the [`assets/`](assets/) folder contains static webpage assets.
-
-For further details, see [`CODE_AVAILABILITY.md`](CODE_AVAILABILITY.md).
+To preview the website locally, run `python -m http.server 8000` from the repository root and open <http://localhost:8000/>.
 
 ## Contact
 
-For questions concerning the research materials or classification workflow, please contact:
+For research-material questions, contact Meizi You at <meizi.you2026@gmail.com>.
 
-**Meizi You**  
-Email: [meizi.you2026@gmail.com](mailto:meizi.you2026@gmail.com)
-
-## Website and Visualisation Development
-
-The interactive webpage and associated visualisations were developed by Waishan Qiu, Laipeng Xu and Meizi You.
-
-## Funding
-
-This research was supported by the **2025–2026 Dissertation Scholarship of the Peking University–Lincoln Institute Center for Urban Development and Land Policy**.
-
-## Local Preview
-
-To preview the interactive webpage locally, clone or download this repository and run the following command from the repository root:
-
-```bash
-python -m http.server 8000
-```
-
-Then open the following address in a web browser:
-
-```text
-http://localhost:8000
-```
-
-## Citation
-
-Citation information will be added after publication of the manuscript.
+The interactive webpage and its visualisations were developed by Waishan Qiu, Laipeng Xu and Meizi You. This research was supported by the 2025–2026 Dissertation Scholarship of the Peking University–Lincoln Institute Center for Urban Development and Land Policy.

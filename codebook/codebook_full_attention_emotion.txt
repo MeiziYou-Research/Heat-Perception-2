@@ -295,4 +295,4 @@ Quality-control checklist
 10. Are the attention and emotion labels independently selected rather than forced to match each other?
 
 Relationship to other files
-This text file is the complete coding manual. The structured table versions are provided as Supplementary_Table_1_attention_taxonomy.csv and Supplementary_Table_2_emotion_scheme.csv. Prompt files operationalise this codebook for LLM-based closed-set classification and include prompt variants used for ablation analyses.
+This text file is the complete coding manual. The manuscript-aligned tables are provided as Extended_Data_Table_1_attention_taxonomy.csv and Extended_Data_Table_2_emotion_scheme.csv; attention_taxonomy_detailed.csv retains additional theoretical context. Prompt files operationalise this codebook for LLM-based closed-set classification and include prompt variants used for ablation analyses.
