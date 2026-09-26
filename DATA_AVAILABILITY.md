@@ -1,6 +1,6 @@
 # Data availability
 
-The original Twitter/X post text and associated metadata are subject to platform data-use restrictions and are not redistributed in full. This repository provides the attention–emotion coding manual, label definitions, evaluated prompt variants, paraphrased representative examples, validation-summary materials, figure-level numerical [Source Data](source_data/Source_Data_NCC_Figures.xlsx) for main Figs. 2–6 and Extended Data Figs. 1–7, and derived files used by the [interactive visualisation](webpage/). The source-data workbook does not contain original post text or user identifiers. Supplementary tables accompanying the article provide further methodological and result detail.
+The original Twitter/X post text and associated metadata are subject to platform data-use restrictions and are not redistributed in full. Figure-level numerical data are provided in the [Source Data workbook](source_data/Source_Data_NCC_Figures.xlsx). Classification materials, paraphrased examples and validation summaries are available in the corresponding repository directories.
 
 The external environmental and contextual data used in the study are available from their respective providers:
 
@@ -13,4 +13,4 @@ The external environmental and contextual data used in the study are available f
 - Household income: [United States ACS B19013](https://data.census.gov/table/ACSDT1Y2022.B19013), [United Kingdom ONS small-area income](https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/smallareaincomeestimatesformiddlelayersuperoutputareasenglandandwales), [Australian 2021 Census](https://digital.atlas.gov.au/datasets/abs-2021-census-g33-total-household-income-weekly-by-household-composition-by-2021-lga/about), and [Statistics Canada 2021 Census Profile](https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm).
 - Governance information: official [C40 Cities](https://www.c40.org) and [ICLEI](https://iclei.org) sources.
 
-This statement describes data access; software and scripts are described separately in [Code Availability](CODE_AVAILABILITY.md).
+See [Code Availability](CODE_AVAILABILITY.md) for software included in the repository.
