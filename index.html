@@ -9148,7 +9148,7 @@
         <h3 class="about-minimal-heading">Contact</h3>
 
         <p class="about-contact-text">Meizi You</p>
-        <a class="about-email-link" href="mailto:meizi.you2026@gmail.com">Email: meizi.you2026@gmail.com</a>
+        <p class="about-email-row">Email: <a class="about-email-link" href="mailto:meizi.you2026@gmail.com">meizi.you2026@gmail.com</a></p>
 
       </div>
 
@@ -10379,7 +10379,7 @@ function opacityExpression() {
     /*
      * Scene 2 emotion-map points:
      * keep a small value difference while making the overall opacity
-     * approximately 50%.
+     * between 58% and 70% opacity.
      */
     return [
       "interpolate",
@@ -10387,10 +10387,10 @@ function opacityExpression() {
       value,
 
       stats.low,
-      0.42,
+      0.58,
 
       stats.high,
-      0.55
+      0.70
     ];
   }
 
@@ -15477,7 +15477,7 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
     clone.properties.s4_color = active ? color : "#ffffff";
     clone.properties.s4_radius =
       state.mode === "backbone" ? 8.5 : 8.0;
-    clone.properties.s4_opacity = active ? 0.50 : 1.0;
+    clone.properties.s4_opacity = active ? 0.64 : 1.0;
     clone.properties.s4_city = city;
     clone.properties.s4_country = country;
     clone.properties.s4_label = activeItem.code + " · " + activeItem.label;
@@ -15514,7 +15514,7 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
 
         '<div class="s4-header">' +
 
-          '<h2 class="s4-title">Heat perception - Signatures</h2>' +
+          '<h2 class="s4-title">Attention–emotion signatures</h2>' +
 
           '<p class="s4-lead">Explore shared signatures and framing differences across cities.</p>' +
 
@@ -15758,7 +15758,7 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
       );
     }).join("");
 
-    note.innerHTML = "<strong>Shared signatures</strong><br>Attention–emotion pairings that show a consistent direction across cities.";
+    note.textContent = "Attention–emotion pairings that show a consistent direction across cities.";
   } else {
     kicker.textContent = "Framing differences";
     meta.textContent = "Framing differences · " + activeItem.a.replace(/^[^ ]+\s*/, "") + " vs " + activeItem.b;
@@ -15792,7 +15792,7 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
       );
     }).join("");
 
-    note.innerHTML = "<strong>Framing differences</strong><br>Attention–emotion patterns that vary across cities, reflecting different ways of framing heat-related issues.";
+    note.textContent = "Attention–emotion patterns that vary across cities, reflecting different ways of framing heat-related issues.";
   }
 
   var activeCard = list.querySelector(".s4-card.is-active");
@@ -31220,11 +31220,14 @@ button#hero-about-btn {
 <style id="ncc-final-signature-notes">
   #scene4-mechanism-panel .s4-right > .s4-card-list { order: 1; }
   #scene4-mechanism-panel .s4-right > .s4-mini-note {
-    order: 2;
+    order: 0;
     font-weight: 400 !important;
   }
-  #scene4-mechanism-panel .s4-right > .s4-mini-note strong {
-    font-weight: 700;
+  #about-section .about-email-row {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #222222;
   }
 </style>
 </body>
