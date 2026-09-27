@@ -1,6 +1,6 @@
 # Attention–emotion signatures of urban heat perception
 
-Research materials and [interactive visualisation](https://meiziyou-research.github.io/Heat-Perception-2/) accompanying the manuscript by Meizi You and colleagues.
+Research materials and an [interactive visualisation](https://meiziyou-research.github.io/Heat-Perception-2/) accompanying the study.
 
 ## Repository layout
 
@@ -28,5 +28,16 @@ Heat-Perception-2/
 - [Interactive visualisation](https://meiziyou-research.github.io/Heat-Perception-2/) and its [source files](webpage/).
 
 See [Data Availability](DATA_AVAILABILITY.md) for data sources and access conditions, and [Code Availability](CODE_AVAILABILITY.md) for software included here.
+
+## Contributions
+
+- Research materials, including analysis code and figure source data: Meizi You.
+- Interactive visualisation: Waishan Qiu, Laipeng Xu and Meizi You.
+
+## Citation
+
+**Paper:** You, M., Yang, T., Huang, J., Qiu, W., Yang, Z., Guan, C., Guo, Y. and Ji, J. S. *Attention–emotion signatures of urban heat perception*.
+
+**Code and data:** You, M. *Attention–emotion signatures of urban heat perception*. [GitHub repository](https://github.com/MeiziYou-Research/Heat-Perception-2).
 
 Contact: [Meizi You](mailto:meizi.you2026@gmail.com).
