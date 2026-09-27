@@ -3373,7 +3373,7 @@
   .about-contact-block
   .about-minimal-heading {
     margin-top: 0 !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 14px !important;
   }
 
   #about-section .about-col-team
@@ -3391,6 +3391,10 @@
     font-size: 17px !important;
     line-height: 1.5 !important;
     font-style: normal !important;
+    color: #2563eb !important;
+    -webkit-text-fill-color: #2563eb !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
   }
 
   /*
@@ -3475,8 +3479,8 @@
 
     var expectedText =
       mode === "switch"
-        ? "Switch"
-        : "Backbone";
+        ? "Framing differences"
+        : "Shared signatures";
 
     if (
       kicker.textContent.trim()
@@ -3983,7 +3987,7 @@
 
             <h3>Mechanism Selector</h3>
 
-            <span>Backbone and switch-like mechanisms</span>
+            <span>Shared signatures and framing differences</span>
 
           </div>
 
@@ -5803,7 +5807,7 @@
 
             <span class="xlp-coupling-dot"></span>
 
-            <span>Backbone signatures</span>
+            <span>Shared signatures</span>
 
           </div>
 
@@ -5851,7 +5855,7 @@
 
             <div class="xlp-coupling-card">
 
-              <div class="xlp-hold-title">Unlike switch mechanisms, the backbone barely varies by nation.</div>
+              <div class="xlp-hold-title">This shared signature varies little across countries.</div>
 
               <div class="xlp-hold-sub">
 
@@ -5913,7 +5917,7 @@
 
               <div class="xlp-footnote">
 
-                No country falls below 94%. Compared with switch mechanisms, where each country can split between emotional regimes, this stability is what makes the coupling a backbone.
+                No country falls below 94%. This cross-country consistency distinguishes the shared signature from framing differences.
 
               </div>
 
@@ -9065,7 +9069,7 @@
       <div class="about-minimal-text">
 
         <p>
-          Urban heat is central to liveability and climate justice, yet how residents emotionally interpret thermal stress in everyday life remains poorly understood. Here, we propose an attention–emotion framework that conceptualises heat perception as structured associations between foregrounded heat issues and discrete elicited emotions. Applying an LLM-based classifier to warm-season tweets from 50 cities in four developed countries, we show that heat perception is emotionally diverse, highly organised, and structurally recurrent. Direction-stable affective signatures emerge across diverse urban contexts: everyday burdens about sleep and commute with sadness, health content with fear, and governance discourse with a neutral–fear register. Context-sensitive framing switches mean that similar thermal conditions can be narrated as abnormal shocks or routine background. Exploratory analysis suggests 15-minute accessibility, socio-demographic structure and environmental inequality show more consistent associations with these patterns than climatic regime. This framework reframes heat perception from unidimensional sentiment into a diagnosable interpretive structure for context-sensitive adaptation.
+          Social media discourse mirrors how people interpret and express heat. However, existing social media analyses often oversimplify emotions into a single axis (positive vs negative), use mismatched keywords/topics, or ignore each city’s baseline attention and emotion composition. Here, we develop an attention–emotion framework to link the heat-related content foregrounded to the affective stance, and apply a large-language-model-based classifier to warm-season Twitter/X posts from 50 cities across Australia, Canada, the UK, and the US. We find emotional heterogeneity is systematically organised by the concerns foregrounded in discourse. Some attention–emotion pairings are consistent across cities: sleep and commuting burdens with sadness, health risks with fear, and systems and governance discourse with a neutral–fear register. Other patterns vary across cities, such as framing heat as abnormal disruption or routine background. Together, these findings provide a framework for distinguishing shared from context-sensitive forms of publicly expressed urban heat perception.
         </p>
 
       </div>
@@ -9143,13 +9147,8 @@
 
         <h3 class="about-minimal-heading">Contact</h3>
 
-        <p class="about-contact-text">For more information, please contact:</p>
-
-        <span class="about-email-text">
-
-          meizi.you2026@gmail.com
-
-        </span>
+        <p class="about-contact-text">Meizi You</p>
+        <a class="about-email-link" href="mailto:meizi.you2026@gmail.com">Email: meizi.you2026@gmail.com</a>
 
       </div>
 
@@ -9162,7 +9161,7 @@
       <div class="about-minimal-text">
 
         <p>
-          You, M., Yang, T., Huang, J., Qiu, W., Yang, Z., Guan, C., Guo, Y., &amp; Ji, J. Attention–emotion signatures of urban heat perception.
+          You, M., Yang, T., Huang, J., Qiu, W., Yang, Z., Guan, C., Guo, Y., &amp; Ji, J. Attention–emotion signatures of urban heat perception. <em>Nature Climate Change</em>.
         </p>
 
       </div>
@@ -14669,6 +14668,7 @@ body #atlas-intro-skip.atlas-intro-skip:hover,
   font-weight: 850;
 
   color: rgba(34,34,34,0.62);
+  display: none;
 
 }
 
@@ -15516,13 +15516,13 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
 
           '<h2 class="s4-title">Heat perception - Signatures</h2>' +
 
-          '<p class="s4-lead"><strong>Attention reorganises emotion.</strong> Some signatures recur across nearly all cities (<strong>backbone</strong>); others split cities into contrasting framing regimes (<strong>switches</strong>).</p>' +
+          '<p class="s4-lead">Explore shared signatures and framing differences across cities.</p>' +
 
           '<div class="s4-tabs" role="tablist" aria-label="Mechanism tabs">' +
 
-            '<button class="s4-tab is-active" type="button" data-mode="backbone">Backbone signatures</button>' +
+            '<button class="s4-tab is-active" type="button" data-mode="backbone">Shared signatures</button>' +
 
-            '<button class="s4-tab" type="button" data-mode="switch">Framing switches</button>' +
+            '<button class="s4-tab" type="button" data-mode="switch">Framing differences</button>' +
 
           '</div>' +
 
@@ -15536,7 +15536,7 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
 
               '<div class="s4-kicker">50-city map</div>' +
 
-              '<div class="s4-map-meta">Backbone · Sadness</div>' +
+              '<div class="s4-map-meta">Shared signatures · Sadness</div>' +
 
             '</div>' +
 
@@ -15564,7 +15564,7 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
 
           '<aside class="s4-right">' +
 
-            '<div class="s4-mode-kicker">Backbone</div>' +
+            '<div class="s4-mode-kicker">Shared signatures</div>' +
 
             '<div class="s4-card-list"></div>' +
 
@@ -15734,8 +15734,8 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
   var activeItem = items[state.activeIndex] || items[0];
 
   if (mode === "backbone") {
-    kicker.textContent = "Backbone";
-    meta.textContent = "Backbone · " + activeItem.emotionLabel.replace(/^[^ ]+\s*/, "");
+    kicker.textContent = "Shared signatures";
+    meta.textContent = "Shared signatures · " + activeItem.emotionLabel.replace(/^[^ ]+\s*/, "");
 
     list.innerHTML = items.map(function (item, index) {
       var color = EMOTION_COLORS[item.emotion] || "#2f80ed";
@@ -15758,10 +15758,10 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
       );
     }).join("");
 
-    note.innerHTML = "Representative backbone: 9 outcomes selected from 19 direction-stable results; coloured cities follow the expected direction and grey cities do not.";
+    note.innerHTML = "<strong>Shared signatures</strong><br>Attention–emotion pairings that show a consistent direction across cities.";
   } else {
-    kicker.textContent = "Switch";
-    meta.textContent = "Switch · " + activeItem.a.replace(/^[^ ]+\s*/, "") + " vs " + activeItem.b;
+    kicker.textContent = "Framing differences";
+    meta.textContent = "Framing differences · " + activeItem.a.replace(/^[^ ]+\s*/, "") + " vs " + activeItem.b;
 
     list.innerHTML = items.map(function (item, index) {
       var color = EMOTION_COLORS[item.emotion] || "#f59e0b";
@@ -15792,7 +15792,7 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
       );
     }).join("");
 
-    note.innerHTML = "Context-sensitive framing: 5 indicators divide cities into two recurring interpretive regimes; coloured cities are in the highlighted regime and grey cities are in the alternative regime.";
+    note.innerHTML = "<strong>Framing differences</strong><br>Attention–emotion patterns that vary across cities, reflecting different ways of framing heat-related issues.";
   }
 
   var activeCard = list.querySelector(".s4-card.is-active");
@@ -31216,6 +31216,16 @@ button#hero-about-btn {
   contain-intrinsic-size: none !important;
   overflow-anchor: none;
 }
+</style>
+<style id="ncc-final-signature-notes">
+  #scene4-mechanism-panel .s4-right > .s4-card-list { order: 1; }
+  #scene4-mechanism-panel .s4-right > .s4-mini-note {
+    order: 2;
+    font-weight: 400 !important;
+  }
+  #scene4-mechanism-panel .s4-right > .s4-mini-note strong {
+    font-weight: 700;
+  }
 </style>
 </body>
 

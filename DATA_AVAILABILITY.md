@@ -1,6 +1,6 @@
 # Data availability
 
-The original Twitter/X post text and associated metadata are subject to platform data-use restrictions and are not redistributed in full. Figure-level numerical data are provided in the [Source Data workbook](source_data/Source_Data_NCC_Figures.xlsx). Classification materials, paraphrased examples and validation summaries are available in the corresponding repository directories.
+The original Twitter/X post text and associated metadata are subject to platform data-use restrictions and are not redistributed in full. Figure-level numerical data are provided in the [Source Data workbook](source_data/Source_Data.xlsx). Classification materials, paraphrased examples and validation summaries are available in the corresponding repository directories.
 
 The external environmental and contextual data used in the study are available from their respective providers:
 

@@ -19,7 +19,7 @@ Heat-Perception-2/
 
 ## Materials
 
-- [Figure Source Data](source_data/Source_Data_NCC_Figures.xlsx): main Figs. 2–6 and Extended Data Figs. 1–7.
+- [Figure Source Data](source_data/Source_Data.xlsx): main Figs. 2–6 and Extended Data Figs. 1–7.
 - [Classification codebook](codebook/): attention taxonomy, emotion scheme and coding manual.
 - [Prompt variants](prompts/) for attention and emotion classification.
 - [Validation examples](validation_examples/) and [model-validation summaries](validation_summary/).
