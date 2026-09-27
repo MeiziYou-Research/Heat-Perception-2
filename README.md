@@ -11,6 +11,7 @@ Heat-Perception-2/
 ├── validation_examples/   Paraphrased representative examples
 ├── validation_summary/    Model-validation summaries
 ├── source_data/           Numerical data for the figures
+├── analysis/              Numbered analysis scripts
 ├── webpage/               Interactive visualisation assets
 ├── index.html             Interactive visualisation entry point
 ├── DATA_AVAILABILITY.md
@@ -20,6 +21,7 @@ Heat-Perception-2/
 ## Materials
 
 - [Figure Source Data](source_data/Source_Data.xlsx): main Figs. 2–6 and Extended Data Figs. 1–7.
+- [Analysis code](analysis/): classification summaries, city-level outcomes, correlate models and robustness analyses.
 - [Classification codebook](codebook/): attention taxonomy, emotion scheme and coding manual.
 - [Prompt variants](prompts/) for attention and emotion classification.
 - [Validation examples](validation_examples/) and [model-validation summaries](validation_summary/).
