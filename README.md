@@ -36,7 +36,7 @@ See [Data Availability](DATA_AVAILABILITY.md) for data sources and access condit
 
 ## Citation
 
-**Paper:** You, M., Yang, T., Huang, J., Qiu, W., Yang, Z., Guan, C., Guo, Y. and Ji, J. S. *Attention–emotion signatures of urban heat perception*.
+**Paper:** You, M., Yang, T., Huang, J., Qiu, W., Yang, Z., Guan, C., Guo, Y. and Ji, J. S. Attention–emotion signatures of urban heat perception. *Nature Climate Change*.
 
 **Code and data:** You, M. *Attention–emotion signatures of urban heat perception*. [GitHub repository](https://github.com/MeiziYou-Research/Heat-Perception-2).
 
