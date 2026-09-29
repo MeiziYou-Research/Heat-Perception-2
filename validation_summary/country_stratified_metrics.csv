@@ -1,5 +1,0 @@
-country,n_posts,emotion_correct,emotion_accuracy_percent,emotion_kappa,attention_correct,attention_accuracy_percent,attention_kappa
-Australia,123,97,78.9,0.746,99,80.5,0.781
-United Kingdom,129,95,73.6,0.688,108,83.7,0.826
-United States,371,260,70.1,0.644,279,75.2,0.727
-Canada,177,128,72.3,0.674,114,64.4,0.611

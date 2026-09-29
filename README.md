@@ -9,7 +9,6 @@ Heat-Perception-2/
 ├── codebook/              Attention and emotion classification
 ├── prompts/               Evaluated prompt variants
 ├── validation_examples/   Paraphrased representative examples
-├── validation_summary/    Model-validation summaries
 ├── source_data/           Numerical data for the figures
 ├── analysis/              Numbered analysis scripts
 ├── webpage/               Interactive visualisation assets
@@ -20,11 +19,11 @@ Heat-Perception-2/
 
 ## Materials
 
-- [Figure Source Data](source_data/Source_Data.xlsx): main Figs. 2–6 and Extended Data Figs. 1–7.
+- [Figure Source Data](source_data/Source_data.xlsx): main Figs. 2–6 and Extended Data Figs. 1–7.
 - [Analysis code](analysis/): classification summaries, city-level outcomes, correlate models and robustness analyses.
 - [Classification codebook](codebook/): attention taxonomy, emotion scheme and coding manual.
 - [Prompt variants](prompts/) for attention and emotion classification.
-- [Validation examples](validation_examples/) and [model-validation summaries](validation_summary/).
+- [Validation examples](validation_examples/).
 - [Interactive visualisation](https://meiziyou-research.github.io/Heat-Perception-2/) and its [source files](webpage/).
 
 See [Data Availability](DATA_AVAILABILITY.md) for data sources and access conditions, and [Code Availability](CODE_AVAILABILITY.md) for software included here.
