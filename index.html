@@ -15165,7 +15165,7 @@ body #atlas-intro-skip.atlas-intro-skip:hover,
 
   var backboneItems = [{"outcomeKey":"E11-Surprise","code":"E11","label":"Everyday thermal sensation","emotion":"surprise","emotionLabel":"😲 Surprise","cities":48,"noCities":2,"total":50,"score":96,"criterion":"E11 Surprise ASR > 0"},{"outcomeKey":"E11-Neutral","code":"E11","label":"Everyday thermal sensation","emotion":"neutral","emotionLabel":"😐 Neutral","cities":46,"noCities":4,"total":50,"score":92,"criterion":"E11 Neutral ASR > 0"},{"outcomeKey":"E21-Sadness","code":"E21","label":"Nighttime heat & sleep disruption","emotion":"sadness","emotionLabel":"😥 Sadness","cities":45,"noCities":5,"total":50,"score":90,"criterion":"E21 Sadness ASR > 0"},{"outcomeKey":"E23-Sadness","code":"E23","label":"Work & commute burden","emotion":"sadness","emotionLabel":"😥 Sadness","cities":48,"noCities":2,"total":50,"score":96,"criterion":"E23 Sadness ASR > 0"},{"outcomeKey":"E24-Joy","code":"E24","label":"Personal outdoor activity","emotion":"joy","emotionLabel":"😊 Joy","cities":44,"noCities":6,"total":50,"score":88,"criterion":"E24 Joy ASR > 0"},{"outcomeKey":"E33-Joy","code":"E33","label":"Consumptive cooling","emotion":"joy","emotionLabel":"😊 Joy","cities":48,"noCities":2,"total":50,"score":96,"criterion":"E33 Joy ASR > 0"},{"outcomeKey":"HealthFear","code":"H21/H31/H41","label":"Health composite","emotion":"fear","emotionLabel":"😨 Fear","cities":49,"noCities":1,"total":50,"score":98,"criterion":"mean Fear ASR across H21, H31 and H41 > 0"},{"outcomeKey":"ClimateNeutral","code":"S41/S43/S44","label":"Systems/climate composite","emotion":"neutral","emotionLabel":"😐 Neutral","cities":47,"noCities":3,"total":50,"score":94,"criterion":"mean Neutral ASR across S41, S43 and S44 > 0"},{"outcomeKey":"SysFear","code":"S41/S43/S44","label":"Systems/climate composite","emotion":"fear","emotionLabel":"😨 Fear","cities":47,"noCities":3,"total":50,"score":94,"criterion":"mean Fear ASR across S41, S43 and S44 > 0"}];
 
-  var switchItems = [{"outcomeKey":"E11-Abnormality","code":"E11","label":"Thermal sensation","emotion":"surprise","a":"😲 Abnormality","b":"background framing","ca":26,"cb":24,"total":50,"shareYes":52,"criterion":"E11 Surprise ASR > E11 Neutral ASR"},{"outcomeKey":"E31-JoyDominant","code":"E31","label":"Affective coping","emotion":"joy","a":"😊 Joy-dominant","b":"complaining coping","ca":14,"cb":36,"total":50,"shareYes":28,"criterion":"Joy is the largest positive ASR and Joy ASR > 0 for E31"},{"outcomeKey":"E32-Surprise-bin","code":"E32","label":"Device/spatial cooling","emotion":"surprise","a":"😲 Surprise-leaning","b":"routine cooling","ca":25,"cb":25,"total":50,"shareYes":50,"criterion":"E32 Surprise ASR > 0"},{"outcomeKey":"V11-Anger-bin","code":"S11","label":"Climate justice","emotion":"anger","a":"😡 Anger-based","b":"other emotions","ca":27,"cb":23,"total":50,"shareYes":54,"criterion":"S11 Anger ASR > 0"},{"outcomeKey":"V21-Fear-bin","code":"S21","label":"Planning & urban form","emotion":"fear","a":"😨 Fear-based","b":"descriptive framing","ca":21,"cb":29,"total":50,"shareYes":42,"criterion":"S21 Fear ASR > 0"}];
+  var switchItems = [{"outcomeKey":"E11-Abnormality","code":"E11","label":"Thermal sensation","emotion":"surprise","a":"😲 Abnormality","b":"other profiles","ca":26,"cb":24,"total":50,"shareYes":52,"criterion":"E11 Surprise ASR > E11 Neutral ASR"},{"outcomeKey":"E31-JoyDominant","code":"E31","label":"Affective coping","emotion":"joy","a":"😊 Joy-dominant","b":"other profiles","ca":14,"cb":36,"total":50,"shareYes":28,"criterion":"Joy is the largest positive ASR and Joy ASR > 0 for E31"},{"outcomeKey":"E32-Surprise-bin","code":"E32","label":"Device/spatial cooling","emotion":"surprise","a":"😲 Surprise-enriched","b":"not enriched","ca":25,"cb":25,"total":50,"shareYes":50,"criterion":"E32 Surprise ASR > 0"},{"outcomeKey":"V11-Anger-bin","code":"S11","label":"Climate justice","emotion":"anger","a":"😡 Anger-enriched","b":"not enriched","ca":27,"cb":23,"total":50,"shareYes":54,"criterion":"S11 Anger ASR > 0"},{"outcomeKey":"V21-Fear-bin","code":"S21","label":"Planning & urban form","emotion":"fear","a":"😨 Fear-enriched","b":"not enriched","ca":21,"cb":29,"total":50,"shareYes":42,"criterion":"S21 Fear ASR > 0"}];
 
   /* XLP_SCENE4_SORT_EHS_V33_START */
 
@@ -16356,7 +16356,7 @@ var scene4MembershipByCity = {"australia|brisbane":{"ClimateNeutral":true,"E22-J
 
       legend.innerHTML =
         '<span class="s4-legend-item"><i class="s4-legend-dot" style="background:' + color + '"></i>' + yesLabel + '</span>' +
-        '<span class="s4-legend-item"><i class="s4-legend-dot" style="background:#626a73"></i>' + noLabel + '</span>';
+        '<span class="s4-legend-item"><i class="s4-legend-dot" style="background:#ffffff;border:1px solid #9aa0a6;box-sizing:border-box"></i>' + noLabel + '</span>';
     }
   } catch (error) {
     console.warn("[Scene4 mechanism map] update failed:", error);
@@ -22008,13 +22008,13 @@ button#hero-about-btn {
   #scene4-mechanism-panel[data-mode="switch"] .s4-card-top {
 
 
-    height: 24px !important;
+    height: auto !important;
 
 
     min-height: 24px !important;
 
 
-    max-height: 24px !important;
+    max-height: none !important;
 
 
     display: flex !important;
@@ -22031,13 +22031,14 @@ button#hero-about-btn {
     min-width: 0 !important;
 
 
-    max-width: calc(100% - 44px) !important;
+    max-width: 100% !important;
 
 
     display: flex !important;
 
 
     align-items: center !important;
+    flex-wrap: wrap !important;
 
 
     gap: 6px !important;
@@ -22046,16 +22047,16 @@ button#hero-about-btn {
     font-size: 12px !important;
 
 
-    line-height: 1 !important;
+    line-height: 1.2 !important;
 
 
-    white-space: nowrap !important;
+    white-space: normal !important;
 
 
-    overflow: hidden !important;
+    overflow: visible !important;
 
 
-    text-overflow: ellipsis !important;
+    text-overflow: clip !important;
 
 
   }
@@ -22066,7 +22067,7 @@ button#hero-about-btn {
     white-space: nowrap !important;
 
 
-    line-height: 1 !important;
+    line-height: 1.2 !important;
 
 
   }
@@ -22074,13 +22075,13 @@ button#hero-about-btn {
   #scene4-mechanism-panel[data-mode="switch"] .s4-pair span:nth-child(2) {
 
 
-    overflow: hidden !important;
+    overflow: visible !important;
 
 
-    text-overflow: ellipsis !important;
+    text-overflow: clip !important;
 
 
-    max-width: 205px !important;
+    max-width: none !important;
 
 
   }
