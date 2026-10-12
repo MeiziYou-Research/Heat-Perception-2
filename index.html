@@ -25318,11 +25318,13 @@ button#hero-about-btn {
           duplicateCode.remove();
         }
 
-        pair = String(
-          pairClone.textContent || ""
-        )
-          .replace(/\s+/g, " ")
-          .trim();
+        pair = Array.prototype.map.call(pairClone.children, function (part) {
+          return String(part.textContent || "")
+            .replace(/\s+/g, " ")
+            .trim();
+        })
+          .filter(Boolean)
+          .join(" ");
       }
     } catch (error) {}
 
