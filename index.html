@@ -25052,6 +25052,9 @@ button#hero-about-btn {
   #scene4-mechanism-panel
   #scene4MechanismMap
   .mapboxgl-popup-content {
+    width: 340px !important;
+    max-width: calc(100vw - 32px) !important;
+    box-sizing: border-box !important;
     padding: 11px 14px !important;
     background: rgba(255,255,255,0.98) !important;
     border: none !important;
@@ -25095,7 +25098,8 @@ button#hero-about-btn {
     font-size: 12.5px !important;
     line-height: 1.35 !important;
     font-weight: 700 !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
   }
 
 </style>
