@@ -3174,7 +3174,9 @@
 
     z-index: 99999 !important;
 
-    max-width: min(270px, calc(100vw - 32px)) !important;
+    width: min(270px, calc(100% - 24px)) !important;
+
+    max-width: calc(100% - 24px) !important;
 
 
   }
@@ -3182,9 +3184,9 @@
   #scene2-comparison .mapboxgl-popup-content {
 
 
-    min-width: 190px !important;
+    min-width: min(190px, 100%) !important;
 
-    width: 270px !important;
+    width: 100% !important;
 
     max-width: calc(100vw - 32px) !important;
 
@@ -25059,12 +25061,14 @@ button#hero-about-btn {
   .mapboxgl-popup {
     z-index: 10000 !important;
     pointer-events: none !important;
+    width: min(340px, calc(100% - 24px)) !important;
+    max-width: calc(100% - 24px) !important;
   }
 
   #scene4-mechanism-panel
   #scene4MechanismMap
   .mapboxgl-popup-content {
-    width: 340px !important;
+    width: 100% !important;
     max-width: calc(100vw - 32px) !important;
     box-sizing: border-box !important;
     padding: 11px 14px !important;
