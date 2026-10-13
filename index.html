@@ -3174,6 +3174,8 @@
 
     z-index: 99999 !important;
 
+    max-width: min(270px, calc(100vw - 32px)) !important;
+
 
   }
 
@@ -3181,6 +3183,12 @@
 
 
     min-width: 190px !important;
+
+    width: 270px !important;
+
+    max-width: calc(100vw - 32px) !important;
+
+    box-sizing: border-box !important;
 
 
     padding: 12px 14px !important;
@@ -3277,7 +3285,9 @@
 
     font-weight: 900 !important;
 
-    white-space: nowrap !important;
+    white-space: normal !important;
+
+    overflow-wrap: break-word !important;
 
 
   }
@@ -3295,7 +3305,9 @@
 
     font-weight: 850 !important;
 
-    white-space: nowrap !important;
+    white-space: normal !important;
+
+    overflow-wrap: break-word !important;
 
 
   }
@@ -25086,7 +25098,8 @@ button#hero-about-btn {
     font-size: 14px !important;
     line-height: 1.35 !important;
     font-weight: 850 !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
   }
 
   #scene4-mechanism-panel
