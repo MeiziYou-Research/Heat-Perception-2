@@ -11,6 +11,8 @@ The scripts are numbered in analysis order. Use `--help` with Python scripts; R 
 
 The classified-post input uses `country`, `city`, `Attention`, `Attention_sub` and `Emotion_gpt`. The city ASR input uses `country`, `city`, `row_var`, `row_level`, `emotion`, `asr`, `n_group` and candidate-correlate columns. The climate mapping uses `country`, `city` and `koppen_subtype_confirmed`. Validation inputs comprise the 800-post cohort, adjudicated reference labels and model predictions, joined by `sample_id`.
 
+Attention subcategories use the codebook's E11–E33, H11–H41 and S11–S44 identifiers at input, during analysis and in output. Legacy V identifiers are rejected, not silently recoded. The coupling and city-ASR scripts check that records and canonical cells are retained before producing statistics.
+
 The 38 candidate correlates are:
 
 - Climatic heat regime: `temp`, `dtr`, `hot_night_days_m2`, `hot_day_days_m2`.

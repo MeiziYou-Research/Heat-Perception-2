@@ -20,11 +20,11 @@ geographic_fisher = import_module("09_robustness_analysis").geographic_fisher
 CONTINUOUS = (
     "ClimateNeutral", "E24_Joy", "H41_Fear", "E11_Neutral", "E11_Surprise",
     "SysFear", "E23_Sad", "HealthFear", "H21_Fear", "E33_Joy",
-    "V41_Neutral", "E21_Sad",
+    "S41_Neutral", "E21_Sad",
 )
 BINARY = (
     "E11_Abnormality", "E31_JoyDominant", "E32_Surprise_bin",
-    "V11_Anger_bin", "V21_Fear_bin",
+    "S11_Anger_bin", "S21_Fear_bin",
 )
 DISPLAY = {
     "ClimateNeutral": "Systems/climate\u2013Neutral", "E24_Joy": "E24\u2013Joy",
@@ -32,10 +32,10 @@ DISPLAY = {
     "E11_Surprise": "E11\u2013Surprise", "SysFear": "Systems/climate\u2013Fear",
     "E23_Sad": "E23\u2013Sadness", "HealthFear": "Health composite\u2013Fear",
     "H21_Fear": "H21\u2013Fear", "E33_Joy": "E33\u2013Joy",
-    "V41_Neutral": "S41\u2013Neutral", "E21_Sad": "E21\u2013Sadness",
+    "S41_Neutral": "S41\u2013Neutral", "E21_Sad": "E21\u2013Sadness",
     "E11_Abnormality": "E11 Abnormality", "E31_JoyDominant": "E31 Joy-dominant",
-    "E32_Surprise_bin": "E32 Surprise", "V11_Anger_bin": "S11 Anger",
-    "V21_Fear_bin": "S21 Fear",
+    "E32_Surprise_bin": "E32 Surprise", "S11_Anger_bin": "S11 Anger",
+    "S21_Fear_bin": "S21 Fear",
 }
 
 US_COASTAL = set("new york|boston|philadelphia|baltimore|miami|new orleans|houston|san diego|san francisco|seattle|portland|chicago".split("|"))

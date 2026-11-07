@@ -13,17 +13,18 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from attention_taxonomy import EMOTIONS, require_complete_city_asr
+
 
 CONTINUOUS_OUTCOMES = (
     "E11_Surprise", "E11_Neutral", "E21_Sad", "E23_Sad", "E24_Joy",
-    "E33_Joy", "H21_Fear", "H41_Fear", "HealthFear", "V41_Neutral",
+    "E33_Joy", "H21_Fear", "H41_Fear", "HealthFear", "S41_Neutral",
     "ClimateNeutral", "SysFear",
 )
 BINARY_OUTCOMES = (
     "E11_Abnormality", "E31_JoyDominant", "E32_Surprise_bin",
-    "V11_Anger_bin", "V21_Fear_bin",
+    "S11_Anger_bin", "S21_Fear_bin",
 )
-EMOTIONS = ("Joy", "Surprise", "Neutral", "Sadness", "Fear", "Disgust", "Anger")
 
 
 def mean_existing(frame: pd.DataFrame, names: tuple[str, ...]) -> pd.Series:
@@ -36,11 +37,10 @@ def construct_outcomes(long_data: pd.DataFrame) -> pd.DataFrame:
     required = {"country", "city", "row_var", "row_level", "emotion", "asr"}
     if missing := required - set(long_data):
         raise ValueError(f"Missing input columns: {sorted(missing)}")
-    sub = long_data.loc[long_data["row_var"].eq("attention_sub")].copy()
+    sub = require_complete_city_asr(
+        long_data.loc[long_data["row_var"].eq("attention_sub")]
+    )
     sub["cell"] = sub["row_level"].astype(str) + "_" + sub["emotion"].astype(str)
-    sub["asr"] = pd.to_numeric(sub["asr"], errors="raise")
-    if sub.duplicated(["country", "city", "cell"]).any():
-        raise ValueError("Duplicate city/attention/emotion ASR cells")
     city = sub.pivot(index=["country", "city"], columns="cell", values="asr")
     if len(city) != 50:
         raise ValueError(f"Final sample requires 50 cities; found {len(city)}")
@@ -50,7 +50,7 @@ def construct_outcomes(long_data: pd.DataFrame) -> pd.DataFrame:
         "E21_Sad": "E21_Sadness", "E23_Sad": "E23_Sadness",
         "E24_Joy": "E24_Joy", "E33_Joy": "E33_Joy",
         "H21_Fear": "H21_Fear", "H41_Fear": "H41_Fear",
-        "V41_Neutral": "V41_Neutral",
+        "S41_Neutral": "S41_Neutral",
     }
     output = pd.DataFrame(index=city.index)
     for name, cell in direct.items():
@@ -58,8 +58,8 @@ def construct_outcomes(long_data: pd.DataFrame) -> pd.DataFrame:
             raise ValueError(f"Missing ASR cell: {cell}")
         output[name] = city[cell]
     output["HealthFear"] = mean_existing(city, ("H21_Fear", "H31_Fear", "H41_Fear"))
-    output["ClimateNeutral"] = mean_existing(city, ("V41_Neutral", "V43_Neutral", "V44_Neutral"))
-    output["SysFear"] = mean_existing(city, ("V41_Fear", "V43_Fear", "V44_Fear"))
+    output["ClimateNeutral"] = mean_existing(city, ("S41_Neutral", "S43_Neutral", "S44_Neutral"))
+    output["SysFear"] = mean_existing(city, ("S41_Fear", "S43_Fear", "S44_Fear"))
 
     surprise, neutral = city["E11_Surprise"], city["E11_Neutral"]
     output["E11_Abnormality"] = np.where(surprise.notna() & neutral.notna(),
@@ -72,8 +72,8 @@ def construct_outcomes(long_data: pd.DataFrame) -> pd.DataFrame:
     output["E31_JoyDominant"] = np.where(other_max.notna(),
         ((joy > 0) & (joy > other_max)).astype(int), np.nan)
     for outcome, cell in (("E32_Surprise_bin", "E32_Surprise"),
-                          ("V11_Anger_bin", "V11_Anger"),
-                          ("V21_Fear_bin", "V21_Fear")):
+                          ("S11_Anger_bin", "S11_Anger"),
+                          ("S21_Fear_bin", "S21_Fear")):
         if cell not in city:
             raise ValueError(f"Missing ASR cell: {cell}")
         output[outcome] = np.where(city[cell].notna(), (city[cell] > 0).astype(int), np.nan)

@@ -14,13 +14,20 @@ if ("koppen_subtype_confirmed" %in% names(city)) {
 
 continuous <- c(
   "E11_Surprise", "E11_Neutral", "E21_Sad", "E23_Sad", "E24_Joy",
-  "E33_Joy", "H21_Fear", "H41_Fear", "HealthFear", "V41_Neutral",
+  "E33_Joy", "H21_Fear", "H41_Fear", "HealthFear", "S41_Neutral",
   "ClimateNeutral", "SysFear"
 )
 binary <- c(
   "E11_Abnormality", "E31_JoyDominant", "E32_Surprise_bin",
-  "V11_Anger_bin", "V21_Fear_bin"
+  "S11_Anger_bin", "S21_Fear_bin"
 )
+if (any(grepl("^V[0-9]{2}(?:_|$)", names(city), perl = TRUE))) {
+  stop("Legacy attention-subcategory columns are not valid model inputs")
+}
+missing <- setdiff(c(continuous, binary), names(city))
+if (length(missing)) {
+  stop("Missing canonical outcome columns: ", paste(missing, collapse = ", "))
+}
 candidate_names <- c(
   "cgi", "hgi", "tgi", "temp", "dtr", "hot_night_days_m2",
   "hot_day_days_m2", "income_z", "ndvi",

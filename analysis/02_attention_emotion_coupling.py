@@ -14,13 +14,8 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
+from attention_taxonomy import EMOTIONS, SUBCATEGORIES, require_codes
 
-EMOTIONS = ("Joy", "Surprise", "Neutral", "Sadness", "Fear", "Disgust", "Anger")
-SUBCATEGORIES = (
-    "E11", "E12", "E21", "E22", "E23", "E24", "E25", "E31", "E32", "E33",
-    "H11", "H12", "H21", "H22", "H31", "H41",
-    "V11", "V21", "V22", "V31", "V41", "V42", "V43", "V44",
-)
 CHANNELS = (
     "Exposure & lived experience",
     "Health impacts & burden",
@@ -30,9 +25,11 @@ CHANNELS = (
 
 def contingency(data: pd.DataFrame, attention: str, emotion: str,
                 levels: tuple[str, ...]) -> pd.DataFrame:
-    rows = data[attention].astype("string").str.strip()
-    columns = data[emotion].astype("string").str.strip()
+    rows = require_codes(data[attention], levels, attention)
+    columns = require_codes(data[emotion], EMOTIONS, emotion)
     table = pd.crosstab(rows, columns)
+    if int(table.to_numpy().sum()) != len(data):
+        raise ValueError("Contingency table lost input records")
     return table.reindex(index=levels, columns=EMOTIONS, fill_value=0)
 
 
@@ -76,7 +73,7 @@ def pooled_subcategory_asr(data: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for code in SUBCATEGORIES:
         for emotion in EMOTIONS:
-            rows.append({"attention_code_or_channel": code.replace("V", "S", 1),
+            rows.append({"attention_code_or_channel": code,
                          "emotion": emotion,
                          "adjusted_standardised_residual": asr.loc[code, emotion],
                          "two_sided_p_value": p_values.loc[code, emotion]})
@@ -102,6 +99,8 @@ def pooled_channel_asr(data: pd.DataFrame) -> pd.DataFrame:
 def city_cramers_v(data: pd.DataFrame) -> pd.DataFrame:
     if missing := {"country", "city", "attention", "attention_sub", "emotion_gpt"} - set(data):
         raise ValueError(f"Missing city-level input columns: {sorted(missing)}")
+    if data[["country", "city"]].isna().any().any():
+        raise ValueError("Missing country or city in classified-post input")
     rows = []
     for (country, city), group in data.groupby(["country", "city"], sort=True):
         for resolution, attention, levels in (("Channel", "attention", CHANNELS),
@@ -130,6 +129,9 @@ def main() -> None:
                 {"attention_sub" if args.resolution == "subcategory" else "attention", "emotion_gpt"})
     if missing := required - set(data):
         raise ValueError(f"Missing input columns: {sorted(missing)}")
+    if "attention_sub" in data:
+        data["attention_sub"] = require_codes(data["attention_sub"], SUBCATEGORIES,
+                                              "attention_sub")
     result = (pooled_subcategory_asr(data) if args.resolution == "subcategory"
               else pooled_channel_asr(data) if args.resolution == "channel"
               else city_cramers_v(data))

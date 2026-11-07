@@ -14,14 +14,16 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from attention_taxonomy import require_complete_city_asr
+
 
 PANEL_A = (
     "E11_Fear", "E11_Sadness", "E21_Joy", "E21_Neutral",
     "E23_Joy", "E23_Neutral", "E22_Joy", "E25_Joy",
-    "H21_Fear", "H31_Fear", "H41_Fear", "V41_Neutral", "V41_Fear",
-    "V43_Fear",
+    "H21_Fear", "H31_Fear", "H41_Fear", "S41_Neutral", "S41_Fear",
+    "S43_Fear",
 )
-PANEL_C = {"E31": "E31", "V11": "S11", "V21": "S21", "V42": "S42", "V44": "S44"}
+PANEL_C = ("E31", "S11", "S21", "S42", "S44")
 COUNTRY_N = {"Australia": 4, "Canada": 7, "United Kingdom": 7, "United States": 32}
 
 
@@ -31,11 +33,10 @@ def prepare_asr(raw: pd.DataFrame) -> pd.DataFrame:
     required = {"country", "city", "row_var", "row_level", "emotion", "asr"}
     if missing := required - set(data):
         raise ValueError(f"Missing ASR columns: {sorted(missing)}")
-    data = data.loc[data["row_var"].eq("attention_sub")].copy()
-    data["asr"] = pd.to_numeric(data["asr"], errors="raise")
+    data = require_complete_city_asr(
+        data.loc[data["row_var"].eq("attention_sub")]
+    )
     data["cell"] = data["row_level"].astype(str) + "_" + data["emotion"].astype(str)
-    if data.duplicated(["country", "city", "cell"]).any():
-        raise ValueError("Duplicate city ASR cell")
     return data
 
 
@@ -60,9 +61,9 @@ def panel_a(data: pd.DataFrame) -> pd.DataFrame:
 
 def panel_b(data: pd.DataFrame) -> pd.DataFrame:
     wide = data.pivot(index=["country", "city"], columns="cell", values="asr")
-    fear = wide[["V41_Fear", "V43_Fear", "V44_Fear"]].mean(axis=1)
+    fear = wide[["S41_Fear", "S43_Fear", "S44_Fear"]].mean(axis=1)
     states = pd.DataFrame({"SysFear_binary": (fear > 0).astype(int),
-                           "V42_Anger_bin": (wide["V42_Anger"] > 0).astype(int)},
+                           "S42_Anger_bin": (wide["S42_Anger"] > 0).astype(int)},
                           index=wide.index).reset_index()
     rows = []
     for country in COUNTRY_N:
@@ -70,7 +71,7 @@ def panel_b(data: pd.DataFrame) -> pd.DataFrame:
         n = len(subset)
         if n != COUNTRY_N[country]:
             raise ValueError(f"Incorrect city count for {country}: {n}")
-        for mechanism in ("SysFear_binary", "V42_Anger_bin"):
+        for mechanism in ("SysFear_binary", "S42_Anger_bin"):
             share = float(subset[mechanism].mean())
             se = float(np.sqrt(share * (1 - share) / n))
             rows.append({"country": country, "mechanism": mechanism,
@@ -83,7 +84,6 @@ def panel_b(data: pd.DataFrame) -> pd.DataFrame:
 
 def panel_c(data: pd.DataFrame) -> pd.DataFrame:
     selected = data.loc[data["row_level"].isin(PANEL_C)].copy()
-    selected["row_level"] = selected["row_level"].map(PANEL_C)
     if selected[["country", "city", "row_level"]].drop_duplicates().shape[0] != 250:
         raise ValueError("Expected five subcategories in each of 50 cities")
     selected = selected.sort_values(["country", "city", "row_level"], kind="stable")

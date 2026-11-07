@@ -14,9 +14,21 @@ city$country <- factor(city$country)
 
 continuous <- c("ClimateNeutral", "E24_Joy", "H41_Fear", "E11_Neutral",
                 "E11_Surprise", "SysFear", "E23_Sad", "HealthFear",
-                "H21_Fear", "E33_Joy", "V41_Neutral", "E21_Sad")
+                "H21_Fear", "E33_Joy", "S41_Neutral", "E21_Sad")
 binary <- c("E11_Abnormality", "E31_JoyDominant", "E32_Surprise_bin",
-            "V11_Anger_bin", "V21_Fear_bin")
+            "S11_Anger_bin", "S21_Fear_bin")
+if (any(grepl("^V[0-9]{2}(?:_|$)", names(city), perl = TRUE)) ||
+    any(grepl("^V[0-9]{2}(?:_|$)", models$outcome, perl = TRUE))) {
+  stop("Legacy attention-subcategory identifiers are not valid LOO inputs")
+}
+missing <- setdiff(c(continuous, binary), names(city))
+if (length(missing)) {
+  stop("Missing canonical city outcomes: ", paste(missing, collapse = ", "))
+}
+missing <- setdiff(c(continuous, binary), models$outcome)
+if (length(missing)) {
+  stop("Missing canonical model outcomes: ", paste(missing, collapse = ", "))
+}
 candidates <- unique(models$candidate_correlate[models$control_spec == "country"])
 if (length(candidates) < 30L) stop("Candidate list is unexpectedly short")
 
