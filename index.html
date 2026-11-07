@@ -3788,7 +3788,7 @@
 
               <span><i class="s2clean-dot-city"></i><b id="s2cleanLegendCity">Toronto</b></span>
 
-              <span><i class="s2clean-dot-global"></i><b>Pooled</b></span>
+              <span><i class="s2clean-dot-global"></i><b>50-city mean</b></span>
 
             </div>
 
@@ -3850,7 +3850,7 @@
 
         <h2>Emotion</h2>
 
-        <p>Seven-emotion profile of the selected city compared with global and country baselines.</p>
+        <p>Seven-emotion profile of the selected city compared with the mean across 50 study cities and country baselines.</p>
 
         <div class="atlas-accent"></div>
 
@@ -3864,7 +3864,7 @@
 
             <h3>Emotion Wheel</h3>
 
-            <span>Selected city · global baseline</span>
+            <span>Selected city · 50-city mean</span>
 
           </div>
 
@@ -3878,7 +3878,7 @@
 
             <h3>Deviation from Baseline</h3>
 
-            <span>Selected city minus global average</span>
+            <span>Selected city minus 50-city mean</span>
 
           </div>
 
@@ -3926,7 +3926,7 @@
 
             <h3>Attention × Emotion Coupling</h3>
 
-            <span>Global ASR structure</span>
+            <span>Pooled-sample ASR structure</span>
 
           </div>
 
@@ -12081,7 +12081,7 @@ function opacityExpression() {
 
       '<span><i style="display:inline-block;width:9px;height:9px;margin-right:6px;border-radius:999px;background:' + CITY_COLOR + ';vertical-align:middle;"></i>' + esc(legendLabelOf(current)) + '</span>' +
 
-      '<span><i style="display:inline-block;width:9px;height:9px;margin-right:6px;border-radius:999px;background:' + GLOBAL_COLOR + ';vertical-align:middle;"></i>Pooled</span>' +
+      '<span><i style="display:inline-block;width:9px;height:9px;margin-right:6px;border-radius:999px;background:' + GLOBAL_COLOR + ';vertical-align:middle;"></i>50-city mean</span>' +
 
       compareLegend;
 
@@ -30461,7 +30461,7 @@ button#hero-about-btn {
           item.textContent || ""
         )
           .trim()
-          .toLowerCase() === "pooled";
+          .toLowerCase() === "50-city mean";
       }
     );
 

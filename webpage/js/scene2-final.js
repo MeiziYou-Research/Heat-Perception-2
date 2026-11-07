@@ -688,7 +688,7 @@ try {
         <div class="s2f-grid">
           <div class="s2f-card s2f-left">
             <div class="s2f-map-head">
-              <div class="s2f-map-title">Global city map</div>
+              <div class="s2f-map-title">50-city map</div>
               <div id="s2fMapMeta" class="s2f-map-meta">50 cities</div>
             </div>
 
@@ -705,7 +705,7 @@ try {
                 <div class="s2f-profile-title">Emotion profile</div>
                 
                 <div class="s2f-legend">
-                  <span class="s2f-legend-item"><span class="s2f-dot s2f-dot-global"></span><span>Global</span></span>
+                  <span class="s2f-legend-item"><span class="s2f-dot s2f-dot-global"></span><span>50-city mean</span></span>
                   <span class="s2f-legend-item"><span class="s2f-dot s2f-dot-city"></span><span id="s2fLegendCity">Toronto</span></span>
                 </div>
               </div>
@@ -1986,7 +1986,7 @@ try {
       : '';
 
     legend.innerHTML =
-      '<span><i style="display:inline-block;width:9px;height:9px;margin-right:6px;border-radius:999px;background:' + GLOBAL_COLOR + ';vertical-align:middle;"></i>Global</span>' +
+      '<span><i style="display:inline-block;width:9px;height:9px;margin-right:6px;border-radius:999px;background:' + GLOBAL_COLOR + ';vertical-align:middle;"></i>50-city mean</span>' +
       '<span><i style="display:inline-block;width:9px;height:9px;margin-right:6px;border-radius:999px;background:' + CITY_COLOR + ';vertical-align:middle;"></i>' + esc(legendLabelOf(current)) + '</span>' +
       compareLegend;
   }
