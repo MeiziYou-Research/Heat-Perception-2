@@ -44,7 +44,9 @@ def adjusted_standardised_residuals(table: pd.DataFrame) -> pd.DataFrame:
     denominator = np.sqrt(expected * np.outer(1 - row_total / n, 1 - col_total / n))
     with np.errstate(divide="ignore", invalid="ignore"):
         values = (observed - expected) / denominator
-    values[~np.isfinite(values)] = 0.0  # matches the manuscript plotting code
+    # Publication convention: non-finite ASRs are coded as zero in cross-city
+    # summaries and downstream analyses.
+    values[~np.isfinite(values)] = 0.0
     return pd.DataFrame(values, index=table.index, columns=table.columns)
 
 

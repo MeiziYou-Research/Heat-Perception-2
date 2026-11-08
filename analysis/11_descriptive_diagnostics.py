@@ -89,6 +89,8 @@ def panel_c(data: pd.DataFrame) -> pd.DataFrame:
     selected = selected.sort_values(["country", "city", "row_level"], kind="stable")
     winner_index = selected.groupby(["country", "city", "row_level"], sort=True)["asr"].idxmax()
     city_top = selected.loc[winner_index, ["country", "city", "row_level", "emotion", "asr"]].copy()
+    # "None" also includes absent subcategories whose undefined ASRs were
+    # coded as zero in the original analysis.
     city_top["top_emotion"] = np.where(city_top["asr"] > 0, city_top["emotion"], "None")
     counts = (city_top.groupby(["country", "row_level", "top_emotion"], sort=True)
               .size().rename("n_city").reset_index())
